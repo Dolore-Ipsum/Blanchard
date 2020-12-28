@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_blank">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/style/normalize.css">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+/>
+  <link rel="stylesheet" href="/style/style.css">
+  <title>Blachard</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container container-header">
+
+          <button type="submit" id="burger" class="burger-btn" aria-label="Открыть навигацию по сайту"><svg class="burger__img" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699997)" fill="white"/>
+            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+            <path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white"/>
+            </svg></button>
+
+        <div class="header__top-logo">
+          <a href="#" class="header-logo-link"  tabindex="1">
+            <img src="/img/1. header/Logo.svg" class="header__logo-img" alt="no-picture" srcset="">
+          </a>
+        </div>
+        <nav class="header__top-nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#aboutUs" class="header__nav-link" target="_self"  tabindex="2">О нас</a></li>
+            <li class="header__nav-item"><a href="#Gallery" class="header__nav-link" target="_self" tabindex="3">Галерея</a></li>
+            <li class="header__nav-item"><a href="#Catalog" class="header__nav-link" target="_self" tabindex="4">Каталог</a></li>
+            <li class="header__nav-item"><a href="#Events" class="header__nav-link" target="_self" tabindex="5">События</a></li>
+            <li class="header__nav-item"><a href="#Issuance" class="header__nav-link" target="_self" tabindex="6">Издания</a></li>
+            <li class="header__nav-item"><a href="#Projects" class="header__nav-link" target="_self" tabindex="7">Проекты</a></li>
+            <li class="header__nav-item"><a href="#Contacts" class="header__nav-link" target="_self" tabindex="8">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__top-link">
+          <a href="#" class="header__link" target="_self"  tabindex="9">
+            Войти</a>
+        </div>
+
+          <button type="submit" id="search" class="search-btn" aria-label="Поиск"><svg class="search__img" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2725 5.32763 13.5104C5.32763 7.74821 10.0376 2.84674 16.1246 2.84674C22.2115 2.84674 26.9215 7.74821 26.9215 13.5104C26.9215 19.2725 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14867 8.76285 0.180832 16.1246 0.180832C23.4863 0.180832 29.4541 6.14867 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+            </svg></button>
+        </div>
+      </div>
+
+
+    <div class="header__list">
+      <div class="container container-header__list">
+        <div class="header__list-info">
+          <div class="header__list-items"><a href="#" target="_self" class="header__list-link" tabindex="10">Реализм</a>
+
+            <div id="scroll" class="header__list-scroll" data-simplebar>
+              <div class="scroll__item"><a href="#" class="scroll__link" target="_self">Тинторетто</a></div>
+              <div class="scroll__item"><a href="#" class="scroll__link" target="_self">Фридрих</a></div>
+              <div class="scroll__item"><a href="#" class="scroll__link" target="_self">Леонардо</a></div>
+              <div class="scroll__item"><a href="#" class="scroll__link" target="_self">Верроккьо</a></div>
+            </div>
+
+          </div>
+          <div class="header__list-items"><a href="#" target="_self" class="header__list-link" tabindex="11">Импрессионизм</a></div>
+          <div class="header__list-items"><a href="#" target="_self" class="header__list-link" tabindex="12">Постимпрессионизм</a></div>
+          <div class="header__list-items"><a href="#" target="_self" class="header__list-link" tabindex="13">Авангард</a></div>
+          <div class="header__list-items"><a href="#" target="_self" class="header__list-link" tabindex="14">Футуризм</a></div>
+        </div>
+
+        <form method="GET" action="https://jsonplaceholder.typicode.com/posts"
+        class="header__list-search" autocomplete="on" tabindex="15">
+          <svg width="23" class="search-sign" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+          </svg>
+          <label for="header__search-input">
+          <input type="search" class="header__search-input" id="header__search-input" name="header__search-input" aria-label="Поиск по сайту" placeholder="Поиск по сайту"
+          tabindex="16"
+          >
+        </label>
+        </form>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container container-header__bottom">
+        <h1 class="header__bottom-title">Прикоснитесь<br> к прекрасному</h1>
+        <p class="header__bottom-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+        <button type="submit" class="btn header__bottom-btn" tabindex="16">Подписаться на рассылку</button>
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <section class="about-us">
+      <div class="container container__about-us">
+        <div id="aboutUs" class="about-us__title">
+          О нас
+        </div>
+        <p class="about-us__text">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="/JS/index.js"></script>
+</body>
+
+</html>
