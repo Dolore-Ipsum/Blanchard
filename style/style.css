@@ -855,7 +855,7 @@ input[type='search']::-webkit-search-results-decoration {
 
   .header__list-items {
     margin-bottom: 25px;
-    padding-right: 0;
+    padding-right: 0px;
   }
 
   .header__list-items:last-child {
@@ -998,8 +998,8 @@ input[type='search']::-webkit-search-results-decoration {
     width: 50%;
   }
 
-  .header__list-items {
-    padding-right: 70px;
+  .header__list-link:active {
+    padding-right: 14px;
   }
 
   .header__list-link:active::after {
@@ -1092,7 +1092,6 @@ input[type='search']::-webkit-search-results-decoration {
     height: 12px;
     background-size: 100%;
   }
-
 
   .header__list-link::after {
     top: 0;
