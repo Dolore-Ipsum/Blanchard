@@ -1,7 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', function() {
   
-                            // Scroll-block
+                            // Scroll-block                              
 
   document.querySelector('.header__list-items:first-child').addEventListener('click', function(){
     document.querySelector('#scroll').classList.toggle('is-active')
