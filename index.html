@@ -184,7 +184,7 @@
 
         <div class="gallery__select">
           <h3 id="gallery" class="gallery-title title">Галерея</h3>
-          <form action="" class="gallery__form" method="get">
+          <form method="GET" action="https://jsonplaceholder.typicode.com/posts" class="gallery__form">
             <label class="gallery__label" for="filter">Фильтровать по:</label>
             <select id="filter" class="gallery__filter" name="select">
               <option value="Автор">Автор</option>
@@ -204,15 +204,21 @@
         <div class="gallery__swiper">
           <div class="pagination">
             <div class="swiper-button-prev">
-              <svg class="swiper__sign swiper__sign-left" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z" fill="#ECECEC"/>
-              <path d="M14 10L19 15L14 20" stroke="black"/>
+              <svg class="swiper__sign swiper__sign-left" width="30" height="30" viewbox="0 0 30 30" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z"
+                  fill="#ECECEC" />
+                <path d="M14 10L19 15L14 20" stroke="black" />
               </svg>
-              </div>
+            </div>
             <div class="swiper-button-next">
-              <svg class="swiper__sign swiper__sign-right" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z" fill="#ECECEC"/>
-              <path d="M14 10L19 15L14 20" stroke="black"/>
+              <svg class="swiper__sign swiper__sign-right" width="30" height="30" viewbox="0 0 30 30" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z"
+                  fill="#ECECEC" />
+                <path d="M14 10L19 15L14 20" stroke="black" />
               </svg></div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>

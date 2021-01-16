@@ -40,6 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
         slidesPerColumn: 1,
         slidesPerGroup: 1,
         slidesPerView: 1,
+        grabCursor: true,
       },
       // when window width is >= 710px
       710: {
