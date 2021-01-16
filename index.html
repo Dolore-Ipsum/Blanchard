@@ -18,7 +18,7 @@
 <body>
   <header class="header">
     <div class="header__top">
-      <div class="container container-header">
+      <div class="container container__header">
 
         <button type="submit" id="burger" class="burger-btn" aria-label="Открыть навигацию по сайту"><svg
             class="burger__img" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@
             <li class="header__nav-item"><a href="#aboutUs" class="header__nav-link" target="_self">О
                 нас</a></li>
             <li class="header__nav-item"><a href="#gallery" class="header__nav-link" target="_self">Галерея</a></li>
-            <li class="header__nav-item"><a href="#Catalog" class="header__nav-link" target="_self">Каталог</a></li>
+            <li class="header__nav-item"><a href="#catalog" class="header__nav-link" target="_self">Каталог</a></li>
             <li class="header__nav-item"><a href="#Events" class="header__nav-link" target="_self">События</a></li>
             <li class="header__nav-item"><a href="#Issuance" class="header__nav-link" target="_self">Издания</a></li>
             <li class="header__nav-item"><a href="#Projects" class="header__nav-link" target="_self">Проекты</a></li>
@@ -62,7 +62,7 @@
 
 
     <div class="header__list">
-      <div class="container container-header__list">
+      <div class="container container__header-list">
         <ul class="header__list-info">
           <li class="header__list-items"><a href="#" target="_self" class="header__list-link"
               aria-label="Раскрывающийся список:Реализм">Реализм</a>
@@ -149,7 +149,7 @@
     </div>
 
     <div class="hero">
-      <div class="container container-hero">
+      <div class="container container__hero">
         <h1 class="hero-title">Прикоснитесь<br> к прекрасному</h1>
         <p class="hero-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
           создаёт предпосылки для новых предложений.</p>
@@ -183,7 +183,7 @@
       <div class="container container__gallery">
 
         <div class="gallery__select">
-          <h3 id="gallery" class="gallery-title title">Галерея</h3>
+          <h3 id="gallery" class="gallery__title title">Галерея</h3>
           <form method="GET" action="https://jsonplaceholder.typicode.com/posts" class="gallery__form">
             <label class="gallery__label" for="filter">Фильтровать по:</label>
             <select id="filter" class="gallery__filter" name="select">
@@ -230,30 +230,38 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide slide1"></div>
-              <div class="swiper-slide slide2"></div>
-              <div class="swiper-slide slide3"></div>
-              <div class="swiper-slide slide4"></div>
-              <div class="swiper-slide slide5"></div>
-              <div class="swiper-slide slide6"></div>
-              <div class="swiper-slide slide7"></div>
-              <div class="swiper-slide slide8"></div>
-              <div class="swiper-slide slide9"></div>
-              <div class="swiper-slide slide10"></div>
-              <div class="swiper-slide slide11"></div>
-              <div class="swiper-slide slide12"></div>
-              <div class="swiper-slide slide13"></div>
-              <div class="swiper-slide slide14"></div>
-              <div class="swiper-slide slide15"></div>
-              <div class="swiper-slide slide16"></div>
-              <div class="swiper-slide slide17"></div>
-              <div class="swiper-slide slide18"></div>
+              <div tabindex="1" class="swiper-slide slide1"></div>
+              <div tabindex="1" class="swiper-slide slide2"></div>
+              <div tabindex="1" class="swiper-slide slide3"></div>
+              <div tabindex="1" class="swiper-slide slide4"></div>
+              <div tabindex="1" class="swiper-slide slide5"></div>
+              <div tabindex="1" class="swiper-slide slide6"></div>
+              <div tabindex="1" class="swiper-slide slide7"></div>
+              <div tabindex="1" class="swiper-slide slide8"></div>
+              <div tabindex="1" class="swiper-slide slide9"></div>
+              <div tabindex="1" class="swiper-slide slide10"></div>
+              <div tabindex="1" class="swiper-slide slide11"></div>
+              <div tabindex="1" class="swiper-slide slide12"></div>
+              <div tabindex="1" class="swiper-slide slide13"></div>
+              <div tabindex="1" class="swiper-slide slide14"></div>
+              <div tabindex="1" class="swiper-slide slide15"></div>
+              <div tabindex="1" class="swiper-slide slide16"></div>
+              <div tabindex="1" class="swiper-slide slide17"></div>
+              <div tabindex="1" class="swiper-slide slide18"></div>
             </div>
 
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
           </div>
         </div>
+
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container container__catalog">
+
+        <h3 id="catalog" class="catalog__title title">Каталог</h3>
 
       </div>
     </section>
