@@ -15,4 +15,93 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.header__list').classList.toggle('search-is-active')
   })
 
+  // Select
+
+  const element = document.querySelector('select');
+  const choises = new Choices(element, {
+  searchEnabled: false,
+  itemSelectText: ''
+  });
+
+  // Swiper 
+
+  var mySwiper = new Swiper('.swiper-container', {
+    grabCursor: true,
+    slidesPerColumn: 2,
+    slidesPerGroup: 3,
+    slidesPerColumnFill: 'column-reverse',
+    spaceBetween: 30,
+    // loop: true,
+    observer: true,
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+      },
+      // when window width is >= 710px
+      710: {
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        slidesPerView: 2,
+      },
+      // when window width is <= 1392px
+      1392: {
+        slidesPerColumn: 2,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: 'true',
+      type: 'fraction',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    
+  })
+
+  // Smooth transition
+
+  $(document).ready(function(){
+    $(document).on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+
+//   const mediaQuery = window.matchMedia('(max-width: 1024px)')
+// if (mediaQuery.matches) {
+//   var mySwiper = new Swiper('.swiper-container', {
+//     slidesPerView: 2,
+//     slidesPerColumn: 2,
+//     slidesPerGroup: 2,
+//     spaceBetween: 30,
+//     loop: true,
+//     loopFillGroupWithBlank: true,
+//   })
+// }
+
 })
