@@ -8,6 +8,7 @@
   <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
   <link rel="stylesheet" href="/style/normalize.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/style/choices.min.css">
   <link rel="stylesheet" href="/style/simplebar.min.css">
   <link rel="stylesheet" href="/style/swiper-bundle.min.css">
@@ -264,15 +265,45 @@
       <div class="container container__catalog">
 
         <h3 id="catalog" class="catalog__title title">Каталог</h3>
-
+        <div class="tab-container">
+        <div class="tab-menu">
+          <ul>
+             <li><a href="#" target="__self" class="tab-a active-a" data-id="tab1">TAB-1</a></li>
+             <li><a href="#" target="__self" class="tab-a" data-id="tab2">TAB-2</a></li>
+             <li><a href="#" target="__self" class="tab-a" data-id="tab3">TAB-3</a></li>
+             <li><a href="#" target="__self" class="tab-a" data-id="tab4">TAB-4</a></li>
+             <li><a href="#" target="__self" class="tab-a" data-id="tab5">TAB-5</a></li>
+          </ul>
+       </div><!--end of tab-menu-->
+       <div  class="tab tab-active" data-id="tab1">
+             <h2>heading of tab one</h2>
+             <p>Content of tab one</p>
+             
+       </div><!--end of tab one--> 
+    
+       <div  class="tab " data-id="tab2">
+              <h2>heading of tab two</h2>
+             <p>Content of tab two</p>
+       </div><!--end of tab two--> 
+          <div  class="tab " data-id="tab3">
+              <h2>heading of tab three</h2>
+             <p>Content of tab three</p>     
+       </div><!--end of tab three--> 
+       <div  class="tab " data-id="tab4">
+        <h2>heading of tab three</h2>
+       <p>Content of tab three</p>     
+ </div><!--end of tab three--> 
+ <div  class="tab " data-id="tab5">
+  <h2>heading of tab three</h2>
+ <p>Content of tab three</p>     
+</div><!--end of tab three--> 
+    </div><!--end of container-->
       </div>
     </section>
   </main>
   <footer>
 
   </footer>
-  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   <script src="/JS/simplebar.min.js"></script>
   <script src="/JS/choices.min.js"></script>
   <script src="/JS/swiper-bundle.min.js"></script>

@@ -93,16 +93,15 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//   const mediaQuery = window.matchMedia('(max-width: 1024px)')
-// if (mediaQuery.matches) {
-//   var mySwiper = new Swiper('.swiper-container', {
-//     slidesPerView: 2,
-//     slidesPerColumn: 2,
-//     slidesPerGroup: 2,
-//     spaceBetween: 30,
-//     loop: true,
-//     loopFillGroupWithBlank: true,
-//   })
-// }
+//   tabs
+
+$(document).ready(function(){ 
+  $('.tab-a').click(function(){  
+    $(".tab").removeClass('tab-active');
+    $(".tab[data-id='"+$(this).attr('data-id')+"']").addClass("tab-active");
+    $(".tab-a").removeClass('active-a');
+    $(this).parent().find(".tab-a").addClass('active-a');
+   });
+});
 
 })
