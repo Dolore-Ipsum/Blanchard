@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
   })
 
   document.querySelector('#burger').addEventListener('click', function(){
-    document.querySelector('.header__top-link').classList.toggle('burger-is-active')
+    document.querySelector('.header__link').classList.toggle('burger-is-active')
   })
 
   document.querySelector('#search').addEventListener('click', function(){
