@@ -5,13 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base target="_blank">
-  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+  <link rel="stylesheet" href="/style/swiper.css">
   <link rel="stylesheet" href="/style/normalize.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/style/choices.min.css">
   <link rel="stylesheet" href="/style/simplebar.min.css">
-  <link rel="stylesheet" href="/style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/style/jquery.css">
   <link rel="stylesheet" href="/style/style.css">
   <title>Blachard</title>
 </head>
@@ -169,7 +167,7 @@
 
     <div class="hero">
       <div class="container container__hero">
-        <h1 class="hero-title">Прикоснитесь<br> к прекрасному</h1>
+        <h3 class="hero-title">Прикоснитесь к прекрасному</h3>
         <p class="hero-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
           создаёт предпосылки для новых предложений.</p>
         <a href="#" class="btn hero-btn" target="_self">Подписаться на рассылку</a>
@@ -223,18 +221,15 @@
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z"
-                  fill="#ECECEC" />
-                <path d="M14 10L19 15L14 20" stroke="black" />
+                  fill="#666666" />
+                <path d="M14 10L19 15L14 20" stroke="#fff"/>
               </svg>
             </div>
             <div class="swiper-button-next">
-              <svg class="swiper__sign swiper__sign-right" width="30" height="30" viewbox="0 0 30 30" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z"
-                  fill="#ECECEC" />
-                <path d="M14 10L19 15L14 20" stroke="black" />
-              </svg></div>
+              <svg class="swiper__sign swiper__sign-right" width="30" height="30" viewox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z" fill="#666666"/>
+                <path d="M14 10L19 15L14 20" stroke="#fff"/>
+                </svg></div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
@@ -273,61 +268,220 @@
       </div>
     </section>
 
-
-
     <section class="catalog">
       <div class="container container__catalog">
 
-        <h3 id="catalog" class="catalog__title title">Каталог</h3>
+
+
         <div class="tab-container">
           <div class="tab-menu">
-            <ul>
-              <li><a href="#" target="__self" class="tab-a active-a" data-id="tab1">TAB-1</a></li>
-              <li><a href="#" target="__self" class="tab-a" data-id="tab2">TAB-2</a></li>
-              <li><a href="#" target="__self" class="tab-a" data-id="tab3">TAB-3</a></li>
-              <li><a href="#" target="__self" class="tab-a" data-id="tab4">TAB-4</a></li>
-              <li><a href="#" target="__self" class="tab-a" data-id="tab5">TAB-5</a></li>
+            <h3 id="catalog" class="catalog__title title">Каталог</h3>
+            <ul class="tab__list">
+              <li><a href="#" target="_self" class="tab-a active-a" data-id="tab1"><img src="/img/3.catalog/fr-flag.png"
+                    class="tab__img" alt="no-picture"></a></li>
+              <li><a href="#" target="_self" class="tab-a" data-id="tab2"><img src="/img/3.catalog/deu-flag.png"
+                    class="tab__img" alt="no-picture"></a></li>
+              <li><a href="#" target="_self" class="tab-a" data-id="tab3"><img src="/img/3.catalog/ital-flag.png"
+                    class="tab__img" alt="no-picture"></a></li>
+              <li><a href="#" target="_self" class="tab-a" data-id="tab4"><img src="/img/3.catalog/ru-flag.png"
+                    class="tab__img" alt="no-picture"></a></li>
+              <li><a href="#" target="_self" class="tab-a" data-id="tab5"><img src="/img/3.catalog/blg-flag.png"
+                    class="tab__img" alt="no-picture"></a></li>
             </ul>
           </div>
           <!--end of tab-menu-->
-          <div class="tab tab-active" data-id="tab1">
-            <h2>heading of tab one</h2>
-            <p>Content of tab one</p>
+
+          <div class="wrap">
+            <div class="tab tab1 tab-active" data-id="tab1">
+              <p>Les actionnaires des plus grandes entreprises, qui représentent un exemple frappant du type de culture
+                politique de l'Europe continentale, seront déclarés violant les normes universelles d'éthique et de
+                moralité. En tant qu'élément seulement de la vue d'ensemble, cherchant à supplanter la fabrication
+                traditionnelle, la nanotechnologie reste le lot des libéraux à ce jour, qui souhaitent être
+                fonctionnellement divisés en éléments indépendants.</p>
+
+            </div>
+
+            <div class="tab tab2" data-id="tab2">
+              <p>Die Aktionäre der größten Unternehmen, die ein anschauliches Beispiel für die kontinentaleuropäische
+                politische Kultur darstellen, werden als Verstoß gegen die universellen Normen der Ethik und Moral
+                erklärt. Als einziger Teil des Gesamtbildes, das die traditionelle Fertigung ersetzen will, bleibt die
+                Nanotechnologie bis heute das Los der Liberalen, die bestrebt sind, funktional in unabhängige Elemente
+                unterteilt zu werden.</p>
+            </div>
+
+            <div class="tab tab3" data-id="tab3">
+              <p>Gli azionisti delle più grandi società, che rappresentano un vivido esempio del tipo di cultura
+                politica dell'Europa continentale, verranno dichiarati violatori delle norme universali di etica e
+                moralità. Come solo una parte del quadro generale, che cerca di soppiantare la produzione tradizionale,
+                la nanotecnologia rimane ancora oggi il destino dei liberali, che sono desiderosi di essere
+                funzionalmente divisi in elementi indipendenti.</p>
+            </div>
+
+            <div class="tab tab4" data-id="tab4">
+              <p>Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+                политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего
+                лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день
+                остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.</p>
+            </div>
+
+            <div class="tab tab5" data-id="tab5">
+              <p>De aandeelhouders van de grootste bedrijven, die een levendig voorbeeld zijn van de continentale
+                Europese politieke cultuur, zullen worden verklaard in strijd met de universele normen van ethiek en
+                moraliteit. Als slechts een deel van het grote geheel, dat de traditionele productie probeert te
+                vervangen, blijft nanotechnologie tot op de dag van vandaag het lot van liberalen, die graag functioneel
+                verdeeld willen worden in onafhankelijke elementen.</p>
+            </div>
 
           </div>
-          <!--end of tab one-->
-
-          <div class="tab " data-id="tab2">
-            <h2>heading of tab two</h2>
-            <p>Content of tab two</p>
-          </div>
-          <!--end of tab two-->
-          <div class="tab " data-id="tab3">
-            <h2>heading of tab three</h2>
-            <p>Content of tab three</p>
-          </div>
-          <!--end of tab three-->
-          <div class="tab " data-id="tab4">
-            <h2>heading of tab three</h2>
-            <p>Content of tab three</p>
-          </div>
-          <!--end of tab three-->
-          <div class="tab " data-id="tab5">
-            <h2>heading of tab three</h2>
-            <p>Content of tab three</p>
-          </div>
-          <!--end of tab three-->
         </div>
         <!--end of container-->
+
+        <div id="accordion" class="selector catalog__list">
+          <h3>
+            <div class="catalog__block">
+              <p class="catalog__text" tabindex="1">C 1400 по 1499 гг.</p>
+              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                  fill="#ECECEC" />
+                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+              </svg>
+            </div>
+
+          </h3>
+          <div>
+            <div class="catalog__info">
+
+            </div>
+
+          </div>
+          <h3>
+            <div class="catalog__block">
+              <p class="catalog__text" tabindex="1">C 1500 по 1599 гг.</p>
+              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                  fill="#ECECEC" />
+                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+              </svg>
+            </div>
+          </h3>
+          <div>
+            <div class="catalog__info">
+
+            </div>
+
+          </div>
+          <h3>
+            <div class="catalog__block">
+              <p class="catalog__text" tabindex="1">C 1600 по 1699 гг.</p>
+              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                  fill="#ECECEC" />
+                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+              </svg>
+            </div>
+          </h3>
+          <div>
+            <div class="catalog__info">
+
+            </div>
+
+          </div>
+          <h3>
+            <div class="catalog__block">
+              <p class="catalog__text" tabindex="1">C 1700 по 1799 гг.
+              </p>
+              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                  fill="#ECECEC" />
+                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+              </svg>
+            </div>
+          </h3>
+          <div>
+            <div class="catalog__info">
+
+            </div>
+
+          </div>
+          <h3>
+            <div class="catalog__block">
+              <p class="catalog__text" tabindex="1">C 1800 по 1899 гг.</p>
+              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                  fill="#ECECEC" />
+                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+              </svg>
+            </div>
+          </h3>
+          <div>
+            <div class="catalog__info">
+
+            </div>
+
+          </div>
+
+          <h3>
+            <div class="catalog__block">
+              <p class="catalog__text" tabindex="1">C 1900 по 1999 гг.</p>
+              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                  fill="#ECECEC" />
+                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+              </svg>
+            </div>
+          </h3>
+          <div>
+            <div class="catalog__info">
+
+            </div>
+
+          </div>
+
+          <h3>
+            <div class="catalog__block">
+              <p class="catalog__text" tabindex="1">C 2000 г.</p>
+              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                  fill="#ECECEC" />
+                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+              </svg>
+            </div>
+          </h3>
+          <div>
+            <div class="catalog__info">
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
+
   </main>
   <footer>
 
   </footer>
   <script src="/JS/choices.min.js"></script>
   <script src="/JS/swiper-bundle.min.js"></script>
-  <script src="/JS/jquery-1.11.3.min.js"></script>
+  <script src="/JS/jquery.js"></script>
+  <script src="/JS/jquery2.js"></script>
   <script src="/JS/simplebar.min.js"></script>
   <script src="/JS/index.js"></script>
 </body>

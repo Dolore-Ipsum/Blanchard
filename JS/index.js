@@ -93,7 +93,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//   tabs
+  // Tabs
 
 $(document).ready(function(){ 
   $('.tab-a').click(function(){  
@@ -101,7 +101,41 @@ $(document).ready(function(){
     $(".tab[data-id='"+$(this).attr('data-id')+"']").addClass("tab-active");
     $(".tab-a").removeClass('active-a');
     $(this).parent().find(".tab-a").addClass('active-a');
+    
+    $('.tab__list').on('click',function (e) {
+    // let tabItem = $('div.' + e.target.className)[0];
+    $('.wrap').children().fadeOut(300, "linear");
+    $(tabItem).fadeIn('slow');
    });
+  });
+
+
+  // Accordion
+
+$( function() {
+  $( "#accordion" ).accordion();
 });
 
+
+$( ".selector" ).accordion({
+  active: -1
+});
+
+var collapsible = $( ".selector" ).accordion( "option", "collapsible" );
+
+// Setter
+$( ".selector" ).accordion( "option", "collapsible", true );
+
+$( ".selector" ).accordion({
+  animate: 50
+});
+
+// Getter
+var animate = $( ".selector" ).accordion( "option", "animate" );
+
+// Setter
+$( ".selector" ).accordion( "option", "animate", 50 );
+
 })
+
+});
