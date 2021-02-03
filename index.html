@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base target="_blank">
+  <!-- <base target="_blank"> -->
   <link rel="stylesheet" href="/style/swiper.css">
   <link rel="stylesheet" href="/style/normalize.css">
   <link rel="stylesheet" href="/style/choices.min.css">
@@ -66,7 +66,7 @@
         <ul class="header__list-info">
           <li class="header__list-items">
 
-            <a href="#" target="_self" class="header__list-link" aria-label="Раскрывающийся список:Реализм">Реализм</a>
+            <button class="header__list-link" aria-label="Раскрывающийся список:Реализм">Реализм</button>
 
             <ul id="scroll" class="header__list-scroll" data-simplebar>
               <li class="scroll__item"><a href="#" class="scroll__link" target="_self">Тинторетто</a>
@@ -81,8 +81,8 @@
 
 
           </li>
-          <li class="header__list-items"><a href="#" target="_self" class="header__list-link"
-              aria-label="Раскрывающийся список:Импрессионизм">Импрессионизм</a>
+          <li class="header__list-items"><button class="header__list-link"
+              aria-label="Раскрывающийся список:Импрессионизм">Импрессионизм</button>
 
             <ul id="scroll-2" class="header__list-scroll" data-simplebar>
               <li class="scroll__item"><a href="#" class="scroll__link" target="_self">Тинторетто</a>
@@ -96,8 +96,9 @@
             </ul>
 
           </li>
-          <li class="header__list-items"><a href="#" target="_self" class="header__list-link"
-              aria-label="Раскрывающийся список:Постимпрессионизм">Постимпрессионизм</a>
+          <li class="header__list-items">
+            <button class="header__list-link"
+              aria-label="Раскрывающийся список:Постимпрессионизм">Постимпрессионизм</button>
 
             <ul id="scroll-3" class="header__list-scroll" data-simplebar>
               <li class="scroll__item"><a href="#" class="scroll__link" target="_self">Тинторетто</a>
@@ -110,8 +111,9 @@
               </li>
             </ul>
           </li>
-          <li class="header__list-items"><a href="#" target="_self" class="header__list-link"
-              aria-label="Раскрывающийся список:Авангард">Авангард</a>
+          <li class="header__list-items">
+            <button class="header__list-link"
+              aria-label="Раскрывающийся список:Авангард">Авангард</button>
 
             <ul id="scroll-4" class="header__list-scroll" data-simplebar>
               <li class="scroll__item"><a href="#" class="scroll__link" target="_self">Тинторетто</a>
@@ -125,8 +127,9 @@
             </ul>
 
           </li>
-          <li class="header__list-items"><a href="#" target="_self" class="header__list-link"
-              aria-label="Раскрывающийся список:Футуризм">Футуризм</a>
+          <li class="header__list-items">
+            <button class="header__list-link"
+              aria-label="Раскрывающийся список:Футуризм">Футуризм</button>
             <ul id="scroll-5" class="header__list-scroll" data-simplebar>
               <li class="scroll__item"><a href="#" class="scroll__link" target="_self">Тинторетто</a>
               </li>
@@ -170,7 +173,7 @@
         <h3 class="hero-title">Прикоснитесь к прекрасному</h3>
         <p class="hero-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
           создаёт предпосылки для новых предложений.</p>
-        <a href="#" class="btn hero-btn" target="_self">Подписаться на рассылку</a>
+        <a href="#" class="btn hero-btn" target="_self" onclick="return false">Подписаться на рассылку</a>
       </div>
     </div>
 
@@ -210,7 +213,7 @@
         <div class="gallery__offer">
           <p class="gallery__offer-text">
             Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#"
-              class="gallery__offer-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+              class="gallery__offer-link" onclick="return false">авторизуйтесь</a>, либо воспользуйтесь лицензией.
           </p>
         </div>
 
@@ -222,14 +225,17 @@
                 <path
                   d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z"
                   fill="#666666" />
-                <path d="M14 10L19 15L14 20" stroke="#fff"/>
+                <path d="M14 10L19 15L14 20" stroke="#fff" />
               </svg>
             </div>
             <div class="swiper-button-next">
-              <svg class="swiper__sign swiper__sign-right" width="30" height="30" viewox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z" fill="#666666"/>
-                <path d="M14 10L19 15L14 20" stroke="#fff"/>
-                </svg></div>
+              <svg class="swiper__sign swiper__sign-right" width="30" height="30" viewox="0 0 30 30" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 5.96636e-08C23.2843 1.14601e-06 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.80661e-07 23.2843 1.96701e-06 15C3.05336e-06 6.71573 6.71573 -1.02669e-06 15 5.96636e-08Z"
+                  fill="#666666" />
+                <path d="M14 10L19 15L14 20" stroke="#fff" />
+              </svg></div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
@@ -270,30 +276,28 @@
 
     <section class="catalog">
       <div class="container container__catalog">
-
-
-
         <div class="tab-container">
           <div class="tab-menu">
             <h3 id="catalog" class="catalog__title title">Каталог</h3>
             <ul class="tab__list">
-              <li><a href="#" target="_self" class="tab-a active-a" data-id="tab1"><img src="/img/3.catalog/fr-flag.png"
-                    class="tab__img" alt="no-picture"></a></li>
-              <li><a href="#" target="_self" class="tab-a" data-id="tab2"><img src="/img/3.catalog/deu-flag.png"
-                    class="tab__img" alt="no-picture"></a></li>
-              <li><a href="#" target="_self" class="tab-a" data-id="tab3"><img src="/img/3.catalog/ital-flag.png"
-                    class="tab__img" alt="no-picture"></a></li>
-              <li><a href="#" target="_self" class="tab-a" data-id="tab4"><img src="/img/3.catalog/ru-flag.png"
-                    class="tab__img" alt="no-picture"></a></li>
-              <li><a href="#" target="_self" class="tab-a" data-id="tab5"><img src="/img/3.catalog/blg-flag.png"
-                    class="tab__img" alt="no-picture"></a></li>
+              <li class="tab__item"><a href="#" class="tab-a active-a" data-id="tab1" onclick="return false"><img
+                    src="/img/3.catalog/fr-flag.png" class="tab__img" alt="no-picture"></a></li>
+              <li class="tab__item"><a href="#" class="tab-a" data-id="tab2" onclick="return false"><img
+                    src="/img/3.catalog/deu-flag.png" class="tab__img" alt="no-picture"></a></li>
+              <li class="tab__item"><a href="#" class="tab-a" data-id="tab3" onclick="return false"><img
+                    src="/img/3.catalog/ital-flag.png" class="tab__img" alt="no-picture"></a></li>
+              <li class="tab__item"><a href="#" class="tab-a" data-id="tab4" onclick="return false"><img
+                    src="/img/3.catalog/ru-flag.png" class="tab__img" alt="no-picture"></a></li>
+              <li class="tab__item"><a href="#" class="tab-a" data-id="tab5" onclick="return false"><img
+                    src="/img/3.catalog/blg-flag.png" class="tab__img" alt="no-picture"></a></li>
             </ul>
           </div>
           <!--end of tab-menu-->
 
           <div class="wrap">
             <div class="tab tab1 tab-active" data-id="tab1">
-              <p>Les actionnaires des plus grandes entreprises, qui représentent un exemple frappant du type de culture
+              <p class="tab__text">Les actionnaires des plus grandes entreprises, qui représentent un exemple frappant
+                du type de culture
                 politique de l'Europe continentale, seront déclarés violant les normes universelles d'éthique et de
                 moralité. En tant qu'élément seulement de la vue d'ensemble, cherchant à supplanter la fabrication
                 traditionnelle, la nanotechnologie reste le lot des libéraux à ce jour, qui souhaitent être
@@ -302,7 +306,8 @@
             </div>
 
             <div class="tab tab2" data-id="tab2">
-              <p>Die Aktionäre der größten Unternehmen, die ein anschauliches Beispiel für die kontinentaleuropäische
+              <p class="tab__text">Die Aktionäre der größten Unternehmen, die ein anschauliches Beispiel für die
+                kontinentaleuropäische
                 politische Kultur darstellen, werden als Verstoß gegen die universellen Normen der Ethik und Moral
                 erklärt. Als einziger Teil des Gesamtbildes, das die traditionelle Fertigung ersetzen will, bleibt die
                 Nanotechnologie bis heute das Los der Liberalen, die bestrebt sind, funktional in unabhängige Elemente
@@ -310,7 +315,8 @@
             </div>
 
             <div class="tab tab3" data-id="tab3">
-              <p>Gli azionisti delle più grandi società, che rappresentano un vivido esempio del tipo di cultura
+              <p class="tab__text">Gli azionisti delle più grandi società, che rappresentano un vivido esempio del tipo
+                di cultura
                 politica dell'Europa continentale, verranno dichiarati violatori delle norme universali di etica e
                 moralità. Come solo una parte del quadro generale, che cerca di soppiantare la produzione tradizionale,
                 la nanotecnologia rimane ancora oggi il destino dei liberali, che sono desiderosi di essere
@@ -318,14 +324,16 @@
             </div>
 
             <div class="tab tab4" data-id="tab4">
-              <p>Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+              <p class="tab__text">Акционеры крупнейших компаний, которые представляют собой яркий пример
+                континентально-европейского типа
                 политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего
                 лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день
                 остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.</p>
             </div>
 
             <div class="tab tab5" data-id="tab5">
-              <p>De aandeelhouders van de grootste bedrijven, die een levendig voorbeeld zijn van de continentale
+              <p class="tab__text">De aandeelhouders van de grootste bedrijven, die een levendig voorbeeld zijn van de
+                continentale
                 Europese politieke cultuur, zullen worden verklaard in strijd met de universele normen van ethiek en
                 moraliteit. Als slechts een deel van het grote geheel, dat de traditionele productie probeert te
                 vervangen, blijft nanotechnologie tot op de dag van vandaag het lot van liberalen, die graag functioneel
@@ -335,143 +343,532 @@
           </div>
         </div>
         <!--end of container-->
+        <div class="catalog__info">
 
-        <div id="accordion" class="selector catalog__list">
-          <h3>
-            <div class="catalog__block">
-              <p class="catalog__text" tabindex="1">C 1400 по 1499 гг.</p>
-              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                  fill="#ECECEC" />
-                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-              </svg>
+          <div class="catalog__specification">
+            <div class="catalog__discription" id="girlandayo">
+            <div class="catalog__specification-img"></div>
+            <div class="catalog__specification-block">
+              <h3 class="catalog__specification-title title">Доменико Гирландайо</h3>
+              <span class="catalog__specification-dates">2 июня 1448 — 11 января 1494.</span>
+              <p class="catalog__specification-text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
             </div>
-
-          </h3>
-          <div>
-            <div class="catalog__info">
-
-            </div>
-
           </div>
-          <h3>
-            <div class="catalog__block">
-              <p class="catalog__text" tabindex="1">C 1500 по 1599 гг.</p>
-              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                  fill="#ECECEC" />
-                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-              </svg>
+              <div class="catalog__discription" id="verokio">
+              <div class="catalog__specification-img"></div>
+              <div class="catalog__specification-block">
+                <h3 class="catalog__specification-title title">Андреа Верроккьо</h3>
+                <span class="catalog__specification-dates">2 июня 1435 — 10 октября 1488.</span>
+                <p class="catalog__specification-text">Ученик, желавший стать художником, вначале поступал подмастерьем к мастеру и лишь после шести лет обучения мог основать собственную мастерскую. Среди учеников Верроккьо в его мастерской были такие мастера Возрождения, как Сандро Боттичелли, Пьетро Перуджино и Леонардо да Винчи — по легенде, именно он позировал учителю для статуи Давида (1476), на лице которого играет своеобразная полуулыбка, впоследствии ставшая отличительной особенностью стиля художника. Изящная статуя, выполненная из бронзы, стала символом гуманистической ренессансной культуры. Она предназначалась для виллы Медичи, которую начал строить в Риме Бартоломео Амманати по заказу Фердинандо Медичи, однако Лоренцо и Джулиано передали её во дворец Синьории во Флоренции.</p>
+              </div>
             </div>
-          </h3>
-          <div>
-            <div class="catalog__info">
+            <div class="catalog__discription" id="vekketa">
+              <div class="catalog__specification-img"></div>
+              <div class="catalog__specification-block">
+                <h3 class="catalog__specification-title title">Веккьетта</h3>
+                <span class="catalog__specification-dates">ок. 1410 — 6 июня 1480.</span>
+                <p class="catalog__specification-text">О Веккьетте сообщает в своих «Жизнеописаниях» Джорджо Вазари и описывает его как человека мрачного и нелюдимого, вечно погружённого в раздумья, и потому прожившего недолго. Позднейшие исследователи пытались имя этого художника увязать с какими-либо архивными данными. Сейчас общепризнанной считается версия, что описанный Вазари Веккьетта — это Лоренцо ди Пьетро ди Джованни, который был крещён в Сиене в 1410 году. Имя этого человека появляется в документах в 1428 году среди членов гильдии художников Сиены.</p>
+              </div>
+            </div>
+            </div>
+         
+
+          <div id="accordion" class="selector catalog__list">
+            <h3>
+              <div class="catalog__block">
+                <p class="catalog__text" tabindex="1">C 1400 по 1499 гг.</p>
+                <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="#ECECEC" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </div>
+
+            </h3>
+            <div>
+              
+                <ul class="catalog__table">
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бенедетто ди
+                      Биндо</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бергоньоне,
+                    Амброджо</button>
+                  </li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Биссоло,
+                    Франческо</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Больтраффио,
+                    Джованни</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бонсиньори,
+                    Франческо</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Боттичини,
+                    Рафаэлло</button>
+                  </li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Брамантино</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бреа,
+                    Людовико</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бьяджо
+                    д’Антонио
+                    Туччи</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" id="vekketaBtn" onclick="return false">Веккьетта</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" id="verokioBtn" onclick="return false">Андреа
+                    Верроккьо</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" id="girlandayoBtn" href="#" onclick="return false">Доменико
+                    Гирландайо</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Беноццо
+                    Гоццоли</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Граначчи,
+                      Франческо</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Грегорио ди
+                    Чекко</button>
+                  </li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни да
+                    Удине</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни ди
+                    Паоло</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джорджоне</button>
+                  </li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Парентино,
+                    Бернардо</button>
+                  </li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пезеллино</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пьетро
+                    Перуджино</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Перуцци,
+                    Бальдассаре</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пизанелло</button></li>
+                  <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пинтуриккьо</button></li>
+                  <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                  <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button>
+                  </li>
+                  <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                </ul>
+              </div>
+
+            
+            <h3>
+              <div class="catalog__block">
+                <p class="catalog__text" tabindex="1">C 1500 по 1599 гг.</p>
+                <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="#ECECEC" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </div>
+            </h3>
+            <div>
+
+              <ul class="catalog__table">
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бенедетто ди
+                    Биндо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бергоньоне,
+                  Амброджо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Биссоло,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Больтраффио,
+                  Джованни</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бонсиньори,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Боттичини,
+                  Рафаэлло</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Брамантино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бреа,
+                  Людовико</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бьяджо
+                  д’Антонио
+                  Туччи</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Веккьетта</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Андреа
+                  Верроккьо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Доменико
+                  Гирландайо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Беноццо
+                  Гоццоли</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Граначчи,
+                    Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Грегорио ди
+                  Чекко</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни да
+                  Удине</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни ди
+                  Паоло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джорджоне</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Парентино,
+                  Бернардо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пезеллино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пьетро
+                  Перуджино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Перуцци,
+                  Бальдассаре</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пизанелло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пинтуриккьо</button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button>
+                </li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+              </ul>
+
+            </div>
+            <h3>
+              <div class="catalog__block">
+                <p class="catalog__text" tabindex="1">C 1600 по 1699 гг.</p>
+                <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="#ECECEC" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </div>
+            </h3>
+            <div>
+              <ul class="catalog__table">
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бенедетто ди
+                    Биндо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бергоньоне,
+                  Амброджо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Биссоло,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Больтраффио,
+                  Джованни</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бонсиньори,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Боттичини,
+                  Рафаэлло</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Брамантино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бреа,
+                  Людовико</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бьяджо
+                  д’Антонио
+                  Туччи</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Веккьетта</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Андреа
+                  Верроккьо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Доменико
+                  Гирландайо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Беноццо
+                  Гоццоли</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Граначчи,
+                    Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Грегорио ди
+                  Чекко</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни да
+                  Удине</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни ди
+                  Паоло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джорджоне</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Парентино,
+                  Бернардо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пезеллино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пьетро
+                  Перуджино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Перуцци,
+                  Бальдассаре</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пизанелло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пинтуриккьо</button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button>
+                </li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+              </ul>
+
+            </div>
+            <h3>
+              <div class="catalog__block">
+                <p class="catalog__text" tabindex="1">C 1700 по 1799 гг.
+                </p>
+                <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="#ECECEC" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </div>
+            </h3>
+            <div>
+              <ul class="catalog__table">
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бенедетто ди
+                    Биндо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бергоньоне,
+                  Амброджо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Биссоло,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Больтраффио,
+                  Джованни</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бонсиньори,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Боттичини,
+                  Рафаэлло</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Брамантино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бреа,
+                  Людовико</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бьяджо
+                  д’Антонио
+                  Туччи</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Веккьетта</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Андреа
+                  Верроккьо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Доменико
+                  Гирландайо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Беноццо
+                  Гоццоли</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Граначчи,
+                    Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Грегорио ди
+                  Чекко</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни да
+                  Удине</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни ди
+                  Паоло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джорджоне</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Парентино,
+                  Бернардо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пезеллино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пьетро
+                  Перуджино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Перуцци,
+                  Бальдассаре</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пизанелло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пинтуриккьо</button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button>
+                </li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+              </ul>
+
+            </div>
+            <h3>
+              <div class="catalog__block">
+                <p class="catalog__text" tabindex="1">C 1800 по 1899 гг.</p>
+                <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="#ECECEC" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </div>
+            </h3>
+            <div>
+              <ul class="catalog__table">
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бенедетто ди
+                    Биндо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бергоньоне,
+                  Амброджо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Биссоло,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Больтраффио,
+                  Джованни</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бонсиньори,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Боттичини,
+                  Рафаэлло</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Брамантино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бреа,
+                  Людовико</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бьяджо
+                  д’Антонио
+                  Туччи</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Веккьетта</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Андреа
+                  Верроккьо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Доменико
+                  Гирландайо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Беноццо
+                  Гоццоли</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Граначчи,
+                    Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Грегорио ди
+                  Чекко</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни да
+                  Удине</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни ди
+                  Паоло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джорджоне</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Парентино,
+                  Бернардо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пезеллино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пьетро
+                  Перуджино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Перуцци,
+                  Бальдассаре</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пизанелло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пинтуриккьо</button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button>
+                </li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+              </ul>
 
             </div>
 
-          </div>
-          <h3>
-            <div class="catalog__block">
-              <p class="catalog__text" tabindex="1">C 1600 по 1699 гг.</p>
-              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                  fill="#ECECEC" />
-                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-              </svg>
-            </div>
-          </h3>
-          <div>
-            <div class="catalog__info">
+            <h3>
+              <div class="catalog__block">
+                <p class="catalog__text" tabindex="1">C 1900 по 1999 гг.</p>
+                <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="#ECECEC" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </div>
+            </h3>
+            <div>
+              <ul class="catalog__table">
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бенедетто ди
+                    Биндо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бергоньоне,
+                  Амброджо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Биссоло,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Больтраффио,
+                  Джованни</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бонсиньори,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Боттичини,
+                  Рафаэлло</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Брамантино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бреа,
+                  Людовико</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бьяджо
+                  д’Антонио
+                  Туччи</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Веккьетта</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Андреа
+                  Верроккьо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Доменико
+                  Гирландайо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Беноццо
+                  Гоццоли</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Граначчи,
+                    Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Грегорио ди
+                  Чекко</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни да
+                  Удине</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни ди
+                  Паоло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джорджоне</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Парентино,
+                  Бернардо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пезеллино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пьетро
+                  Перуджино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Перуцци,
+                  Бальдассаре</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пизанелло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пинтуриккьо</button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button>
+                </li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+              </ul>
 
             </div>
 
-          </div>
-          <h3>
-            <div class="catalog__block">
-              <p class="catalog__text" tabindex="1">C 1700 по 1799 гг.
-              </p>
-              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                  fill="#ECECEC" />
-                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-              </svg>
-            </div>
-          </h3>
-          <div>
-            <div class="catalog__info">
-
-            </div>
-
-          </div>
-          <h3>
-            <div class="catalog__block">
-              <p class="catalog__text" tabindex="1">C 1800 по 1899 гг.</p>
-              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                  fill="#ECECEC" />
-                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-              </svg>
-            </div>
-          </h3>
-          <div>
-            <div class="catalog__info">
-
-            </div>
-
-          </div>
-
-          <h3>
-            <div class="catalog__block">
-              <p class="catalog__text" tabindex="1">C 1900 по 1999 гг.</p>
-              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                  fill="#ECECEC" />
-                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-              </svg>
-            </div>
-          </h3>
-          <div>
-            <div class="catalog__info">
-
-            </div>
-
-          </div>
-
-          <h3>
-            <div class="catalog__block">
-              <p class="catalog__text" tabindex="1">C 2000 г.</p>
-              <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                  fill="#ECECEC" />
-                <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-              </svg>
-            </div>
-          </h3>
-          <div>
-            <div class="catalog__info">
+            <h3>
+              <div class="catalog__block">
+                <p class="catalog__text" tabindex="1">C 2000 г.</p>
+                <svg class="catalog__img" tabindex="1" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="#ECECEC" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </div>
+            </h3>
+            <div>
+              <ul class="catalog__table">
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бенедетто ди
+                    Биндо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бергоньоне,
+                  Амброджо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Биссоло,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Больтраффио,
+                  Джованни</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бонсиньори,
+                  Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Боттичини,
+                  Рафаэлло</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Брамантино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бреа,
+                  Людовико</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Бьяджо
+                  д’Антонио
+                  Туччи</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Веккьетта</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Андреа
+                  Верроккьо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Доменико
+                  Гирландайо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Беноццо
+                  Гоццоли</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Граначчи,
+                    Франческо</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Грегорио ди
+                  Чекко</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни да
+                  Удине</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джованни ди
+                  Паоло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Джорджоне</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Парентино,
+                  Бернардо</button>
+                </li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пезеллино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пьетро
+                  Перуджино</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Перуцци,
+                  Бальдассаре</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пизанелло</button></li>
+                <li class="catalog__date"><button class="catalog__btn" href="#" onclick="return false">Пинтуриккьо</button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button>
+                </li>
+                <li class="catalog__date none"><button class="catalog__btn" href="#" onclick="return false"></button></li>
+              </ul>
 
             </div>
 
           </div>
 
         </div>
-
       </div>
-
     </section>
 
   </main>
