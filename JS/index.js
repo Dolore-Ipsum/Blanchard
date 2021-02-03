@@ -118,13 +118,13 @@ $( function() {
 
 
 $( ".selector" ).accordion({
-  active: -1
+  active: true  
 });
 
-var collapsible = $( ".selector" ).accordion( "option", "collapsible" );
+var collapsible = $( ".selector" ).accordion( "option", "collapsible");
 
 // Setter
-$( ".selector" ).accordion( "option", "collapsible", true );
+$( ".selector" ).accordion( "option", "collapsible", true);
 
 $( ".selector" ).accordion({
   animate: 50
