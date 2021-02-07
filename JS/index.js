@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // Swiper 
 
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper('.swiper-container.swiper__gallery', {
     grabCursor: true,
     slidesPerColumn: 2,
     slidesPerGroup: 3,
@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', function() {
     },
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination.pagination__gallery',
       clickable: 'true',
       type: 'fraction',
     },
@@ -95,6 +95,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // Tabs
 
+
 $(document).ready(function(){ 
   $('.tab-a').click(function(){  
     $(".tab").removeClass('tab-active');
@@ -109,6 +110,13 @@ $(document).ready(function(){
    });
   });
 
+  $('.tab__item:nth-child(4)').addClass('tab__is-focused');
+
+  $('.tab__item').click(function() {  
+    $(this).siblings().removeClass('tab__is-focused');
+    $(this).addClass('tab__is-focused');
+});
+
 
   // Accordion
 
@@ -118,7 +126,7 @@ $( function() {
 
 
 $( ".selector" ).accordion({
-  active: true  
+  active: 0 
 });
 
 var collapsible = $( ".selector" ).accordion( "option", "collapsible");
@@ -139,6 +147,8 @@ $( ".selector" ).accordion( "option", "animate", 50 );
 })
 
 // catalog
+
+$('#girlandayoBtn').addClass('catalog__btn_is-active');
 
 $('.catalog__btn').click(function() {  
   $('.catalog__btn').not(this).removeClass('catalog__btn_is-active');
@@ -164,4 +174,17 @@ $('#vekketaBtn').click(function() {
 
 
 
+$(window).resize(function() {
+    if ( $(window).width() < 321 ) {
+      var swiperEvents = new Swiper('.swiper-container.swiper__events', {
+        grabCursor: true,
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        pagination: {
+          el: '.swiper-pagination.pagination__events',
+        },
+      });
+    }
+  });
 });
