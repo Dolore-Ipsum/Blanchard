@@ -172,19 +172,63 @@ $('#vekketaBtn').click(function() {
   $('#vekketa').addClass('specification_is-active');
 });
 
+var swiperEvents = new Swiper('.swiper-container.swiper__events', {
+  grabCursor: false,
+  spaceBetween: 10,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+      grabCursor: true,
+      spaceBetween: 25,
+    },
+    326: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+      grabCursor: true,
+      spaceBetween: 19,
+    },
+    710: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 2,
+      grabCursor: false,
+    },
+    
+  },
+  pagination: {
+    el: '.swiper-pagination.pagination__events',
+    clickable: 'true'
+  },
+  
+  observer: true,  
+  observeParents: true,
+  callback: true,
+  
+});
 
 
-$(window).resize(function() {
-    if ( $(window).width() < 321 ) {
-      var swiperEvents = new Swiper('.swiper-container.swiper__events', {
-        grabCursor: true,
-        slidesPerView: 1,
-        slidesPerColumn: 1,
-        slidesPerGroup: 1,
-        pagination: {
-          el: '.swiper-pagination.pagination__events',
-        },
-      });
-    }
-  });
+
+// Events
+
+document.querySelector('#eventsBtn').addEventListener('click', function(){
+  document.querySelectorAll('.events_active').forEach(function(el){
+    el.classList.add('swiper-slide__events_is-active')
+  })
+})
+
+document.querySelector('#eventsBtn').addEventListener('click', function(){
+  document.querySelector('.swiper__events').classList.add('events_is-active')
+})
+
+document.querySelector('#eventsBtn').addEventListener('click', function(){
+  document.querySelector('#eventsBtn').classList.add('tab')
+})
+
+
+
 });
