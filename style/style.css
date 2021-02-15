@@ -3399,11 +3399,6 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 30px;
   }
 
-  .swiper-slide__events:nth-child(2),
-  .swiper-slide__events:nth-child(3) {
-    order: 0;
-  }
-
   .swiper-slide__events:nth-child(6) {
     margin-bottom: 35px;
   }
@@ -3543,9 +3538,9 @@ html .ui-button.ui-state-disabled:active {
   }
 }
 
-@media (min-width: 323px) and (max-width: 326px) {
+@media (min-width: 321px) and (max-width: 326px) {
   .swiper__events .swiper-slide__events {
-    margin-right: 31px !important;
+    margin-right: 28px !important;
   }
 }
 
@@ -3666,7 +3661,7 @@ html .ui-button.ui-state-disabled:active {
   .gallery__swiper .swiper-slide.slide4,
   .gallery__swiper .swiper-slide.slide6,
   .gallery__swiper .swiper-slide {
-    margin-right: 36px !important;
+    margin-right: 38px !important;
   }
 
   .pagination {
