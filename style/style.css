@@ -190,7 +190,7 @@ button {
 }
 
 
-/* @keyframes resize {
+@keyframes resize {
   0% {
     transform: none;
   }
@@ -198,7 +198,7 @@ button {
   100% {
     transform: scale(1.08, 1.08);
   }
-} */
+}
 
 .container__header {
   display: -webkit-box;
