@@ -15,9 +15,9 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.header__list').classList.toggle('search-is-active')
   })
 
-  // Select
+  // Select gallery
 
-  const element = document.querySelector('select');
+  const element = document.querySelector('#filter');
   const choises = new Choices(element, {
   searchEnabled: false,
   itemSelectText: ''
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // Swiper 
 
-  var mySwiper = new Swiper('.swiper-container.swiper__gallery', {
+  var mySwiper = new Swiper('.swiper__gallery', {
     grabCursor: true,
     slidesPerColumn: 2,
     slidesPerGroup: 3,
@@ -40,6 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
         slidesPerColumn: 1,
         slidesPerGroup: 1,
         slidesPerView: 1,
+        spaceBetween: 26,
         grabCursor: true,
       },
       // when window width is >= 710px
@@ -68,11 +69,7 @@ window.addEventListener('DOMContentLoaded', function() {
       prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-    
+  
   })
 
   // Smooth transition
@@ -172,11 +169,12 @@ $('#vekketaBtn').click(function() {
   $('#vekketa').addClass('specification_is-active');
 });
 
-var swiperEvents = new Swiper('.swiper-container.swiper__events', {
+var swiperEvents = new Swiper('.swiper__events', {
   grabCursor: false,
   spaceBetween: 10,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  grabCursor: false,
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -208,6 +206,11 @@ var swiperEvents = new Swiper('.swiper-container.swiper__events', {
   observer: true,  
   observeParents: true,
   callback: true,
+
+  // Disable preloading of all images
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: true
   
 });
 
@@ -229,6 +232,216 @@ document.querySelector('#eventsBtn').addEventListener('click', function(){
   document.querySelector('#eventsBtn').classList.add('tab')
 })
 
+// editions
 
+document.querySelector('#checkbox').addEventListener('click', function(){
+  document.querySelector('#checkbox').classList.remove('checkbox_is-active')
+})
+
+document.querySelectorAll('.checkbox__text').forEach(function(ele) {
+  ele.addEventListener('click', function(event) {
+    event.target.classList.toggle('checkbox__text_is-active')
+  })
+})
+
+document.querySelector('#spoiler1').addEventListener('click', function(){
+  document.querySelector('.features__spoiler').classList.toggle('spoiler_is-active')
+})
+
+document.querySelector('#spoiler1').addEventListener('click', function(){
+  document.querySelector('.editions').classList.toggle('editions__height-is-active')
+})
+
+
+$(".bestsellers").on("click", function() {
+  $(".bestsellers")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".art").on("click", function() {
+  $(".art")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".archi").on("click", function() {
+  $(".archi")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".fashion").on("click", function() {
+  $(".fashion")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".kids").on("click", function() {
+  $(".kids")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".literature").on("click", function() {
+  $(".literature")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".publish").on("click", function() {
+  $(".publish")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".trip").on("click", function() {
+  $(".trip")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".philosophy").on("click", function() {
+  $(".philosophy")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".learning").on("click", function() {
+  $(".learning")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".periodical").on("click", function() {
+  $(".periodical")
+      .addClass("custom-checkbox_is-active");
+});
+
+$(".btn-bestsellers").on("click", function() {
+  $(".bestsellers")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-art").on("click", function() {
+  $(".art")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-archi").on("click", function() {
+  $(".archi")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-disign").on("click", function() {
+  $(".disign")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-fashion").on("click", function() {
+  $(".fashion")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-kids").on("click", function() {
+  $(".kids")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-literature").on("click", function() {
+  $(".literature")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-publish").on("click", function() {
+  $(".publish")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-trip").on("click", function() {
+  $(".trip")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-philosophy").on("click", function() {
+  $(".philosophy")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-learning").on("click", function() {
+  $(".learning")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$(".btn-periodical").on("click", function() {
+  $(".periodical")
+      .addClass("custom-checkbox_is-notactive")
+});
+
+$('#spoiler1').click(function() {  
+  $('.custom-checkbox').not(this).removeClass('custom-checkbox_is-notactive');
+  $(this).toggleClass('custom-checkbox_is-notactive');
+});
+
+document.querySelector('.editions__btn-close').addEventListener('click', function(){
+  document.querySelectorAll('.custom-checkbox').forEach(function(elbtn){
+    elbtn.classList.remove('custom-checkbox_is-active')
+  })
+})
+
+var swiperEditions = new Swiper('.swiper__editions', {
+  grabCursor: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      slidesPerColumn: 4,
+      slidesPerGroup: 2,
+      grabCursor: false,
+    },
+
+    710: {
+      slidesPerView: 2,
+      slidesPerColumn: 1,
+      slidesPerGroup: 2,
+      spaceBetween: 28,
+      grabCursor: true,
+    },
+
+    958: {
+      slidesPerView: 2,
+      slidesPerColumn: 1,
+      slidesPerGroup: 2,
+      spaceBetween: 12,
+      grabCursor: true,
+    },
+
+    1350: {
+      slidesPerView: 2,
+      slidesPerColumn: 1,
+      slidesPerGroup: 2,
+      spaceBetween: 11,
+      grabCursor: true,
+    },
+  
+    1919: {
+      slidesPerView: 3,
+      slidesPerColumn: 1,
+      slidesPerGroup: 3,
+      spaceBetween: 49,
+      grabCursor: true
+    },
+    
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination.pagination__editions',
+    clickable: 'true',
+    type: 'fraction',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next__editions',
+    prevEl: '.swiper-button-prev__editions',
+  },
+
+  // Disable preloading of all images
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: true
+ 
+  
+});
 
 });
