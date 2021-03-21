@@ -15,6 +15,36 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.header__list').classList.toggle('search-is-active')
   })
 
+
+// SimpleBar
+
+
+new SimpleBar(document.getElementById('scroll'), {
+  autoHide: false,
+  scrollbarMaxSize: 35
+});
+
+new SimpleBar(document.getElementById('scroll-2'), {
+  autoHide: false,
+  scrollbarMaxSize: 35
+});
+
+new SimpleBar(document.getElementById('scroll-3'), {
+  autoHide: false,
+  scrollbarMaxSize: 35
+});
+
+new SimpleBar(document.getElementById('scroll-4'), {
+  autoHide: false,
+  scrollbarMaxSize: 35
+});
+
+new SimpleBar(document.getElementById('scroll-5'), {
+  autoHide: false,
+  scrollbarMaxSize: 35
+});
+
+
   // Select gallery
 
   const element = document.querySelector('#filter');
@@ -37,6 +67,14 @@ window.addEventListener('DOMContentLoaded', function() {
     breakpoints: {
       // when window width is >= 320px
       320: {
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+      },
+
+      321: {
         slidesPerColumn: 1,
         slidesPerGroup: 1,
         slidesPerView: 1,
@@ -69,7 +107,30 @@ window.addEventListener('DOMContentLoaded', function() {
       prevEl: '.swiper-button-prev',
     },
 
-  
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true
+    },
+
+    preloadImages: false,
+  lazy: {
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+
+  zoom: {
+    maxRatio: 5,
+    minRatio: 1,
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
+  },
+
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
   })
 
   // Smooth transition
@@ -175,6 +236,7 @@ var swiperEvents = new Swiper('.swiper__events', {
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
   grabCursor: false,
+  observer: true,
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -194,7 +256,7 @@ var swiperEvents = new Swiper('.swiper__events', {
       slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 2,
-      grabCursor: false,
+      grabCursor: true,
     },
     
   },
@@ -202,18 +264,32 @@ var swiperEvents = new Swiper('.swiper__events', {
     el: '.swiper-pagination.pagination__events',
     clickable: 'true'
   },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true
+  },
   
   observer: true,  
   observeParents: true,
   callback: true,
 
-  // Disable preloading of all images
   preloadImages: false,
-  // Enable lazy loading
-  lazy: true
+  lazy: {
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
+  },
+
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
   
 });
-
 
 
 // Events
@@ -381,19 +457,21 @@ document.querySelector('.editions__btn-close').addEventListener('click', functio
 
 var swiperEditions = new Swiper('.swiper__editions', {
   grabCursor: true,
+  observer: true,
   breakpoints: {
     0: {
       slidesPerView: 2,
       slidesPerColumn: 4,
       slidesPerGroup: 2,
       grabCursor: false,
+      touchRatio: 0,
     },
 
     710: {
       slidesPerView: 2,
       slidesPerColumn: 1,
       slidesPerGroup: 2,
-      spaceBetween: 28,
+      spaceBetween: 38,
       grabCursor: true,
     },
 
@@ -401,8 +479,9 @@ var swiperEditions = new Swiper('.swiper__editions', {
       slidesPerView: 2,
       slidesPerColumn: 1,
       slidesPerGroup: 2,
-      spaceBetween: 12,
+      spaceBetween: 19,
       grabCursor: true,
+      
     },
 
     1350: {
@@ -415,10 +494,10 @@ var swiperEditions = new Swiper('.swiper__editions', {
   
     1919: {
       slidesPerView: 3,
-      slidesPerColumn: 1,
+      
       slidesPerGroup: 3,
-      spaceBetween: 49,
-      grabCursor: true
+      spaceBetween: -1600,
+      grabCursor: true,
     },
     
   },
@@ -436,10 +515,116 @@ var swiperEditions = new Swiper('.swiper__editions', {
     prevEl: '.swiper-button-prev__editions',
   },
 
-  // Disable preloading of all images
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true
+  },
+
   preloadImages: false,
-  // Enable lazy loading
-  lazy: true
+  lazy: {
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
+  },
+
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+
+  autoheight: true,
+  
+ 
+  
+});
+
+var swiperProjects = new Swiper('.swiper__projects-container', {
+  grabCursor: true,
+  observer: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 30,
+      grabCursor: true,
+    },
+
+     710: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      grabCursor: true,
+    },
+
+    958: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 18,
+      grabCursor: true,
+      
+    },
+
+    1025: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 10,
+      grabCursor: true,
+    },
+
+    1391: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 48,
+      grabCursor: true,
+    },
+  
+    1919: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 46,
+      grabCursor: true,
+    },
+    
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination.pagination__projects',
+    clickable: 'true',
+    type: 'fraction',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next__projects',
+    prevEl: '.swiper-button-prev__projects',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true
+  },
+
+  preloadImages: false,
+  lazy: {
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
+  },
+
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+
+  autoheight: true,
+  
  
   
 });
