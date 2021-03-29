@@ -56,13 +56,10 @@ new SimpleBar(document.getElementById('scroll-5'), {
   // Swiper 
 
   var mySwiper = new Swiper('.swiper__gallery', {
-    grabCursor: true,
-    slidesPerColumn: 2,
-    slidesPerGroup: 3,
-    slidesPerColumnFill: 'column-reverse',
-    spaceBetween: 30,
-    // loop: true,
-    observer: true,
+    slidesPerColumnFill: 'row',
+    watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  observer: true,
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
@@ -81,18 +78,37 @@ new SimpleBar(document.getElementById('scroll-5'), {
         spaceBetween: 26,
         grabCursor: true,
       },
-      // when window width is >= 710px
+
       710: {
         slidesPerColumn: 2,
         slidesPerGroup: 2,
         slidesPerView: 2,
+        spaceBetween: 34,
       },
-      // when window width is <= 1392px
+
+      769: {
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        slidesPerView: 2,
+        spaceBetween: 36,
+        slidesPerColumnFill: 'row-reverse',
+      },
+      
+      959: {
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        slidesPerView: 2,
+        spaceBetween: 35,
+        slidesPerColumnFill: 'row-reverse',
+      },
+
       1392: {
         slidesPerColumn: 2,
         slidesPerView: 3,
         slidesPerGroup: 3,
+        spaceBetween: 51,
       },
+      
     },
     // If we need pagination
     pagination: {
@@ -128,9 +144,6 @@ new SimpleBar(document.getElementById('scroll-5'), {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
   },
-
-  watchSlidesProgress: true,
-  watchSlidesVisibility: true,
   })
 
   // Smooth transition
@@ -165,6 +178,7 @@ $(document).ready(function(){
     // let tabItem = $('div.' + e.target.className)[0];
     $('.wrap').children().fadeOut(500, "linear");
     $(tabItem).fadeIn('slow');
+
    });
   });
 
@@ -175,16 +189,43 @@ $(document).ready(function(){
     $(this).addClass('tab__is-focused');
 });
 
+// Tabs + Accordion
+
+$('#first-tab').click(function() {  
+  $('.catalog__info').siblings().removeClass('catalog__info_is-active');
+  $('#frenchAccordeon').addClass('catalog__info_is-active');
+});
+
+$('#second-tab').click(function() {  
+  $('.catalog__info').siblings().removeClass('catalog__info_is-active');
+  $('#deutchAccordeon').addClass('catalog__info_is-active');
+});
+
+$('#third-tab').click(function() {  
+  $('.catalog__info').siblings().removeClass('catalog__info_is-active');
+  $('#italyAccordeon').addClass('catalog__info_is-active');
+});
+
+$('#fourth-tab').click(function() {  
+  $('.catalog__info').siblings().removeClass('catalog__info_is-active');
+  $('#russianAccordeon').addClass('catalog__info_is-active');
+});
+
+$('#fifth-tab').click(function() {  
+  $('.catalog__info').siblings().removeClass('catalog__info_is-active');
+  $('#belgiumAccordeon').addClass('catalog__info_is-active');
+});
+
 
   // Accordion
 
 $( function() {
-  $( "#accordion" ).accordion();
+  $( "#accordion").accordion();
 });
 
 
 $( ".selector" ).accordion({
-  active: 0 
+  active: 0
 });
 
 var collapsible = $( ".selector" ).accordion( "option", "collapsible");
@@ -205,6 +246,11 @@ $( ".selector" ).accordion( "option", "animate", 50 );
 })
 
 // catalog
+
+$('#fourth-tab').click(function() {  
+  $('#girlandayoBtn').addClass('catalog__btn_is-active');
+  $('#girlandayo').addClass('specification_is-active');
+});
 
 $('#girlandayoBtn').addClass('catalog__btn_is-active');
 
@@ -229,6 +275,152 @@ $('#vekketaBtn').click(function() {
   $('.catalog__discription').siblings().removeClass('specification_is-active');
   $('#vekketa').addClass('specification_is-active');
 });
+
+// italy  accordeon
+
+$('#third-tab').click(function() {  
+  $('#girlandayoBtn-2').addClass('catalog__btn_is-active');
+  $('#girlandayo-2').addClass('specification_is-active');
+  $('.catalog__block-2+.ui-accordion-content').addClass('catalog__block_is-active');
+});
+
+$('#accordion-2 .catalog__block').click(function() {  
+  $(this).siblings().removeClass('catalog__block_is-active');
+});
+
+$('#girlandayoBtn-2').addClass('catalog__btn_is-active');
+
+$('.catalog__btn-2').click(function() {  
+  $('.catalog__btn-2').not(this).removeClass('catalog__btn_is-active');
+  $(this).toggleClass('catalog__btn_is-active');
+});
+
+$('#girlandayo-2').addClass('specification_is-active');
+
+$('#girlandayoBtn-2').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#girlandayo-2').addClass('specification_is-active');
+});
+
+$('#verokioBtn-2').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#verokio-2').addClass('specification_is-active');
+});
+
+$('#vekketaBtn-2').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#vekketa-2').addClass('specification_is-active');
+});
+
+// french  accordeon
+
+$('#first-tab').click(function() {  
+  $('#girlandayoBtn-3').addClass('catalog__btn_is-active');
+  $('#girlandayo-3').addClass('specification_is-active');
+  $('.catalog__block-3+.ui-accordion-content').addClass('catalog__block_is-active');
+});
+
+$('#accordion-3 .catalog__block').click(function() {  
+  $(this).siblings().removeClass('catalog__block_is-active');
+});
+
+$('#girlandayoBtn-3').addClass('catalog__btn_is-active');
+
+$('.catalog__btn-3').click(function() {  
+  $('.catalog__btn-3').not(this).removeClass('catalog__btn_is-active');
+  $(this).toggleClass('catalog__btn_is-active');
+});
+
+$('#girlandayo-3').addClass('specification_is-active');
+
+$('#girlandayoBtn-3').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#girlandayo-3').addClass('specification_is-active');
+});
+
+$('#verokioBtn-3').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#verokio-3').addClass('specification_is-active');
+});
+
+$('#vekketaBtn-3').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#vekketa-3').addClass('specification_is-active');
+});
+
+// deutch accordeon
+
+$('#second-tab').click(function() {  
+  $('#girlandayoBtn-4').addClass('catalog__btn_is-active');
+  $('#girlandayo-4').addClass('specification_is-active');
+  $('.catalog__block-4+.ui-accordion-content').addClass('catalog__block_is-active');
+});
+
+$('#accordion-4 .catalog__block').click(function() {  
+  $(this).siblings().removeClass('catalog__block_is-active');
+});
+
+$('#girlandayoBtn-4').addClass('catalog__btn_is-active');
+
+$('.catalog__btn-4').click(function() {  
+  $('.catalog__btn-4').not(this).removeClass('catalog__btn_is-active');
+  $(this).toggleClass('catalog__btn_is-active');
+});
+
+$('#girlandayo-4').addClass('specification_is-active');
+
+$('#girlandayoBtn-4').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#girlandayo-4').addClass('specification_is-active');
+});
+
+$('#verokioBtn-4').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#verokio-4').addClass('specification_is-active');
+});
+
+$('#vekketaBtn-4').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#vekketa-4').addClass('specification_is-active');
+});
+
+// belgium accordeon
+
+$('#fifth-tab').click(function() {  
+  $('#girlandayoBtn-5').addClass('catalog__btn_is-active');
+  $('#girlandayo-5').addClass('specification_is-active');
+  $('.catalog__block-5+.ui-accordion-content').addClass('catalog__block_is-active');
+});
+
+$('#accordion-5 .catalog__block').click(function() {  
+  $(this).siblings().removeClass('catalog__block_is-active');
+});
+
+$('#girlandayoBtn-5').addClass('catalog__btn_is-active');
+
+$('.catalog__btn-5').click(function() {  
+  $('.catalog__btn-5').not(this).removeClass('catalog__btn_is-active');
+  $(this).toggleClass('catalog__btn_is-active');
+});
+
+$('#girlandayo-5').addClass('specification_is-active');
+
+$('#girlandayoBtn-5').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#girlandayo-5').addClass('specification_is-active');
+});
+
+$('#verokioBtn-5').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#verokio-5').addClass('specification_is-active');
+});
+
+$('#vekketaBtn-5').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#vekketa-5').addClass('specification_is-active');
+});
+
+// swiperEvents
 
 var swiperEvents = new Swiper('.swiper__events', {
   grabCursor: false,
@@ -548,21 +740,21 @@ var swiperProjects = new Swiper('.swiper__projects-container', {
     0: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 30,
+      spaceBetween: 25,
       grabCursor: true,
     },
 
      710: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 30,
+      spaceBetween: 34,
       grabCursor: true,
     },
 
     958: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 18,
+      spaceBetween: 50,
       grabCursor: true,
       
     },
@@ -570,7 +762,7 @@ var swiperProjects = new Swiper('.swiper__projects-container', {
     1025: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 10,
+      spaceBetween: 73,
       grabCursor: true,
     },
 
