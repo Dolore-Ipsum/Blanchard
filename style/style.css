@@ -196,7 +196,7 @@ button {
 }
 
 
-/* @keyframes resize {
+@keyframes resize {
   0% {
     transform: none;
   }
@@ -204,7 +204,7 @@ button {
   100% {
     transform: scale(1.08, 1.08);
   }
-} */
+}
 
 .container__header {
   display: -webkit-box;
@@ -2322,6 +2322,8 @@ input::-webkit-inner-spin-button {
   width: 384px;
   height: 128px;
   background: url('/img/6.projects/Freelans.png') center no-repeat;
+  transition: transform .5s .2s ease-in-out;
+  transform: scale(1, 1);
 }
 
 .projects__img-2::after {
@@ -2363,6 +2365,8 @@ input::-webkit-inner-spin-button {
   width: 384px;
   height: 128px;
   background: url('/img/6.projects/Freelans-color.png') center no-repeat;
+  transition: transform .5s .2s ease-in-out;
+  transform: scale(1.1, 1.1);
 }
 
 .projects__img-2:hover::after {
