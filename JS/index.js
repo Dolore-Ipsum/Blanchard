@@ -149,7 +149,7 @@ new SimpleBar(document.getElementById('scroll-5'), {
   // Smooth transition
 
   $(document).ready(function(){
-    $(document).on("click",".header__nav-link", function (event) {
+    $(document).on("click",".transition", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();
 
@@ -182,7 +182,7 @@ $(document).ready(function(){
    });
   });
 
-  $('.tab__item:nth-child(4)').addClass('tab__is-focused');
+  $('.tab__item:nth-child(3)').addClass('tab__is-focused');
 
   $('.tab__item').click(function() {  
     $(this).siblings().removeClass('tab__is-focused');
@@ -248,14 +248,61 @@ $( ".selector" ).accordion( "option", "animate", 50 );
 // catalog
 
 $('#fourth-tab').click(function() {  
-  $('#girlandayoBtn').addClass('catalog__btn_is-active');
-  $('#girlandayo').addClass('specification_is-active');
+  $('#rublevBtn').addClass('catalog__btn_is-active');
+  $('#rublev').addClass('specification_is-active');
+  $('.catalog__block-1+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
-$('#girlandayoBtn').addClass('catalog__btn_is-active');
+$('#accordion .catalog__block').click(function() {  
+  $(this).siblings().removeClass('catalog__block_is-active');
+});
+
+$('#fourth-tab').click(function() {  
+  $('#rublevBtn').addClass('catalog__btn_is-active');
+  $('#rublev').addClass('specification_is-active');
+});
+
+$('#rublevBtn').addClass('catalog__btn_is-active');
 
 $('.catalog__btn').click(function() {  
   $('.catalog__btn').not(this).removeClass('catalog__btn_is-active');
+  $(this).toggleClass('catalog__btn_is-active');
+});
+
+$('#rublev').addClass('specification_is-active');
+
+$('#rublevBtn').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#rublev').addClass('specification_is-active');
+});
+
+$('#cherniyBtn').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#cherniy').addClass('specification_is-active');
+});
+
+$('#prohorBtn').click(function() {  
+  $('.catalog__discription').siblings().removeClass('specification_is-active');
+  $('#prohor').addClass('specification_is-active');
+});
+
+// italy  accordeon
+
+$('#third-tab').click(function() {  
+  $('#girlandayoBtn').addClass('catalog__btn_is-active');
+  $('#girlandayo').addClass('specification_is-active');
+  $('.catalog__block-2+.ui-accordion-content').addClass('catalog__block_is-active');
+});
+
+$('#accordion-2 .catalog__block').click(function() {  
+  $(this).siblings().removeClass('catalog__block_is-active');
+});
+
+
+$('#girlandayoBtn').addClass('catalog__btn_is-active');
+
+$('.catalog__btn-2').click(function() {  
+  $('.catalog__btn-2').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
@@ -276,47 +323,11 @@ $('#vekketaBtn').click(function() {
   $('#vekketa').addClass('specification_is-active');
 });
 
-// italy  accordeon
-
-$('#third-tab').click(function() {  
-  $('#girlandayoBtn-2').addClass('catalog__btn_is-active');
-  $('#girlandayo-2').addClass('specification_is-active');
-  $('.catalog__block-2+.ui-accordion-content').addClass('catalog__block_is-active');
-});
-
-$('#accordion-2 .catalog__block').click(function() {  
-  $(this).siblings().removeClass('catalog__block_is-active');
-});
-
-$('#girlandayoBtn-2').addClass('catalog__btn_is-active');
-
-$('.catalog__btn-2').click(function() {  
-  $('.catalog__btn-2').not(this).removeClass('catalog__btn_is-active');
-  $(this).toggleClass('catalog__btn_is-active');
-});
-
-$('#girlandayo-2').addClass('specification_is-active');
-
-$('#girlandayoBtn-2').click(function() {  
-  $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#girlandayo-2').addClass('specification_is-active');
-});
-
-$('#verokioBtn-2').click(function() {  
-  $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#verokio-2').addClass('specification_is-active');
-});
-
-$('#vekketaBtn-2').click(function() {  
-  $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#vekketa-2').addClass('specification_is-active');
-});
-
 // french  accordeon
 
 $('#first-tab').click(function() {  
-  $('#girlandayoBtn-3').addClass('catalog__btn_is-active');
-  $('#girlandayo-3').addClass('specification_is-active');
+  $('#angerranBtn').addClass('catalog__btn_is-active');
+  $('#angerran').addClass('specification_is-active');
   $('.catalog__block-3+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
@@ -324,35 +335,35 @@ $('#accordion-3 .catalog__block').click(function() {
   $(this).siblings().removeClass('catalog__block_is-active');
 });
 
-$('#girlandayoBtn-3').addClass('catalog__btn_is-active');
+$('#angerranBtn').addClass('catalog__btn_is-active');
 
 $('.catalog__btn-3').click(function() {  
   $('.catalog__btn-3').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
-$('#girlandayo-3').addClass('specification_is-active');
+$('#angerran').addClass('specification_is-active');
 
-$('#girlandayoBtn-3').click(function() {  
+$('#angerranBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#girlandayo-3').addClass('specification_is-active');
+  $('#angerran').addClass('specification_is-active');
 });
 
-$('#verokioBtn-3').click(function() {  
+$('#ivernyBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#verokio-3').addClass('specification_is-active');
+  $('#iverny').addClass('specification_is-active');
 });
 
-$('#vekketaBtn-3').click(function() {  
+$('#eikBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#vekketa-3').addClass('specification_is-active');
+  $('#eik').addClass('specification_is-active');
 });
 
 // deutch accordeon
 
 $('#second-tab').click(function() {  
-  $('#girlandayoBtn-4').addClass('catalog__btn_is-active');
-  $('#girlandayo-4').addClass('specification_is-active');
+  $('#volgemutBtn').addClass('catalog__btn_is-active');
+  $('#volgemut').addClass('specification_is-active');
   $('.catalog__block-4+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
@@ -360,35 +371,35 @@ $('#accordion-4 .catalog__block').click(function() {
   $(this).siblings().removeClass('catalog__block_is-active');
 });
 
-$('#girlandayoBtn-4').addClass('catalog__btn_is-active');
+$('#volgemutBtn').addClass('catalog__btn_is-active');
 
 $('.catalog__btn-4').click(function() {  
   $('.catalog__btn-4').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
-$('#girlandayo-4').addClass('specification_is-active');
+$('#volgemut').addClass('specification_is-active');
 
-$('#girlandayoBtn-4').click(function() {  
+$('#volgemutBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#girlandayo-4').addClass('specification_is-active');
+  $('#volgemut').addClass('specification_is-active');
 });
 
-$('#verokioBtn-4').click(function() {  
+$('#bertramBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#verokio-4').addClass('specification_is-active');
+  $('#bertram').addClass('specification_is-active');
 });
 
-$('#vekketaBtn-4').click(function() {  
+$('#golbeinBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#vekketa-4').addClass('specification_is-active');
+  $('#golbein').addClass('specification_is-active');
 });
 
 // belgium accordeon
 
 $('#fifth-tab').click(function() {  
-  $('#girlandayoBtn-5').addClass('catalog__btn_is-active');
-  $('#girlandayo-5').addClass('specification_is-active');
+  $('#dareBtn').addClass('catalog__btn_is-active');
+  $('#dare').addClass('specification_is-active');
   $('.catalog__block-5+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
@@ -396,28 +407,28 @@ $('#accordion-5 .catalog__block').click(function() {
   $(this).siblings().removeClass('catalog__block_is-active');
 });
 
-$('#girlandayoBtn-5').addClass('catalog__btn_is-active');
+$('#dareBtn').addClass('catalog__btn_is-active');
 
 $('.catalog__btn-5').click(function() {  
   $('.catalog__btn-5').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
-$('#girlandayo-5').addClass('specification_is-active');
+$('#dare').addClass('specification_is-active');
 
-$('#girlandayoBtn-5').click(function() {  
+$('#dareBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#girlandayo-5').addClass('specification_is-active');
+  $('#dare').addClass('specification_is-active');
 });
 
-$('#verokioBtn-5').click(function() {  
+$('#vanEikBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#verokio-5').addClass('specification_is-active');
+  $('#vanEik').addClass('specification_is-active');
 });
 
-$('#vekketaBtn-5').click(function() {  
+$('#bruderlamBtn').click(function() {  
   $('.catalog__discription').siblings().removeClass('specification_is-active');
-  $('#vekketa-5').addClass('specification_is-active');
+  $('#bruderlam').addClass('specification_is-active');
 });
 
 // swiperEvents
@@ -816,9 +827,82 @@ var swiperProjects = new Swiper('.swiper__projects-container', {
   watchSlidesVisibility: true,
 
   autoheight: true,
-  
- 
-  
+
 });
+
+// Валидация форм
+
+new window.JustValidate('.contacts__callback-form');
+
+var selector = document.querySelector("input[type='tel']");
+
+var im = new Inputmask("+7 (999)-999-99-99");
+im.mask(selector);
+
+
+new JustValidate('.contacts__callback-form', {
+  rules: {
+    name: {
+      required: true,
+      minLength: 2,
+      maxLength: 10
+    },
+    tel: {
+      required: true,
+      function: (name, value) => {
+        const phone = selector.inputmask.unmaskedvalue()
+        return Number(phone) && phone.length === 10
+      }
+    },
+  },
+  messages: {
+    name: {
+      minLength: 'Поле должно содержать не менее двух символов',
+      required: 'Как вас зовут?'
+    },
+    tel: {
+      required: 'Укажите ваш телефон',
+      function: 'Номер введён неверно'
+    },
+    focusWrongField: true,
+  },
+});
+
+// Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.758542, 37.5988043,17],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 17
+        });
+
+                // Создание геообъекта с типом точка (метка).
+        // var myGeoObject = new ymaps.GeoObject({
+        //   geometry: {
+        //       type: "Point", // тип геометрии - точка
+        //       coordinates: [55.8, 37.8] // координаты точки
+        //   }
+        // });
+
+        var myPlacemark = new ymaps.Placemark([48.872197, 2.354224], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: '/img/mdi_location_on.png',
+          iconImageSize: [48, 48],
+          iconImageOffset: [-3, -42]
+      });
+
+        // Размещение геообъекта на карте.
+        // myMap.geoObjects.add(myGeoObject);
+        myMap.geoObjects.add(myPlacemark);
+            }
+
 
 });

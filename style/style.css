@@ -196,7 +196,7 @@ button {
 }
 
 
-@keyframes resize {
+/* @keyframes resize {
   0% {
     transform: none;
   }
@@ -204,7 +204,7 @@ button {
   100% {
     transform: scale(1.08, 1.08);
   }
-}
+} */
 
 .container__header {
   display: -webkit-box;
@@ -1171,6 +1171,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .catalog__info {
   display: none;
+  visibility: hidden;
 }
 
 .catalog__info_is-active {
@@ -1188,6 +1189,7 @@ input[type='search']::-webkit-search-results-decoration {
   -ms-flex-align: start;
   align-items: flex-start;
   margin-bottom: 94px;
+  visibility: visible;
 }
 
 
@@ -2400,6 +2402,14 @@ input::-webkit-inner-spin-button {
 .projects__img-9:hover::after {
   background: url('/img/6.projects/Esad-color.png') center no-repeat;
 }
+
+
+/* contacts */
+
+.container__contacts {
+  padding-top: 87px;
+  padding-left: 11px;
+  }
 
 
 /* hover */
