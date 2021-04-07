@@ -15,7 +15,15 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.header__list').classList.toggle('search-is-active')
   })
 
+  // Сброс ссылки
 
+  $(function() {
+    $('a').on('click', function(event) {
+      event.preventDefault();
+    });
+  });
+
+  
 // SimpleBar
 
 
@@ -60,6 +68,7 @@ new SimpleBar(document.getElementById('scroll-5'), {
     watchSlidesVisibility: true,
   watchSlidesProgress: true,
   observer: true,
+  resizeObserver: true,
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
@@ -291,7 +300,7 @@ $('#prohorBtn').click(function() {
 $('#third-tab').click(function() {  
   $('#girlandayoBtn').addClass('catalog__btn_is-active');
   $('#girlandayo').addClass('specification_is-active');
-  $('.catalog__block-2+.ui-accordion-content').addClass('catalog__block_is-active');
+  $('.catalog__block-4+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
 $('#accordion-2 .catalog__block').click(function() {  
@@ -773,21 +782,21 @@ var swiperProjects = new Swiper('.swiper__projects-container', {
     1025: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 73,
+      spaceBetween: 50,
       grabCursor: true,
     },
 
     1391: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 48,
+      spaceBetween: 52,
       grabCursor: true,
     },
   
     1919: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-      spaceBetween: 46,
+      spaceBetween: 53,
       grabCursor: true,
     },
     
@@ -878,24 +887,17 @@ new JustValidate('.contacts__callback-form', {
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [55.758542, 37.5988043,17],
+            center: [55.76060, 37.64550],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
-            zoom: 17
+            zoom: 14.489,
         });
 
-                // Создание геообъекта с типом точка (метка).
-        // var myGeoObject = new ymaps.GeoObject({
-        //   geometry: {
-        //       type: "Point", // тип геометрии - точка
-        //       coordinates: [55.8, 37.8] // координаты точки
-        //   }
-        // });
-
-        var myPlacemark = new ymaps.Placemark([48.872197, 2.354224], {}, {
+        
+        var myPlacemark = new ymaps.Placemark([55.756370, 37.600047], {}, {
           iconLayout: 'default#image',
-          iconImageHref: '/img/mdi_location_on.png',
-          iconImageSize: [48, 48],
+          iconImageHref: '/img/7.contacts/point.svg',
+          iconImageSize: [20, 20],
           iconImageOffset: [-3, -42]
       });
 
@@ -903,6 +905,5 @@ new JustValidate('.contacts__callback-form', {
         // myMap.geoObjects.add(myGeoObject);
         myMap.geoObjects.add(myPlacemark);
             }
-
 
 });
