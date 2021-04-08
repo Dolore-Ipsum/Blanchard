@@ -259,7 +259,7 @@ $( ".selector" ).accordion( "option", "animate", 50 );
 $('#fourth-tab').click(function() {  
   $('#rublevBtn').addClass('catalog__btn_is-active');
   $('#rublev').addClass('specification_is-active');
-  $('.catalog__block-1+.ui-accordion-content').addClass('catalog__block_is-active');
+  $('.catalog__block-russian+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
 $('#accordion .catalog__block').click(function() {  
@@ -273,8 +273,8 @@ $('#fourth-tab').click(function() {
 
 $('#rublevBtn').addClass('catalog__btn_is-active');
 
-$('.catalog__btn').click(function() {  
-  $('.catalog__btn').not(this).removeClass('catalog__btn_is-active');
+$('.catalog__btn-russian').click(function() {  
+  $('.catalog__btn-russian').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
@@ -300,18 +300,18 @@ $('#prohorBtn').click(function() {
 $('#third-tab').click(function() {  
   $('#girlandayoBtn').addClass('catalog__btn_is-active');
   $('#girlandayo').addClass('specification_is-active');
-  $('.catalog__block-4+.ui-accordion-content').addClass('catalog__block_is-active');
+  $('.catalog__block-italy+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
-$('#accordion-2 .catalog__block').click(function() {  
+$('#accordion-italy .catalog__block').click(function() {  
   $(this).siblings().removeClass('catalog__block_is-active');
 });
 
 
 $('#girlandayoBtn').addClass('catalog__btn_is-active');
 
-$('.catalog__btn-2').click(function() {  
-  $('.catalog__btn-2').not(this).removeClass('catalog__btn_is-active');
+$('.catalog__btn-italy').click(function() {  
+  $('.catalog__btn-italy').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
@@ -337,17 +337,17 @@ $('#vekketaBtn').click(function() {
 $('#first-tab').click(function() {  
   $('#angerranBtn').addClass('catalog__btn_is-active');
   $('#angerran').addClass('specification_is-active');
-  $('.catalog__block-3+.ui-accordion-content').addClass('catalog__block_is-active');
+  $('.catalog__block-french+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
-$('#accordion-3 .catalog__block').click(function() {  
+$('#accordion-french .catalog__block').click(function() {  
   $(this).siblings().removeClass('catalog__block_is-active');
 });
 
 $('#angerranBtn').addClass('catalog__btn_is-active');
 
-$('.catalog__btn-3').click(function() {  
-  $('.catalog__btn-3').not(this).removeClass('catalog__btn_is-active');
+$('.catalog__btn-french').click(function() {  
+  $('.catalog__btn-french').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
@@ -373,17 +373,17 @@ $('#eikBtn').click(function() {
 $('#second-tab').click(function() {  
   $('#volgemutBtn').addClass('catalog__btn_is-active');
   $('#volgemut').addClass('specification_is-active');
-  $('.catalog__block-4+.ui-accordion-content').addClass('catalog__block_is-active');
+  $('.catalog__block-deutch+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
-$('#accordion-4 .catalog__block').click(function() {  
+$('#accordion-deutch .catalog__block').click(function() {  
   $(this).siblings().removeClass('catalog__block_is-active');
 });
 
 $('#volgemutBtn').addClass('catalog__btn_is-active');
 
-$('.catalog__btn-4').click(function() {  
-  $('.catalog__btn-4').not(this).removeClass('catalog__btn_is-active');
+$('.catalog__btn-deutch').click(function() {  
+  $('.catalog__btn-deutch').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
@@ -409,17 +409,17 @@ $('#golbeinBtn').click(function() {
 $('#fifth-tab').click(function() {  
   $('#dareBtn').addClass('catalog__btn_is-active');
   $('#dare').addClass('specification_is-active');
-  $('.catalog__block-5+.ui-accordion-content').addClass('catalog__block_is-active');
+  $('.catalog__block-belgium+.ui-accordion-content').addClass('catalog__block_is-active');
 });
 
-$('#accordion-5 .catalog__block').click(function() {  
+$('#accordion-belgium .catalog__block').click(function() {  
   $(this).siblings().removeClass('catalog__block_is-active');
 });
 
 $('#dareBtn').addClass('catalog__btn_is-active');
 
-$('.catalog__btn-5').click(function() {  
-  $('.catalog__btn-5').not(this).removeClass('catalog__btn_is-active');
+$('.catalog__btn-belgium').click(function() {  
+  $('.catalog__btn-belgium').not(this).removeClass('catalog__btn_is-active');
   $(this).toggleClass('catalog__btn_is-active');
 });
 
@@ -887,23 +887,28 @@ new JustValidate('.contacts__callback-form', {
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [55.76060, 37.64550],
+            center: [55.76060, 37.67450],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 14.489,
+            
         });
 
         
-        var myPlacemark = new ymaps.Placemark([55.756370, 37.600047], {}, {
+        var myPlacemark = new ymaps.Placemark([55.756370, 37.600047], {balloonContent: 'Леонтьевский переулок, дом 5, строение 1'}, {
           iconLayout: 'default#image',
           iconImageHref: '/img/7.contacts/point.svg',
           iconImageSize: [20, 20],
-          iconImageOffset: [-3, -42]
+          iconImageOffset: [-3, -42],
+          
+          balloonPane: 'outerBalloon'
       });
 
         // Размещение геообъекта на карте.
         // myMap.geoObjects.add(myGeoObject);
         myMap.geoObjects.add(myPlacemark);
             }
+
+            myMap.controls.get('trafficControl').options.set('size', 'large');
 
 });
