@@ -528,11 +528,11 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  document.querySelector('#spoiler1').addEventListener('click', function () {
+  document.querySelector('#editionsSpoiler').addEventListener('click', function () {
     document.querySelector('.features__spoiler').classList.toggle('spoiler_is-active')
   })
 
-  document.querySelector('#spoiler1').addEventListener('click', function () {
+  document.querySelector('#editionsSpoiler').addEventListener('click', function () {
     document.querySelector('.editions').classList.toggle('editions__height-is-active')
   })
 
@@ -652,7 +652,7 @@ window.addEventListener('DOMContentLoaded', function () {
       .addClass("custom-checkbox_is-notactive")
   });
 
-  $('#spoiler1').click(function () {
+  $('#editionsSpoiler').click(function () {
     $('.custom-checkbox').not(this).removeClass('custom-checkbox_is-notactive');
     $(this).toggleClass('custom-checkbox_is-notactive');
   });

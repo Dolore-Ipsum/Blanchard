@@ -4584,7 +4584,7 @@ input::-webkit-inner-spin-button {
 
   .check:hover+span::before,
   .check+span::before {
-    top: -50%;
+    top: -43%;
     left: 19%;
   }
 
@@ -5639,6 +5639,10 @@ input::-webkit-inner-spin-button {
     min-height: 194px;
   }
 
+  .cards__slide:nth-child(2) .cards__info {
+    margin-bottom: -8px;
+}
+
   .cards__slide:nth-child(3) .cards__text {
     padding-left: 28px;
   }
@@ -5842,6 +5846,10 @@ input::-webkit-inner-spin-button {
     margin-right: 0;
   }
 
+  .editions__label {
+    padding-right: 86%;
+  }
+
   .features__spoiler::after {
     content: '';
     position: absolute;
@@ -5860,6 +5868,7 @@ input::-webkit-inner-spin-button {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+    z-index: -1;
   }
 
   /* Открытый спойлер */
@@ -6525,6 +6534,11 @@ input::-webkit-inner-spin-button {
   .editions__features {
     margin-bottom: 6px;
   }
+
+  .check:hover+span::before, .check+span::before {
+    top: -42%;
+    left: 21%;
+}
 
   .projects__container {
     padding-top: 6px;
