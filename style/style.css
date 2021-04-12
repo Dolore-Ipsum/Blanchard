@@ -5848,6 +5848,7 @@ input::-webkit-inner-spin-button {
 
   .editions__label {
     padding-right: 86%;
+    cursor: pointer;
   }
 
   .features__spoiler::after {
