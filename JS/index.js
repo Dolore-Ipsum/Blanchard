@@ -51,7 +51,6 @@ window.addEventListener('DOMContentLoaded', function () {
     scrollbarMaxSize: 35
   });
 
-
   // Select gallery
 
   const element = document.querySelector('#filter');
@@ -75,7 +74,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerColumn: 1,
         slidesPerGroup: 1,
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 33,
         grabCursor: true,
       },
 
@@ -181,8 +180,8 @@ window.addEventListener('DOMContentLoaded', function () {
     $('.tab__btn').click(function () {
       $(".tab").removeClass('tab__active');
       $(".tab[data-id='" + $(this).attr('data-id') + "']").addClass("tab__active");
-      $('.tab__btn').removeClass('active__btn');
-      $(this).parent().find('.tab__btn').addClass('active__btn');
+      // $('.tab__btn').removeClass('active__btn');
+      // $(this).parent().find('.tab__btn').addClass('active__btn');
 
       $('.tab__list').on('click', function (e) {
         // let tabItem = $('div.' + e.target.className)[0];
@@ -232,26 +231,29 @@ window.addEventListener('DOMContentLoaded', function () {
     $(function () {
       $("#accordion").accordion();
     });
-
+    $(".catalog__table").fadeIn();
 
     $(".selector").accordion({
-      active: 0
+      collapsible: true,
     });
 
+    // Getter
     var collapsible = $(".selector").accordion("option", "collapsible");
 
     // Setter
     $(".selector").accordion("option", "collapsible", true);
 
+
     $(".selector").accordion({
-      animate: 50
+      animate: 250
     });
 
     // Getter
-    var animate = $(".selector").accordion("option", "animate");
+    var animate = $(".selector").accordion("option", "animate", 250);
 
     // Setter
-    $(".selector").accordion("option", "animate", 50);
+    $(".selector").accordion("option", "animate", 250);
+
 
   })
 
@@ -446,12 +448,19 @@ window.addEventListener('DOMContentLoaded', function () {
     grabCursor: false,
     observer: true,
     breakpoints: {
-      320: {
+      0: {
         slidesPerView: 1,
         slidesPerColumn: 1,
         slidesPerGroup: 1,
         grabCursor: true,
         spaceBetween: 25,
+      },
+      321: {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        grabCursor: true,
+        spaceBetween: 23,
       },
       326: {
         slidesPerView: 1,
@@ -464,7 +473,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 2,
-        grabCursor: true,
+        grabCursor: false,
       },
 
     },
@@ -767,18 +776,10 @@ window.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
       },
 
-      958: {
+      959: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 50,
-        grabCursor: true,
-
-      },
-
-      1025: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 50,
+        spaceBetween: 52,
         grabCursor: true,
       },
 
@@ -899,32 +900,38 @@ window.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
 
-    var myPlacemark = new ymaps.Placemark([55.756370, 37.600047], {
-      balloonContent: 'Леонтьевский переулок, дом 5, строение 1'
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '/img/7.contacts/point.svg',
-      iconImageSize: [20, 20],
-      iconImageOffset: [-3, -42],
+    function init() {
 
-      balloonPane: 'outerBalloon'
-    });
 
-    function setBounds() {
-      // Bounds - границы видимой области карты.
-      // Задаются в географических координатах самой юго-восточной и самой северо-западной точек видимой области.
-      myMap.setBounds([
-        [55.65060, 37.30050],
-        [55.85060, 37.35050]
-      ]);
+      var myPlacemark = new ymaps.Placemark([55.756370, 37.600047], {
+        balloonContent: 'Леонтьевский переулок, дом 5, строение 1'
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/7.contacts/point.svg',
+        iconImageSize: [20, 20],
+        iconImageOffset: [-3, -42],
+
+        balloonPane: 'outerBalloon'
+      });
+
+      function setBounds() {
+        // Bounds - границы видимой области карты.
+        // Задаются в географических координатах самой юго-восточной и самой северо-западной точек видимой области.
+        myMap.setBounds([
+          [55.65060, 37.30050],
+          [55.85060, 37.35050]
+        ]);
+      }
+
+      // Размещение геообъекта на карте.
+      // myMap.geoObjects.add(myGeoObject);
+      myMap.geoObjects.add(myPlacemark);
     }
 
-    // Размещение геообъекта на карте.
-    // myMap.geoObjects.add(myGeoObject);
-    myMap.geoObjects.add(myPlacemark);
+    myMap.controls.get('trafficControl').options.set('size', 'large');
   }
-
-  myMap.controls.get('trafficControl').options.set('size', 'large');
-
 });
