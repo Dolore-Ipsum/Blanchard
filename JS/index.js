@@ -178,8 +178,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
   $(document).ready(function () {
     $('.tab__btn').click(function () {
-      $(".tab").removeClass('tab__active');
-      $(".tab[data-id='" + $(this).attr('data-id') + "']").addClass("tab__active");
+      $(".tab__block").removeClass('tab__block_is-active');
+      $(".tab__block[data-id='" + $(this).attr('data-id') + "']").addClass("tab__block_is-active");
       // $('.tab__btn').removeClass('active__btn');
       // $(this).parent().find('.tab__btn').addClass('active__btn');
 
@@ -235,18 +235,21 @@ window.addEventListener('DOMContentLoaded', function () {
 
     $(".selector").accordion({
       collapsible: true,
+      animate: 250,
+      heightStyle: "fill",
     });
+
+    // Getter
+var heightStyle = $( ".selector" ).accordion( "option", "heightStyle" );
+ 
+// Setter
+$( ".selector" ).accordion( "option", "heightStyle", "fill" );
 
     // Getter
     var collapsible = $(".selector").accordion("option", "collapsible");
 
     // Setter
     $(".selector").accordion("option", "collapsible", true);
-
-
-    $(".selector").accordion({
-      animate: 250
-    });
 
     // Getter
     var animate = $(".selector").accordion("option", "animate", 250);
