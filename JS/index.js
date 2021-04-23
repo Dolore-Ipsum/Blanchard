@@ -237,6 +237,7 @@ window.addEventListener('DOMContentLoaded', function () {
       collapsible: true,
       animate: 250,
       heightStyle: "fill",
+      autoHeight: false
     });
 
     // Getter
@@ -257,6 +258,9 @@ $( ".selector" ).accordion( "option", "heightStyle", "fill" );
     // Setter
     $(".selector").accordion("option", "animate", 250);
 
+    $( ".selector" ).accordion( "refresh" );
+
+    var widget = $( ".selector" ).accordion( "widget" );
 
   })
 
@@ -525,7 +529,7 @@ $( ".selector" ).accordion( "option", "heightStyle", "fill" );
   })
 
   document.querySelector('#eventsBtn').addEventListener('click', function () {
-    document.querySelector('#eventsBtn').classList.add('tab')
+    document.querySelector('#eventsBtn').classList.add('none')
   })
 
   // editions
