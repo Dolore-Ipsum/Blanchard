@@ -16,11 +16,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Сброс ссылки
 
-  $(function () {
-    $('a').on('click', function (event) {
-      event.preventDefault();
-    });
-  });
+  // $(function () {
+  //   $('a').on('click', function (event) {
+  //     event.preventDefault();
+  //   });
+  // });
 
 
   // SimpleBar
@@ -231,20 +231,10 @@ window.addEventListener('DOMContentLoaded', function () {
     $(function () {
       $("#accordion").accordion();
     });
-    $(".catalog__table").fadeIn();
 
     $(".selector").accordion({
       collapsible: true,
-      animate: 250,
-      heightStyle: "fill",
-      autoHeight: false
     });
-
-    // Getter
-var heightStyle = $( ".selector" ).accordion( "option", "heightStyle" );
- 
-// Setter
-$( ".selector" ).accordion( "option", "heightStyle", "fill" );
 
     // Getter
     var collapsible = $(".selector").accordion("option", "collapsible");
@@ -252,15 +242,6 @@ $( ".selector" ).accordion( "option", "heightStyle", "fill" );
     // Setter
     $(".selector").accordion("option", "collapsible", true);
 
-    // Getter
-    var animate = $(".selector").accordion("option", "animate", 250);
-
-    // Setter
-    $(".selector").accordion("option", "animate", 250);
-
-    $( ".selector" ).accordion( "refresh" );
-
-    var widget = $( ".selector" ).accordion( "widget" );
 
   })
 
