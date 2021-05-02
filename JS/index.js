@@ -14,41 +14,13 @@ window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.header__list').classList.toggle('search-is-active')
   })
 
-  // Сброс ссылки
-
-  // $(function () {
-  //   $('a').on('click', function (event) {
-  //     event.preventDefault();
-  //   });
-  // });
-
-
   // SimpleBar
 
-
-  new SimpleBar(document.getElementById('scroll'), {
-    autoHide: false,
-    scrollbarMaxSize: 35
-  });
-
-  new SimpleBar(document.getElementById('scroll-2'), {
-    autoHide: false,
-    scrollbarMaxSize: 35
-  });
-
-  new SimpleBar(document.getElementById('scroll-3'), {
-    autoHide: false,
-    scrollbarMaxSize: 35
-  });
-
-  new SimpleBar(document.getElementById('scroll-4'), {
-    autoHide: false,
-    scrollbarMaxSize: 35
-  });
-
-  new SimpleBar(document.getElementById('scroll-5'), {
-    autoHide: false,
-    scrollbarMaxSize: 35
+  $('.header__list-scroll').each(function () {
+    new SimpleBar($(this)[0], {
+      autoHide: false,
+      scrollbarMaxSize: 35
+    });
   });
 
   // Select gallery
@@ -175,255 +147,101 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Tabs
 
+  document.querySelectorAll('.tab__btn').forEach(function (tabsBtn) {
+    tabsBtn.addEventListener('click', function (event) {
+      const path = event.currentTarget.dataset.path
 
-  $(document).ready(function () {
-    $('.tab__btn').click(function () {
-      $(".tab__block").removeClass('tab__block_is-active');
-      $(".tab__block[data-id='" + $(this).attr('data-id') + "']").addClass("tab__block_is-active");
-      // $('.tab__btn').removeClass('active__btn');
-      // $(this).parent().find('.tab__btn').addClass('active__btn');
-
-      $('.tab__list').on('click', function (e) {
-        // let tabItem = $('div.' + e.target.className)[0];
-        $('.wrap').children().fadeOut(500, "linear");
-        $(tabItem).fadeIn('slow');
-
+      document.querySelectorAll('.tab__block').forEach(function (tabContent) {
+        tabContent.classList.remove('tab__block_is-active')
       });
+      document.querySelector(`[data-target="${path}"]`).classList.add('tab__block_is-active')
     });
-
-    $('.tab__item:nth-child(3)').addClass('tab__is-focused');
-
-    $('.tab__item').click(function () {
-      $(this).siblings().removeClass('tab__is-focused');
-      $(this).addClass('tab__is-focused');
-    });
-
-    // Tabs + Accordion
-
-    $('.tab__item:first-child').click(function () {
-      $('.catalog__info').siblings().removeClass('catalog__info_is-active');
-      $('#frenchAccordeon').addClass('catalog__info_is-active');
-    });
-
-    $('.tab__item:nth-child(2)').click(function () {
-      $('.catalog__info').siblings().removeClass('catalog__info_is-active');
-      $('#deutchAccordeon').addClass('catalog__info_is-active');
-    });
-
-    $('.tab__item:nth-child(3)').click(function () {
-      $('.catalog__info').siblings().removeClass('catalog__info_is-active');
-      $('#italyAccordeon').addClass('catalog__info_is-active');
-    });
-
-    $('.tab__item:nth-child(4)').click(function () {
-      $('.catalog__info').siblings().removeClass('catalog__info_is-active');
-      $('#russianAccordeon').addClass('catalog__info_is-active');
-    });
-
-    $('.tab__item:last-child').click(function () {
-      $('.catalog__info').siblings().removeClass('catalog__info_is-active');
-      $('#belgiumAccordeon').addClass('catalog__info_is-active');
-    });
-
-
-    // Accordion
-
-    $(function () {
-      $("#accordion").accordion();
-    });
-
-    $(".selector").accordion({
-      collapsible: true,
-    });
-
-    // Getter
-    var collapsible = $(".selector").accordion("option", "collapsible");
-
-    // Setter
-    $(".selector").accordion("option", "collapsible", true);
-
-
-  })
-
-  // catalog
-
-  $('.tab__item:nth-child(4)').click(function () {
-    $('#rublevBtn').addClass('catalog__btn_is-active');
-    $('#rublev').addClass('specification_is-active');
-    $('.catalog__block-russian+.ui-accordion-content').addClass('catalog__block_is-active');
   });
 
-  $('#accordion .catalog__block').click(function () {
-    $(this).siblings().removeClass('catalog__block_is-active');
+  // Accordion is active
+
+  $('.tab__item').click(function () {
+    $('.catalog__info').siblings().removeClass('catalog__info_is-active');
+    $(this).siblings().removeClass('tab__is-focused');
+    $(this).addClass('tab__is-focused');
   });
 
-  $('#rublevBtn').addClass('catalog__btn_is-active');
-
-  $('.catalog__btn-russian').click(function () {
-    $('.catalog__btn-russian').not(this).removeClass('catalog__btn_is-active');
-    $(this).toggleClass('catalog__btn_is-active');
-  });
-
-  $('#rublev').addClass('specification_is-active');
-
-  $('#rublevBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#rublev').addClass('specification_is-active');
-  });
-
-  $('#cherniyBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#cherniy').addClass('specification_is-active');
-  });
-
-  $('#prohorBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#prohor').addClass('specification_is-active');
-  });
-
-  // italy  accordeon
-
-  $('.tab__item:nth-child(3)').click(function () {
-    $('#girlandayoBtn').addClass('catalog__btn_is-active');
-    $('#girlandayo').addClass('specification_is-active');
-    $('.catalog__block-italy+.ui-accordion-content').addClass('catalog__block_is-active');
-  });
-
-  $('#accordion-italy .catalog__block').click(function () {
-    $(this).siblings().removeClass('catalog__block_is-active');
-  });
-
-
-  $('#girlandayoBtn').addClass('catalog__btn_is-active');
-
-  $('.catalog__btn-italy').click(function () {
-    $('.catalog__btn-italy').not(this).removeClass('catalog__btn_is-active');
-    $(this).toggleClass('catalog__btn_is-active');
-  });
-
-  $('#girlandayo').addClass('specification_is-active');
-
-  $('#girlandayoBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#girlandayo').addClass('specification_is-active');
-  });
-
-  $('#verokioBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#verokio').addClass('specification_is-active');
-  });
-
-  $('#vekketaBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#vekketa').addClass('specification_is-active');
-  });
-
-  // french  accordeon
+  // Tabs + Accordion
 
   $('.tab__item:first-child').click(function () {
+    $('#frenchAccordeon').addClass('catalog__info_is-active');
     $('#angerranBtn').addClass('catalog__btn_is-active');
     $('#angerran').addClass('specification_is-active');
     $('.catalog__block-french+.ui-accordion-content').addClass('catalog__block_is-active');
   });
 
-  $('#accordion-french .catalog__block').click(function () {
-    $(this).siblings().removeClass('catalog__block_is-active');
-  });
-
-  $('#angerranBtn').addClass('catalog__btn_is-active');
-
-  $('.catalog__btn-french').click(function () {
-    $('.catalog__btn-french').not(this).removeClass('catalog__btn_is-active');
-    $(this).toggleClass('catalog__btn_is-active');
-  });
-
-  $('#angerran').addClass('specification_is-active');
-
-  $('#angerranBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#angerran').addClass('specification_is-active');
-  });
-
-  $('#ivernyBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#iverny').addClass('specification_is-active');
-  });
-
-  $('#eikBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#eik').addClass('specification_is-active');
-  });
-
-  // deutch accordeon
-
   $('.tab__item:nth-child(2)').click(function () {
+    $('#deutchAccordeon').addClass('catalog__info_is-active');
     $('#volgemutBtn').addClass('catalog__btn_is-active');
     $('#volgemut').addClass('specification_is-active');
     $('.catalog__block-deutch+.ui-accordion-content').addClass('catalog__block_is-active');
   });
 
-  $('#accordion-deutch .catalog__block').click(function () {
-    $(this).siblings().removeClass('catalog__block_is-active');
+  $('.tab__item:nth-child(3)').click(function () {
+    $('#italyAccordeon').addClass('catalog__info_is-active');
+    $('#girlandayoBtn').addClass('catalog__btn_is-active');
+    $('#girlandayo').addClass('specification_is-active');
+    $('.catalog__block-italy+.ui-accordion-content').addClass('catalog__block_is-active');
   });
 
-  $('#volgemutBtn').addClass('catalog__btn_is-active');
-
-  $('.catalog__btn-deutch').click(function () {
-    $('.catalog__btn-deutch').not(this).removeClass('catalog__btn_is-active');
-    $(this).toggleClass('catalog__btn_is-active');
+  $('.tab__item:nth-child(4)').click(function () {
+    $('#russianAccordeon').addClass('catalog__info_is-active');
+    $('#rublevBtn').addClass('catalog__btn_is-active');
+    $('#rublev').addClass('specification_is-active');
+    $('.catalog__block-russian+.ui-accordion-content').addClass('catalog__block_is-active');
   });
-
-  $('#volgemut').addClass('specification_is-active');
-
-  $('#volgemutBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#volgemut').addClass('specification_is-active');
-  });
-
-  $('#bertramBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#bertram').addClass('specification_is-active');
-  });
-
-  $('#golbeinBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#golbein').addClass('specification_is-active');
-  });
-
-  // belgium accordeon
 
   $('.tab__item:last-child').click(function () {
     $('#dareBtn').addClass('catalog__btn_is-active');
     $('#dare').addClass('specification_is-active');
     $('.catalog__block-belgium+.ui-accordion-content').addClass('catalog__block_is-active');
+    $('#belgiumAccordeon').addClass('catalog__info_is-active');
   });
 
-  $('#accordion-belgium .catalog__block').click(function () {
-    $(this).siblings().removeClass('catalog__block_is-active');
+
+  // Accordion
+
+  $(function () {
+    $("#accordion").accordion();
   });
 
-  $('#dareBtn').addClass('catalog__btn_is-active');
+  $(".selector").accordion({
+    collapsible: true,
+    heightStyle: "content",
+  });
 
-  $('.catalog__btn-belgium').click(function () {
-    $('.catalog__btn-belgium').not(this).removeClass('catalog__btn_is-active');
+  // Getter
+  var collapsible = $(".selector").accordion("option", "collapsible");
+
+  // Setter
+  $(".selector").accordion("option", "collapsible", true);
+
+
+  // catalog-function
+
+  $('#rublevBtn, #girlandayoBtn, #angerranBtn, #volgemutBtn, #dareBtn').addClass('catalog__btn_is-active');
+
+  $('#rublev, #girlandayo, #angerran, #volgemut, #dare').addClass('specification_is-active');
+
+  document.querySelectorAll('.catalog__btn').forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      const path = event.currentTarget.dataset.path
+
+      document.querySelectorAll('.catalog__discription').forEach(function (content) {
+        content.classList.remove('specification_is-active')
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add('specification_is-active')
+    });
+  });
+
+  $('.catalog__btn').click(function () {
+    $('.catalog__btn').not(this).removeClass('catalog__btn_is-active');
     $(this).toggleClass('catalog__btn_is-active');
-  });
-
-  $('#dare').addClass('specification_is-active');
-
-  $('#dareBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#dare').addClass('specification_is-active');
-  });
-
-  $('#vanEikBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#vanEik').addClass('specification_is-active');
-  });
-
-  $('#bruderlamBtn').click(function () {
-    $('.catalog__discription').siblings().removeClass('specification_is-active');
-    $('#bruderlam').addClass('specification_is-active');
   });
 
   // swiperEvents
@@ -502,15 +320,9 @@ window.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#eventsBtn').addEventListener('click', function () {
     document.querySelectorAll('.cards__block_is-active').forEach(function (el) {
       el.classList.add('cards_is-active')
+      document.querySelector('.cards__container').classList.add('events_is-active')
+      document.querySelector('#eventsBtn').classList.add('none')
     })
-  })
-
-  document.querySelector('#eventsBtn').addEventListener('click', function () {
-    document.querySelector('.cards__container').classList.add('events_is-active')
-  })
-
-  document.querySelector('#eventsBtn').addEventListener('click', function () {
-    document.querySelector('#eventsBtn').classList.add('none')
   })
 
   // editions
@@ -525,140 +337,28 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  document.querySelector('#editionsSpoiler').addEventListener('click', function () {
-    document.querySelector('.features__spoiler').classList.toggle('spoiler_is-active')
-  })
 
   document.querySelector('#editionsSpoiler').addEventListener('click', function () {
+    document.querySelector('.features__spoiler').classList.toggle('spoiler_is-active')
     document.querySelector('.editions').classList.toggle('editions__height-is-active')
   })
 
+  // checkbox
 
-  $(".bestsellers").on("click", function () {
-    $(".bestsellers")
-      .addClass("custom-checkbox_is-active");
-  });
 
-  $(".art").on("click", function () {
-    $(".art")
-      .addClass("custom-checkbox_is-active");
-  });
+  $('.checkbox').on('click',function(){
+    $(this).addClass('custom-checkbox_is-active');
+});
 
-  $(".archi").on("click", function () {
-    $(".archi")
-      .addClass("custom-checkbox_is-active");
-  });
 
-  $(".fashion").on("click", function () {
-    $(".fashion")
-      .addClass("custom-checkbox_is-active");
-  });
+document.querySelectorAll('.editions__btn-close').forEach(function(btn) {
+  btn.addEventListener('click', function(event) {
+    const path = event.currentTarget.dataset.path
 
-  $(".kids").on("click", function () {
-    $(".kids")
-      .addClass("custom-checkbox_is-active");
-  });
+  document.querySelector(`[data-target="${path}"]`).classList.add('custom-checkbox_is-notactive') 
+});
+});
 
-  $(".literature").on("click", function () {
-    $(".literature")
-      .addClass("custom-checkbox_is-active");
-  });
-
-  $(".publish").on("click", function () {
-    $(".publish")
-      .addClass("custom-checkbox_is-active");
-  });
-
-  $(".trip").on("click", function () {
-    $(".trip")
-      .addClass("custom-checkbox_is-active");
-  });
-
-  $(".philosophy").on("click", function () {
-    $(".philosophy")
-      .addClass("custom-checkbox_is-active");
-  });
-
-  $(".learning").on("click", function () {
-    $(".learning")
-      .addClass("custom-checkbox_is-active");
-  });
-
-  $(".periodical").on("click", function () {
-    $(".periodical")
-      .addClass("custom-checkbox_is-active");
-  });
-
-  $(".btn-bestsellers").on("click", function () {
-    $(".bestsellers")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-art").on("click", function () {
-    $(".art")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-archi").on("click", function () {
-    $(".archi")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-disign").on("click", function () {
-    $(".disign")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-fashion").on("click", function () {
-    $(".fashion")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-kids").on("click", function () {
-    $(".kids")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-literature").on("click", function () {
-    $(".literature")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-publish").on("click", function () {
-    $(".publish")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-trip").on("click", function () {
-    $(".trip")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-philosophy").on("click", function () {
-    $(".philosophy")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-learning").on("click", function () {
-    $(".learning")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $(".btn-periodical").on("click", function () {
-    $(".periodical")
-      .addClass("custom-checkbox_is-notactive")
-  });
-
-  $('#editionsSpoiler').click(function () {
-    $('.custom-checkbox').not(this).removeClass('custom-checkbox_is-notactive');
-    $(this).toggleClass('custom-checkbox_is-notactive');
-  });
-
-  document.querySelector('.editions__btn-close').addEventListener('click', function () {
-    document.querySelectorAll('.custom-checkbox').forEach(function (elbtn) {
-      elbtn.classList.remove('custom-checkbox_is-active')
-    })
-  })
 
   var swiperEditions = new Swiper('.editions__swiper-container', {
     grabCursor: true,
@@ -741,8 +441,6 @@ window.addEventListener('DOMContentLoaded', function () {
     watchSlidesVisibility: true,
 
     autoheight: true,
-
-
 
   });
 
