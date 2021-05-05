@@ -158,75 +158,14 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Accordion is active
+  // Accordion buttons
 
-  $('.tab__item').click(function () {
-    $('.catalog__info').siblings().removeClass('catalog__info_is-active');
-    $(this).siblings().removeClass('tab__is-focused');
-    $(this).addClass('tab__is-focused');
+  $('.catalog__btn_active').addClass('btn_is-active');
+
+  $('.catalog__btn').click(function () {
+    $('.catalog__btn').not(this).removeClass('btn_is-active');
+    $(this).toggleClass('btn_is-active');
   });
-
-  // Tabs + Accordion
-
-  $('.tab__item:first-child').click(function () {
-    $('#frenchAccordeon').addClass('catalog__info_is-active');
-    $('#angerranBtn').addClass('catalog__btn_is-active');
-    $('#angerran').addClass('specification_is-active');
-    $('.catalog__block-french+.ui-accordion-content').addClass('catalog__block_is-active');
-  });
-
-  $('.tab__item:nth-child(2)').click(function () {
-    $('#deutchAccordeon').addClass('catalog__info_is-active');
-    $('#volgemutBtn').addClass('catalog__btn_is-active');
-    $('#volgemut').addClass('specification_is-active');
-    $('.catalog__block-deutch+.ui-accordion-content').addClass('catalog__block_is-active');
-  });
-
-  $('.tab__item:nth-child(3)').click(function () {
-    $('#italyAccordeon').addClass('catalog__info_is-active');
-    $('#girlandayoBtn').addClass('catalog__btn_is-active');
-    $('#girlandayo').addClass('specification_is-active');
-    $('.catalog__block-italy+.ui-accordion-content').addClass('catalog__block_is-active');
-  });
-
-  $('.tab__item:nth-child(4)').click(function () {
-    $('#russianAccordeon').addClass('catalog__info_is-active');
-    $('#rublevBtn').addClass('catalog__btn_is-active');
-    $('#rublev').addClass('specification_is-active');
-    $('.catalog__block-russian+.ui-accordion-content').addClass('catalog__block_is-active');
-  });
-
-  $('.tab__item:last-child').click(function () {
-    $('#dareBtn').addClass('catalog__btn_is-active');
-    $('#dare').addClass('specification_is-active');
-    $('.catalog__block-belgium+.ui-accordion-content').addClass('catalog__block_is-active');
-    $('#belgiumAccordeon').addClass('catalog__info_is-active');
-  });
-
-
-  // Accordion
-
-  $(function () {
-    $("#accordion").accordion();
-  });
-
-  $(".selector").accordion({
-    collapsible: true,
-    heightStyle: "content",
-  });
-
-  // Getter
-  var collapsible = $(".selector").accordion("option", "collapsible");
-
-  // Setter
-  $(".selector").accordion("option", "collapsible", true);
-
-
-  // catalog-function
-
-  $('#rublevBtn, #girlandayoBtn, #angerranBtn, #volgemutBtn, #dareBtn').addClass('catalog__btn_is-active');
-
-  $('#rublev, #girlandayo, #angerran, #volgemut, #dare').addClass('specification_is-active');
 
   document.querySelectorAll('.catalog__btn').forEach(function (btn) {
     btn.addEventListener('click', function (event) {
@@ -239,10 +178,50 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  $('.catalog__btn').click(function () {
-    $('.catalog__btn').not(this).removeClass('catalog__btn_is-active');
-    $(this).toggleClass('catalog__btn_is-active');
+  // Accordion catalog
+
+  $('.catalog__discription_is-active').addClass('specification_is-active');
+
+  $('.tab__item').click(function () {
+    $('.catalog__discription_is-active').addClass('specification_is-active');
+    $('.catalog__discription').not('.catalog__discription_is-active').removeClass('specification_is-active');
+    $('.catalog__btn_active').addClass('btn_is-active');
+    $('.catalog__btn').not('.catalog__btn_active').removeClass('btn_is-active');
+    $(this).siblings().removeClass('tab__is-focused');
+    $(this).addClass('tab__is-focused');
   });
+
+  // Tabs + Accordion
+
+  document.querySelectorAll('.tab__item').forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      const path = event.currentTarget.dataset.path
+
+      document.querySelectorAll('.catalog__info').forEach(function (content) {
+        content.classList.remove('catalog__info_is-active')
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__info_is-active')
+    });
+  });
+
+  // Accordion
+
+  $(function () {
+    $("#accordion").accordion();
+  });
+
+  $(".selector").accordion({
+    collapsible: true,
+    heightStyle: "content",
+  });
+
+  $(".selector").accordion("refresh");
+
+  // Getter
+  var collapsible = $(".selector").accordion("option", "collapsible");
+
+  // Setter
+  $(".selector").accordion("option", "collapsible", true);
 
   // swiperEvents
 
@@ -314,7 +293,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
   });
 
-
   // Events
 
   document.querySelector('#eventsBtn').addEventListener('click', function () {
@@ -337,7 +315,6 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-
   document.querySelector('#editionsSpoiler').addEventListener('click', function () {
     document.querySelector('.features__spoiler').classList.toggle('spoiler_is-active')
     document.querySelector('.editions').classList.toggle('editions__height-is-active')
@@ -345,20 +322,17 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // checkbox
 
-
-  $('.checkbox').on('click',function(){
+  $('.checkbox').on('click', function () {
     $(this).addClass('custom-checkbox_is-active');
-});
+  });
 
+  document.querySelectorAll('.editions__btn-close').forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      const path = event.currentTarget.dataset.path
 
-document.querySelectorAll('.editions__btn-close').forEach(function(btn) {
-  btn.addEventListener('click', function(event) {
-    const path = event.currentTarget.dataset.path
-
-  document.querySelector(`[data-target="${path}"]`).classList.add('custom-checkbox_is-notactive') 
-});
-});
-
+      document.querySelector(`[data-target="${path}"]`).classList.add('custom-checkbox_is-notactive')
+    });
+  });
 
   var swiperEditions = new Swiper('.editions__swiper-container', {
     grabCursor: true,
