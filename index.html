@@ -152,7 +152,7 @@
 
         <form method="GET" action="https://jsonplaceholder.typicode.com/posts" class="header__list-search"
           autocomplete="on">
-          <button class="search__btn">
+          <button class="header__search__btn">
             <svg class="search-sign" width="23" height="22" viewbox="0 0 23 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
@@ -322,13 +322,13 @@
             <ul class="tab__list">
               <li class="tab__item" data-path="accordion-french"><button type="button" class="tab__btn" data-path="tab-one" tabindex="1"
                   aria-label="Выбор языка: французский"></button></li>
-              <li class="tab__item" data-path="accordion-deutch"><button type="button" class="tab__btn tab__btn-2" data-path="tab-two" tabindex="1"
+              <li class="tab__item" data-path="accordion-deutch"><button type="button" class="tab__btn" data-path="tab-two" tabindex="1"
                   aria-label="Выбор языка: немецкий"></button></li>
-              <li class="tab__item tab__is-focused" data-path="accordion-italy"><button type="button" class="tab__btn tab__btn-3"
+              <li class="tab__item" data-path="accordion-italy"><button type="button" class="tab__btn tab__is-focused"
                   data-path="tab-three" tabindex="1" aria-label="Выбор языка: итальянский"></button></li>
-              <li class="tab__item" data-path="accordion-russian"><button type="button" class="tab__btn tab__btn-4" data-path="tab-four" tabindex="1"
+              <li class="tab__item" data-path="accordion-russian"><button type="button" class="tab__btn" data-path="tab-four" tabindex="1"
                   aria-label="Выбор языка: русский"></button></li>
-              <li class="tab__item" data-path="accordion-belgium"><button type="button" class="tab__btn tab__btn-5" data-path="tab-five" tabindex="1"
+              <li class="tab__item" data-path="accordion-belgium"><button type="button" class="tab__btn" data-path="tab-five" tabindex="1"
                   aria-label="Выбор языка: голландский"></button></li>
             </ul>
           </div>
@@ -1390,71 +1390,81 @@
         <div class="swiper-container cards__container">
           <div class="swiper-wrapper">
             <div class="swiper-slide cards__slide">
+             
+              <div class="cards__description">
               <img class="cards__img" src="/img/4.events/shusev.jpg" alt="Изображение:Музей им. Щусева">
               <div class="cards__info">
                 <span class="cards__info-name">Музей им. Щусева</span>
                 <span class="cards__info-date">с 20 марта по 30 апреля</span>
               </div>
-              <h4 class="cards__title">Книжная гравюра в живом восприятии</h4>
+              <h3 class="cards__title">Книжная гравюра в живом восприятии</h3>
               <p class="cards__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной
                 династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-
+              </div>
               <a class="cards__link" href="#" tabindex="1">Подробнее</a>
 
             </div>
 
             <div class="swiper-slide cards__slide">
+              <div class="cards__description">
               <img class="cards__img" src="/img/4.events/mmoma.jpg" alt="Изображение:Музей ММОМА">
               <div class="cards__info">
                 <span class="cards__info-name">ММОМА</span>
                 <span class="cards__info-date">24 марта 19:00</span>
               </div>
-              <h4 class="cards__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h4>
+              <h3 class="cards__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
               <p class="cards__text">Высокий уровень вовлечения представителей целевой аудитории является четким
                 доказательством простого факта.</p>
+              </div>
               <a class="cards__link" href="#" tabindex="1">Подробнее</a>
             </div>
-            <div class="swiper-slide cards__slide">
+            
+              <div class="swiper-slide cards__slide cards__block_is-active">
+                <div class="cards__description">
               <img class="cards__img" src="/img/4.events/jewish.jpg" alt="Изображение:Еврейский музей">
               <div class="cards__info">
                 <span class="cards__info-name">Еврейский музей</span>
                 <span class="cards__info-date">с 31 марта по 21 апреля</span>
               </div>
-              <h4 class="cards__title">Выставка «Формация 2020»</h4>
+              <h3 class="cards__title">Выставка «Формация 2020»</h3>
               <p class="cards__text">Идейные соображения высшего порядка, а также современная методология разработки
                 играет важную роль в формировании глубокомысленных рассуждений.
               </p>
+            </div>
               <a class="cards__link" href="#" tabindex="1">Подробнее</a>
             </div>
+
             <div class="swiper-slide cards__slide cards__block_is-active">
+              <div class="cards__description">
               <img class="cards__img" src="/img/4.events/tretyacov.jpg" alt="Изображение:Третьяковка на Крымском валу">
               <div class="cards__info">
                 <span class="cards__info-name">Третьяковка на Крымском валу</span>
                 <span class="cards__info-date">с 30 марта по 30 апреля</span>
               </div>
-              <h4 class="cards__title">XXIV Международная биеннале молодого искусства</h4>
+              <h3 class="cards__title">XXIV Международная биеннале молодого искусства</h3>
               <p class="cards__text">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+            </div>
               <a class="cards__link" href="#" tabindex="1">Подробнее</a>
             </div>
 
             <div class="swiper-slide cards__slide cards__block_is-active">
+              <div class="cards__description">
               <img class="cards__img" src="/img/4.events/mmam.jpg" alt="Изображение:Музей ММАМ">
               <div class="cards__info">
                 <span class="cards__info-name">ММАМ</span>
                 <span class="cards__info-date">с 8 апреля по 20 мая</span>
               </div>
-              <h4 class="cards__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
+              <h3 class="cards__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
               <p class="cards__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной
                 династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+              </div>
               <a class="cards__link" href="#" tabindex="1">Подробнее</a>
             </div>
-          </div>
-          <div class="swiper-pagination cards__pagination"></div>
         </div>
-
-
+        </div>
+        <div class="swiper-pagination cards__pagination"></div>
+      
         <button class="btn events__btn" type="button" id="eventsBtn" tabindex="1">Все события</button>
-
       </div>
     </section>
 
@@ -1469,7 +1479,7 @@
             <div class="editions__checkbox">
               <form class="editions__form" action="https://jsonplaceholder.typicode.com/posts" method="get">
 
-                <div class="checkbox-block">
+              
 
                   <div class="checkbox" data-target="checkbox-1">
                     <label class="custom-checkbox" tabindex="1">
@@ -1577,11 +1587,10 @@
                       <span class="checkbox__text">Журналы и газеты</span>
                     </label>
                     <button class="editions__btn-close" type="button" data-path="checkbox-12"></button>
-                  </div>
                 </div>
 
                 <div class="features__price">
-                  <h4 class="features__title">Цена</h4>
+                  <h3 class="features__title">Цена</h3>
                   <div class="price__block">
                     <label class="price__label price__label1" for="price">От</label>
                     <input class="price__input price__input1" tabindex="1" type="number" name="username" id="price"
@@ -1765,7 +1774,7 @@
             target="_self">blanchard-art.ru/projects/about</a>
         </p>
 
-        <h4 class="projects__swiper-title">Партнёры проектов:</h4>
+        <h3 class="projects__swiper-title">Партнёры проектов:</h3>
 
         <div class="projects__swiper">
           <div class="swiper-container swiper__projects-container">

@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+
   // Select gallery
 
   const element = document.querySelector('#filter');
@@ -46,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerColumn: 1,
         slidesPerGroup: 1,
         slidesPerView: 1,
-        spaceBetween: 33,
+        spaceBetween: 32,
         grabCursor: true,
       },
 
@@ -54,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerColumn: 1,
         slidesPerGroup: 1,
         slidesPerView: 1,
-        spaceBetween: 26,
+        spaceBetween: 33,
         grabCursor: true,
       },
 
@@ -145,11 +146,52 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Tabs
+  // Tabs + Accordion
+
+  document.querySelectorAll('.catalog__discription_is-active').forEach(function (disc) {
+    disc.classList.add('specification_is-active');
+  });
+
+  document.querySelectorAll('.tab__item').forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+
+      const path = event.currentTarget.dataset.path
+
+      event.target.classList.add('tab__is-focused')
+
+      document.querySelectorAll('.catalog__info').forEach(function (content) {
+        content.classList.remove('catalog__info_is-active')
+      });
+
+      document.querySelectorAll('.catalog__discription').forEach(function (spec_act) {
+        spec_act.classList.remove('specification_is-active');
+      });
+
+      document.querySelectorAll('.catalog__discription_is-active').forEach(function (spec) {
+        spec.classList.add('specification_is-active');
+      });
+
+      document.querySelectorAll('.catalog__btn').forEach(function (btn) {
+        btn.classList.remove('btn_is-active');
+      });
+
+      document.querySelectorAll('.catalog__btn_active').forEach(function (btn_act) {
+        btn_act.classList.add('btn_is-active');
+      });
+
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__info_is-active')
+    });
+  });
+
 
   document.querySelectorAll('.tab__btn').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (event) {
+
       const path = event.currentTarget.dataset.path
+
+      document.querySelectorAll('.tab__btn').forEach(function (content) {
+        content.classList.remove('tab__is-focused')
+      });
 
       document.querySelectorAll('.tab__block').forEach(function (tabContent) {
         tabContent.classList.remove('tab__block_is-active')
@@ -160,15 +202,19 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Accordion buttons
 
-  $('.catalog__btn_active').addClass('btn_is-active');
-
-  $('.catalog__btn').click(function () {
-    $('.catalog__btn').not(this).removeClass('btn_is-active');
-    $(this).toggleClass('btn_is-active');
+  document.querySelectorAll('.catalog__btn_active').forEach(function (btn) {
+    btn.classList.add('btn_is-active');
   });
 
   document.querySelectorAll('.catalog__btn').forEach(function (btn) {
     btn.addEventListener('click', function (event) {
+
+      document.querySelectorAll('.catalog__btn').forEach(function (content) {
+        content.classList.remove('btn_is-active')
+      });
+
+      event.target.classList.toggle('btn_is-active')
+
       const path = event.currentTarget.dataset.path
 
       document.querySelectorAll('.catalog__discription').forEach(function (content) {
@@ -178,31 +224,6 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Accordion catalog
-
-  $('.catalog__discription_is-active').addClass('specification_is-active');
-
-  $('.tab__item').click(function () {
-    $('.catalog__discription_is-active').addClass('specification_is-active');
-    $('.catalog__discription').not('.catalog__discription_is-active').removeClass('specification_is-active');
-    $('.catalog__btn_active').addClass('btn_is-active');
-    $('.catalog__btn').not('.catalog__btn_active').removeClass('btn_is-active');
-    $(this).siblings().removeClass('tab__is-focused');
-    $(this).addClass('tab__is-focused');
-  });
-
-  // Tabs + Accordion
-
-  document.querySelectorAll('.tab__item').forEach(function (btn) {
-    btn.addEventListener('click', function (event) {
-      const path = event.currentTarget.dataset.path
-
-      document.querySelectorAll('.catalog__info').forEach(function (content) {
-        content.classList.remove('catalog__info_is-active')
-      });
-      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__info_is-active')
-    });
-  });
 
   // Accordion
 
@@ -217,17 +238,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
   $(".selector").accordion("refresh");
 
-  // Getter
-  var collapsible = $(".selector").accordion("option", "collapsible");
-
-  // Setter
-  $(".selector").accordion("option", "collapsible", true);
-
   // swiperEvents
 
   var swiperEvents = new Swiper('.cards__container', {
     grabCursor: false,
-    spaceBetween: 10,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     grabCursor: false,
@@ -305,16 +319,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // editions
 
-  document.querySelector('#checkbox').addEventListener('click', function () {
-    document.querySelector('#checkbox').classList.remove('checkbox_is-active')
-  })
-
-  document.querySelectorAll('.checkbox__text').forEach(function (ele) {
-    ele.addEventListener('click', function (event) {
-      event.target.classList.toggle('checkbox__text_is-active')
-    })
-  })
-
   document.querySelector('#editionsSpoiler').addEventListener('click', function () {
     document.querySelector('.features__spoiler').classList.toggle('spoiler_is-active')
     document.querySelector('.editions').classList.toggle('editions__height-is-active')
@@ -322,26 +326,34 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // checkbox
 
+
+
   $('.checkbox').on('click', function () {
     $(this).addClass('custom-checkbox_is-active');
   });
 
-  document.querySelectorAll('.editions__btn-close').forEach(function (btn) {
-    btn.addEventListener('click', function (event) {
-      const path = event.currentTarget.dataset.path
 
-      document.querySelector(`[data-target="${path}"]`).classList.add('custom-checkbox_is-notactive')
-    });
+ document.querySelectorAll('.editions__btn-close').forEach(function(tabsBtn) {
+    tabsBtn.addEventListener('click', function(eventbtn) {
+      const path = eventbtn.currentTarget.dataset.path
+    document.querySelector(`[data-target="${path}"]`).classList.remove('custom-checkbox_is-active') 
+  });
   });
 
+  $('.check').on('click', function () {
+    $(this).addClass('check_is-active');
+  });
+
+  $('.editions__btn-close').click(function () {
+    $('.check_is-active').removeAttr('checked');
+  });
+
+  
   var swiperEditions = new Swiper('.editions__swiper-container', {
     grabCursor: true,
     observer: true,
     breakpoints: {
       0: {
-        slidesPerView: 2,
-        slidesPerColumn: 4,
-        slidesPerGroup: 2,
         grabCursor: false,
         touchRatio: 0,
       },
@@ -350,7 +362,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 2,
         slidesPerColumn: 1,
         slidesPerGroup: 2,
-        spaceBetween: 38,
+        spaceBetween: 34,
         grabCursor: true,
       },
 
@@ -373,9 +385,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
       1919: {
         slidesPerView: 3,
-
         slidesPerGroup: 3,
-        spaceBetween: -1600,
+        spaceBetween: 50,
         grabCursor: true,
       },
 
