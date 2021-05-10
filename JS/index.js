@@ -326,26 +326,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // checkbox
 
-
-
-  $('.checkbox').on('click', function () {
-    $(this).addClass('custom-checkbox_is-active');
-  });
-
-
- document.querySelectorAll('.editions__btn-close').forEach(function(tabsBtn) {
-    tabsBtn.addEventListener('click', function(eventbtn) {
-      const path = eventbtn.currentTarget.dataset.path
-    document.querySelector(`[data-target="${path}"]`).classList.remove('custom-checkbox_is-active') 
-  });
-  });
-
-  $('.check').on('click', function () {
-    $(this).addClass('check_is-active');
-  });
-
-  $('.editions__btn-close').click(function () {
-    $('.check_is-active').removeAttr('checked');
+  $('.checkbox').on('click',function(e){
+    e.preventDefault();
+    $(this).toggleClass('custom-checkbox_is-active');
   });
 
   
