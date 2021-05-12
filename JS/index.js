@@ -328,7 +328,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   $('.checkbox').on('click',function(e){
     e.preventDefault();
-    $(this).toggleClass('custom-checkbox_is-active');
+    $(this).toggleClass('checkbox_is-active');
   });
 
   
