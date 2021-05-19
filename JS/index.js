@@ -266,7 +266,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				slidesPerColumn: 1,
 				slidesPerGroup: 1,
 				grabCursor: true,
-				spaceBetween: 15,
+				spaceBetween: 16,
 			},
 			710: {
 				slidesPerView: 2,
@@ -437,17 +437,11 @@ window.addEventListener('DOMContentLoaded', function () {
 				grabCursor: true,
 			},
 
-			1391: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
-				spaceBetween: 52,
-				grabCursor: true,
-			},
 
 			1919: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
-				spaceBetween: 53,
+				spaceBetween: 52,
 				grabCursor: true,
 			},
 
