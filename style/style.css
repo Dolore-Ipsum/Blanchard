@@ -1683,7 +1683,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .editions__title {
-	margin-bottom: 29px;
+	margin-bottom: 28px;
 	line-height: 1.1;
 	color: var(--txt-white);
 }
@@ -4021,11 +4021,11 @@ input::-webkit-inner-spin-button {
 	/* editions */
 
 	.editions {
-		padding-bottom: 21px;
+		padding-bottom: 121px;
 	}
 
 	.editions__form {
-		margin-bottom: 24px;
+		margin-bottom: 40px;
 		padding-left: 24px;
 	}
 
@@ -4091,7 +4091,7 @@ input::-webkit-inner-spin-button {
 	}
 
 	.editions__swiper .editions__swiper-slide {
-		margin-right: 48px !important;
+		margin-right: 50px !important;
 	}
 
 	.editions__swiper-btn:focus::before {
@@ -4109,7 +4109,7 @@ input::-webkit-inner-spin-button {
 	}
 
 	.projects__container {
-		padding-top: 85px;
+		padding-top: 45px;
 		padding-left: 16px;
 	}
 
@@ -4146,15 +4146,33 @@ input::-webkit-inner-spin-button {
 		padding-top: 48px;
 		padding-bottom: 43px;
 		padding-left: 21px;
-		padding-right: 21px;
+		padding-right: 49px;
+	}
+
+	.form__input-tel {
+		margin-bottom: 24px;
+	}
+
+	.contacts__social-icon {
+		left: 10px;
+		top: 9px;
+		transform: scale(1.5);
+	}
+
+	.whatsapp {
+		margin-right: 46px;
 	}
 
 	.contacts__map {
 		height: 700px;
 	}
 
-	.form__input-tel {
-		margin-bottom: 24px;
+	.footer__social {
+		transform: scale(1.31);
+	}
+
+	.footer__social-link:not(:last-child) {
+		margin-right: 18px;
 	}
 }
 
@@ -4440,7 +4458,7 @@ input::-webkit-inner-spin-button {
 
 	.editions__swiper .swiper-container {
 		margin-left: 0;
-		padding-left: 30px;
+		padding-left: 29px;
 		max-width: 644px;
 	}
 
@@ -4473,7 +4491,7 @@ input::-webkit-inner-spin-button {
 
 	.editions__pagination {
 		top: -9.2%;
-		left: -0.25%;
+		left: 0.75%;
 	}
 
 	.editions__swiper-img::after,
@@ -4724,10 +4742,14 @@ input::-webkit-inner-spin-button {
 	}
 
 	.price__block {
-		padding-left: 18px;
-		padding-right: 17px;
-		width: 340px;
-		height: 40px;
+		padding-left: 8px;
+    	padding-right: 0;
+    	width: 276px;
+    	height: 40px;
+	}
+
+	.price__label {
+		margin-right: 7px;
 	}
 
 	.editions__title {
@@ -4749,14 +4771,18 @@ input::-webkit-inner-spin-button {
 	}
 
 	.features__spoiler .price__input {
-		margin-right: 8px;
+		margin-right: 5px;
 		padding-top: 8px;
 		padding-left: 10px;
-		max-width: 83px;
+		max-width: 73px;
 	}
 
 	.projects__container {
-		padding-top: 8px;
+		padding-top: 7px;
+	}
+
+	.projects__title {
+		margin-bottom: 21px;
 	}
 
 	.projects__text {
@@ -5518,13 +5544,13 @@ input::-webkit-inner-spin-button {
 
 	.features__title {
 		margin-left: -1px;
-		margin-bottom: 11px;
+		margin-bottom: 14px;
 	}
 
 	.editions__form {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
-		margin-bottom: 21px;
+		margin-bottom: 18px;
 		padding-left: 0;
 		max-width: 100%;
 		max-height: 1000px;
@@ -5533,7 +5559,7 @@ input::-webkit-inner-spin-button {
 	}
 
 	.editions__swiper {
-		transform: translateY(1px);
+		transform: translateY(30px);
 	} 
 
 	.spoiler__catagory {
@@ -5619,7 +5645,7 @@ input::-webkit-inner-spin-button {
 	}
 
 	.editions__swiper-info {
-		margin-bottom: 17px;
+		margin-bottom: 18px;
 		width: 130px;
 		height: 16px;
 		font-size: 12px;
@@ -5682,12 +5708,11 @@ input::-webkit-inner-spin-button {
 
 	.price__block {
 		padding-left: 7px;
-		padding-right: 5px;
 		max-width: 296px;
 	}
 
 	.price__label {
-		margin-right: 3px;
+		margin-right: 7px;
 	}
 
 	.price__input {
@@ -6089,7 +6114,7 @@ input::-webkit-inner-spin-button {
 	.tab__list {
 		margin-top: 0;
 		margin-left: -2px;
-		height: 50px;
+		height: 49px;
 	}
 
 	.tab__btn {
@@ -6241,19 +6266,20 @@ input::-webkit-inner-spin-button {
 
 	.features__price {
 		margin-left: 2px;
-		width: 100%;
 	}
 
 	.features__spoiler .price__input {
 		margin-top: -3px;
-		margin-right: 4px;
+		margin-right: 5px;
 		padding-left: 8px;
+		padding-top: 8px;
 		height: 38px;
+		width: 72px;
 	}
 
 	.price__block {
 		padding-top: 4px;
-		padding-left: 13px;
+		padding-left: 9px;
 		max-width: 288px;
 		-webkit-transform: translatex(-1px);
 		-ms-transform: translatex(-1px);
@@ -6262,11 +6288,6 @@ input::-webkit-inner-spin-button {
 
 	.price__input {
 		margin-right: 4px;
-	}
-
-	.features__spoiler .price__input {
-		padding-top: 8px;
-		width: 69px;
 	}
 
 	.editions__swiper .editions__swiper-slide {
