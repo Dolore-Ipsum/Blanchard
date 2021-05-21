@@ -326,10 +326,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	// checkbox
 
-	$('.checkbox').on('click', function (e) {
-		e.preventDefault();
-		$(this).toggleClass('checkbox_is-active');
-	});
+	// $('.checkbox').on('click', function (e) {
+	// 	e.preventDefault();
+	// 	$(this).toggleClass('checkbox_is-active');
+	// });
 
 
 	var swiperEditions = new Swiper('.editions__swiper-container', {
