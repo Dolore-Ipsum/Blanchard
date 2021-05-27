@@ -324,14 +324,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('.editions').classList.toggle('editions__height-is-active')
 	})
 
-	// checkbox
-
-	// $('.checkbox').on('click', function (e) {
-	// 	e.preventDefault();
-	// 	$(this).toggleClass('checkbox_is-active');
-	// });
-
-
 	var swiperEditions = new Swiper('.editions__swiper-container', {
 		grabCursor: true,
 		observer: true,
@@ -533,7 +525,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			// Порядок по умолчанию: «широта, долгота».
 			// Чтобы не определять координаты центра карты вручную,
 			// воспользуйтесь инструментом Определение координат.
-			center: [55.75860, 37.67450],
+			center: [55.75810, 37.63380],
 			// Уровень масштабирования. Допустимые значения:
 			// от 0 (весь мир) до 19.
 			zoom: 14.5,
