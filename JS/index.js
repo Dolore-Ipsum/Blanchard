@@ -3,15 +3,14 @@ window.addEventListener('DOMContentLoaded', function () {
 	// Burger and Search
 
 	document.querySelector('#burger').addEventListener('click', function () {
-		document.querySelector('.header__top-nav').classList.toggle('burger-is-active')
-	})
-
-	document.querySelector('#burger').addEventListener('click', function () {
-		document.querySelector('.header__link').classList.toggle('burger-is-active')
+		document.querySelector('.header__top-nav').classList.toggle('burger-is-active');
+		document.querySelector('.header__link').classList.toggle('burger-is-active');
+		document.querySelector('.burger__btn').classList.toggle('burger__btn-is-active');
 	})
 
 	document.querySelector('#search').addEventListener('click', function () {
-		document.querySelector('.header__list').classList.toggle('search-is-active')
+		document.querySelector('.header__list').classList.toggle('search-is-active');
+		document.querySelector('.search__btn').classList.toggle('search__btn-is-active');
 	})
 
 	// SimpleBar
@@ -82,11 +81,11 @@ window.addEventListener('DOMContentLoaded', function () {
 				slidesPerColumnFill: 'row-reverse',
 			},
 
-			1392: {
+			1291: {
 				slidesPerColumn: 2,
 				slidesPerView: 3,
 				slidesPerGroup: 3,
-				spaceBetween: 51,
+				spaceBetween: 50,
 			},
 
 		},
@@ -339,20 +338,21 @@ window.addEventListener('DOMContentLoaded', function () {
 				slidesPerView: 2,
 				slidesPerColumn: 1,
 				slidesPerGroup: 2,
-				spaceBetween: 19,
+				spaceBetween: 50,
 				grabCursor: true,
 
 			},
 
-			1350: {
+			1024: {
 				slidesPerView: 2,
 				slidesPerColumn: 1,
 				slidesPerGroup: 2,
-				spaceBetween: 11,
+				spaceBetween: 50,
 				grabCursor: true,
 			},
 
-			1919: {
+
+			1391: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
 				spaceBetween: 50,
