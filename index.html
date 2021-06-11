@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="/style/choices.min.css">
 	<link rel="stylesheet" href="/style/simplebar.min.css">
 	<link rel="stylesheet" href="/style/jquery.css">
+	<link rel="stylesheet" href="modal.css">
 	<link rel="stylesheet" href="/style/style.css">
 	<title>Blachard</title>
 </head>
@@ -23,18 +24,22 @@
 
 				<button class="burger__btn" type="submit" id="burger">
 
-					<svg class="burger__img" viewbox="0 0 36 29"
-						fill="none" aria-label="Открыть навигацию по сайту">
+					<svg class="burger__img" viewbox="0 0 36 29" fill="none" aria-label="Открыть навигацию по сайту">
 						<rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699997)" fill="white" />
 						<path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white" />
 						<path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white" />
 					</svg>
 
-					<svg class="burger__cross" width="22" height="22" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#000000"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#000000"/>
+					<svg class="burger__cross" width="22" height="22" viewbox="0 0 11 12" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+							fill="#000000" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+							fill="#000000" />
 					</svg>
-						
+
 				</button>
 
 
@@ -75,9 +80,14 @@
 							fill="white" />
 					</svg>
 
-					<svg class="search__cross" width="22" height="22" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#000000"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#000000"/>
+					<svg class="search__cross" width="22" height="22" viewbox="0 0 11 12" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+							fill="#000000" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+							fill="#000000" />
 					</svg>
 
 				</button>
@@ -278,56 +288,121 @@
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
-							<div class="swiper-slide gallery__slide slide1 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide2 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide3 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide4 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture1.jpg" alt="no-picture">	
+							</div>
 
-							<div class="swiper-slide gallery__slide slide5 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture2.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide6 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<div class="swiper-zoom-container">
+									<img class="gallery__img" src="/img/2.gallery/Picture3.jpg" alt="no-picture">
+								</div>
+							</div>
 
-							<div class="swiper-slide gallery__slide slide7 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture4.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide8 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture5.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide9 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture6.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide10 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide11 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide12 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide13 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture7.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide14 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture8.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide15 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture9.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide16 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture10.jpg" alt="no-picture">
+							</div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture11.jpg" alt="no-picture">
+							</div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture12.jpg" alt="no-picture">
+							</div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture13.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide17 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture14.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide18 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture15.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide19 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture16.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide20 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture17.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide21 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture18.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide22 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture19.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide23 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide24 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide25 swiper-lazy" tabindex="1"></div>
-							<div class="swiper-slide gallery__slide slide26 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture20.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide27 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture21.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide28 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture22.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide29 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture23.jpg" alt="no-picture">
+							</div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture24.jpg" alt="no-picture">
+							</div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture25.jpg" alt="no-picture">
+							</div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture26.jpg" alt="no-picture">
+							</div>
 
-							<div class="swiper-slide gallery__slide slide30 swiper-lazy" tabindex="1"></div>
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture27.jpg" alt="no-picture">
+							</div>
+
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture28.jpg" alt="no-picture">
+							</div>
+
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture29.jpg" alt="no-picture">
+							</div>
+
+							<div class="swiper-slide gallery__slide swiper-lazy" tabindex="1">
+								<img class="gallery__img" src="/img/2.gallery/Picture30.jpg" alt="no-picture">
+							</div>
 
 						</div>
 
@@ -532,8 +607,8 @@
 
 						<div class="catalog__block catalog__block-hover-1" tabindex="1">
 							<p class="catalog__text">C 1400 по 1499 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -556,8 +631,8 @@
 
 						<div class="catalog__block catalog__block-hover-2" tabindex="1">
 							<p class="catalog__text">C 1500 по 1599 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -566,10 +641,13 @@
 						</div>
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -578,8 +656,8 @@
 
 						<div class="catalog__block catalog__block-hover-3" tabindex="1">
 							<p class="catalog__text">C 1600 по 1699 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -588,10 +666,13 @@
 						</div>
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -600,8 +681,8 @@
 						<div class="catalog__block catalog__block-hover-4" tabindex="1">
 							<p class="catalog__text">C 1700 по 1799 гг.
 							</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -610,18 +691,21 @@
 						</div>
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
 						</div>
 						<div class="catalog__block catalog__block-hover-5" tabindex="1">
 							<p class="catalog__text">C 1800 по 1899 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -630,18 +714,21 @@
 						</div>
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
 						</div>
 						<div class="catalog__block catalog__block-hover-6" tabindex="1">
 							<p class="catalog__text">C 1900 по 1999 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -650,10 +737,13 @@
 						</div>
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -661,8 +751,8 @@
 
 						<div class="catalog__block catalog__block-last" tabindex="1">
 							<p class="catalog__text">C 2000 г.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -671,10 +761,13 @@
 						</div>
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -759,7 +852,8 @@
 								alt="Изображние художника">
 							<div class="catalog__specification-block">
 								<h3 class="catalog__specification-title title">Что мы о нём знаем?</h3>
-								<p class="catalog__specification-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+								<p class="catalog__specification-text">Пока ничего... Зато мы точно знаем, что в галерее
+									есть на что посмотреть!</p>
 								<a class="information__link" href="#gallery">В галерею</a>
 							</div>
 						</div>
@@ -770,8 +864,8 @@
 
 						<div class="catalog__block catalog__block-hover-1">
 							<p class="catalog__text" tabindex="1">C 1400 по 1499 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -783,21 +877,30 @@
 						<div>
 
 							<ul class="catalog__table">
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бенедетто ди Биндо</button>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бенедетто
+										ди Биндо</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бергоньоне, Амброджо</button>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Бергоньоне, Амброджо</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Биссоло, Франческо</button>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Биссоло,
+										Франческо</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Больтраффио, Джованни</button>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Больтраффио, Джованни</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бонсиньори, Франческо</button>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Бонсиньори, Франческо</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Боттичини, Рафаэлло</button>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Боттичини, Рафаэлло</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Брамантино</button></li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бреа, Людовико</button></li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бьяджо д’Антонио
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Брамантино</button></li>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бреа,
+										Людовико</button></li>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Бьяджо
+										д’Антонио
 										Туччи</button></li>
 								<li class="catalog__date"><button class="catalog__btn"
 										data-path="btn-italy-3">Веккьетта</button></li>
@@ -806,25 +909,37 @@
 								<li class="catalog__date"><button class="catalog__btn catalog__btn_active"
 										data-path="btn-italy-1">Доменико
 										Гирландайо</button></li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Беноццо Гоццоли</button></li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Граначчи, Франческо</button>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Беноццо
+										Гоццоли</button></li>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Граначчи,
+										Франческо</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Грегорио ди Чекко</button>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Грегорио
+										ди Чекко</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Джованни да Удине</button>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Джованни
+										да Удине</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Джованни ди Паоло</button>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Джованни
+										ди Паоло</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Джорджоне</button>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Джорджоне</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Парентино, Бернардо</button>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Парентино, Бернардо</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Пезеллино</button></li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Пьетро Перуджино</button></li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Перуцци, Бальдассаре</button>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Пезеллино</button></li>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Пьетро
+										Перуджино</button></li>
+								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Перуцци,
+										Бальдассаре</button>
 								</li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Пизанелло</button></li>
-								<li class="catalog__date"><button class="catalog__btn" data-path="btn-unknown">Пинтуриккьо</button></li>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Пизанелло</button></li>
+								<li class="catalog__date"><button class="catalog__btn"
+										data-path="btn-unknown">Пинтуриккьо</button></li>
 								<li class="catalog__date none"><button class="catalog__btn"></button>
 								</li>
 								<li class="catalog__date none"><button class="catalog__btn"></button>
@@ -836,8 +951,8 @@
 
 						<div class="catalog__block catalog__block-hover-2">
 							<p class="catalog__text" tabindex="1">C 1500 по 1599 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -847,10 +962,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -858,8 +976,8 @@
 
 						<div class="catalog__block catalog__block-hover-3">
 							<p class="catalog__text" tabindex="1">C 1600 по 1699 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -869,10 +987,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -881,8 +1002,8 @@
 						<div class="catalog__block catalog__block-hover-4">
 							<p class="catalog__text" tabindex="1">C 1700 по 1799 гг.
 							</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -892,10 +1013,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -903,8 +1027,8 @@
 
 						<div class="catalog__block catalog__block-hover-5">
 							<p class="catalog__text" tabindex="1">C 1800 по 1899 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -914,10 +1038,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -925,8 +1052,8 @@
 
 						<div class="catalog__block catalog__block-6 catalog__block-hover-6">
 							<p class="catalog__text" tabindex="1">C 1900 по 1999 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -936,10 +1063,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -947,8 +1077,8 @@
 
 						<div class="catalog__block catalog__block-last" tabindex="1">
 							<p class="catalog__text">C 2000 г.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -958,10 +1088,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1062,8 +1195,8 @@
 
 						<div class="catalog__block catalog__block-hover-1" tabindex="1">
 							<p class="catalog__text">C 1400 по 1499 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1090,8 +1223,8 @@
 
 						<div class="catalog__block catalog__block-hover-2" tabindex="1">
 							<p class="catalog__text">C 1500 по 1599 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1101,10 +1234,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1112,8 +1248,8 @@
 
 						<div class="catalog__block catalog__block-hover-3" tabindex="1">
 							<p class="catalog__text">C 1600 по 1699 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1123,10 +1259,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1135,8 +1274,8 @@
 						<div class="catalog__block catalog__block-hover-4" tabindex="1">
 							<p class="catalog__text">C 1700 по 1799 гг.
 							</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1146,10 +1285,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1157,8 +1299,8 @@
 
 						<div class="catalog__block catalog__block-hover-5" tabindex="1">
 							<p class="catalog__text">C 1800 по 1899 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1168,10 +1310,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1179,8 +1324,8 @@
 
 						<div class="catalog__block catalog__block-hover-6" tabindex="1">
 							<p class="catalog__text">C 1900 по 1999 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1190,10 +1335,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1201,8 +1349,8 @@
 
 						<div class="catalog__block catalog__block-last" tabindex="1">
 							<p class="catalog__text">C 2000 г.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1212,10 +1360,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1300,8 +1451,8 @@
 
 						<div class="catalog__block catalog__block-hover-1" tabindex="1">
 							<p class="catalog__text">C 1400 по 1499 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1328,8 +1479,8 @@
 
 						<div class="catalog__block catalog__block-hover-2" tabindex="1">
 							<p class="catalog__text">C 1500 по 1599 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1339,10 +1490,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1350,8 +1504,8 @@
 
 						<div class="catalog__block catalog__block-hover-3" tabindex="1">
 							<p class="catalog__text">C 1600 по 1699 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1361,10 +1515,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1373,8 +1530,8 @@
 						<div class="catalog__block catalog__block-hover-4" tabindex="1">
 							<p class="catalog__text">C 1700 по 1799 гг.
 							</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1384,10 +1541,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1395,8 +1555,8 @@
 
 						<div class="catalog__block catalog__block-hover-5" tabindex="1">
 							<p class="catalog__text">C 1800 по 1899 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1406,10 +1566,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1417,8 +1580,8 @@
 
 						<div class="catalog__block catalog__block-hover-6" tabindex="1">
 							<p class="catalog__text">C 1900 по 1999 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1428,10 +1591,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1439,8 +1605,8 @@
 
 						<div class="catalog__block catalog__block-last" tabindex="1">
 							<p class="catalog__text">C 2000 г.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1450,10 +1616,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1537,8 +1706,8 @@
 
 						<div class="catalog__block  catalog__block-hover-1" tabindex="1">
 							<p class="catalog__text">C 1400 по 1499 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1565,8 +1734,8 @@
 
 						<div class="catalog__block catalog__block-hover-2" tabindex="1">
 							<p class="catalog__text">C 1500 по 1599 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1576,10 +1745,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1587,8 +1759,8 @@
 
 						<div class="catalog__block catalog__block-hover-3" tabindex="1">
 							<p class="catalog__text">C 1600 по 1699 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1598,10 +1770,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1610,8 +1785,8 @@
 						<div class="catalog__block catalog__block-hover-4" tabindex="1">
 							<p class="catalog__text">C 1700 по 1799 гг.
 							</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1621,10 +1796,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1632,8 +1810,8 @@
 
 						<div class="catalog__block catalog__block-hover-5" tabindex="1">
 							<p class="catalog__text">C 1800 по 1899 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1643,10 +1821,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1654,8 +1835,8 @@
 
 						<div class="catalog__block catalog__block-hover-6" tabindex="1">
 							<p class="catalog__text">C 1900 по 1999 гг.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1665,10 +1846,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -1676,8 +1860,8 @@
 
 						<div class="catalog__block catalog__block-last" tabindex="1">
 							<p class="catalog__text">C 2000 г.</p>
-							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50"
-								fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="catalog__img" width="50" height="50" viewbox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
 									fill="#ECECEC" />
@@ -1687,10 +1871,13 @@
 
 						<div>
 							<ul class="catalog__table information-table information">
-								<li class="information__date"><div class="catalog__table-img"></div></li>
+								<li class="information__date">
+									<div class="catalog__table-img"></div>
+								</li>
 								<li class="information__date">
 									<h3 class="information__title">Здесь пока пусто</h3>
-									<p class="information__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+									<p class="information__text">А в галерее вы всегда можете найти что-то интересное
+										для себя</p>
 									<a class="information__link" href="#gallery">В галерею</a>
 								</li>
 							</ul>
@@ -2148,8 +2335,7 @@
 						Заказать обратный звонок
 					</h3>
 
-					<form class="contacts__callback-form" action="#"
-						method="get">
+					<form class="contacts__callback-form" action="#" method="get">
 						<label class="form__label form__label-name" for="name"></label>
 						<input class="form__input form__input-name" name="Имя" type="text" id="name" placeholder="Имя*"
 							data-validate-field="name">
@@ -2263,6 +2449,7 @@
 	<script src="/JS/just-validate.min.js"></script>
 	<script src="/JS/inputmask.js"></script>
 	<script src="/JS/yandex.js"></script>
+	<script src="modal.js"></script>
 	<script src="/JS/index.js"></script>
 
 
