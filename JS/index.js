@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	// Smooth transition
 
 	$(document).ready(function () {
-		$(document).on("click", ".transition", function (event) {
+		$(document).on("click", "a", function (event) {
 			//отменяем стандартную обработку нажатия по ссылке
 			event.preventDefault();
 
@@ -165,11 +165,11 @@ window.addEventListener('DOMContentLoaded', function () {
 				spec.classList.add('specification_is-active');
 			});
 
-			document.querySelectorAll('.catalog__btn').forEach(function (btn) {
+			document.querySelectorAll('.catalog__link').forEach(function (btn) {
 				btn.classList.remove('btn_is-active');
 			});
 
-			document.querySelectorAll('.catalog__btn_active').forEach(function (btn_act) {
+			document.querySelectorAll('.catalog__link_active').forEach(function (btn_act) {
 				btn_act.classList.add('btn_is-active');
 			});
 
@@ -196,14 +196,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	// Accordion buttons
 
-	document.querySelectorAll('.catalog__btn_active').forEach(function (btn) {
+	document.querySelectorAll('.catalog__link_active').forEach(function (btn) {
 		btn.classList.add('btn_is-active');
 	});
 
-	document.querySelectorAll('.catalog__btn').forEach(function (btn) {
+	document.querySelectorAll('.catalog__link').forEach(function (btn) {
 		btn.addEventListener('click', function (event) {
 
-			document.querySelectorAll('.catalog__btn').forEach(function (content) {
+			document.querySelectorAll('.catalog__link').forEach(function (content) {
 				content.classList.remove('btn_is-active')
 			});
 
@@ -543,7 +543,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				balloonContent: 'Леонтьевский переулок, дом 5, строение 1'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: '/img/7.contacts/point.svg',
+				iconImageHref: './img/7.contacts/point.svg',
 				iconImageSize: [20, 20],
 				iconImageOffset: [-3, -42],
 
@@ -577,202 +577,19 @@ window.addEventListener('DOMContentLoaded', function () {
 		myMap.controls.get('trafficControl').options.set('size', 'large');
 	}
 
-	// Smooth transition
+	// modal window
 
-	const navbarToggler = document.querySelector(".information__link");
-	const navbarMenu = document.querySelector(".information");
-	const navbarLinks = document.querySelectorAll(".information__link");
+	const modal = new GraphModal();
 
-	navbarToggler.addEventListener("click", navbarTogglerClick);
 
-	function navbarTogglerClick() {
-		navbarToggler.classList.toggle("open-navbar-toggler");
-		navbarMenu.classList.toggle("open");
-	}
+	// width > 958
 
-	// navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinkClick));
+	$(function(){
+		if ( $(window).width() > 958 ) {
 
-	for (let i = 0; i < navbarLinks.length; i++) {
-		navbarLinks[i].addEventListener("click", navbarLinkClick);
-	}
-
-	function navbarLinkClick(event) {
-
-		smoothScroll(event); // Call the "smoothScroll" function
-
-		if (navbarMenu.classList.contains("open")) { // Close navbarMenu in smaller screens
-			navbarToggler.click();
-		}
+	  $('.catalog__link').click(function(){ return false})
 
 	}
-
-	function smoothScroll(event) {
-		event.preventDefault();
-		const targetId = event.currentTarget.getAttribute("href") === "#" ? "header" : event.currentTarget.getAttribute("href");
-		const targetPosition = document.querySelector(targetId).offsetTop;
-		const startPosition = window.pageYOffset;
-		const distance = targetPosition - startPosition;
-		const duration = 1000;
-		let start = null;
-
-		window.requestAnimationFrame(step);
-
-		function step(timestamp) {
-			if (!start) start = timestamp;
-			const progress = timestamp - start;
-			// window.scrollTo(0, distance*(progress/duration) + startPosition);
-			window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-			if (progress < duration) {
-				window.requestAnimationFrame(step);
-			}
-		}
-	}
-
-	// Easing Functions
-
-	function linear(t, b, c, d) {
-		return c * t / d + b;
-	};
-
-	function easeInOutQuad(t, b, c, d) {
-		t /= d / 2;
-		if (t < 1) return c / 2 * t * t + b;
-		t--;
-		return -c / 2 * (t * (t - 2) - 1) + b;
-	};
-
-	function easeInOutCubic(t, b, c, d) {
-		t /= d / 2;
-		if (t < 1) return c / 2 * t * t * t + b;
-		t -= 2;
-		return c / 2 * (t * t * t + 2) + b;
-	};
-
-
-
-	// Модальное окно
-
-	(function () {
-		if (typeof window.CustomEvent === "function") return false;
-		function CustomEvent(event, params) {
-			params = params || { bubbles: false, cancelable: false, detail: null };
-			var evt = document.createEvent('CustomEvent');
-			evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-			return evt;
-		}
-		window.CustomEvent = CustomEvent;
-	})();
-	
-	$modal = function (options) {
-		var
-			_elemModal,
-			_eventShowModal,
-			_eventHideModal,
-			_hiding = false,
-			_destroyed = false,
-			_animationSpeed = 200;
-	
-		function _createModal(options) {
-			var
-				elemModal = document.createElement('div'),
-				modalTemplate = '<div class="modal__backdrop" data-dismiss="modal"><div class="modal__content"><div class="modal__header"><div class="modal__title" data-modal="title">{{title}}</div><span class="modal__btn-close" data-dismiss="modal" title="Закрыть">×</span></div><div class="modal__body" data-modal="content">{{content}}</div>{{footer}}</div></div>',
-				modalFooterTemplate = '<div class="modal__footer">{{buttons}}</div>',
-				modalButtonTemplate = '<button type="button" class="{{button_class}}" data-handler={{button_handler}}>{{button_text}}</button>',
-				modalHTML,
-				modalFooterHTML = '';
-	
-			elemModal.classList.add('modal');
-			modalHTML = modalTemplate.replace('{{title}}', options.title || '');
-			modalHTML = modalHTML.replace('{{content}}', options.content || '');
-			if (options.footerButtons) {
-				for (var i = 0, length = options.footerButtons.length; i < length; i++) {
-					var modalFooterButton = modalButtonTemplate.replace('{{button_class}}', options.footerButtons[i].class);
-					modalFooterButton = modalFooterButton.replace('{{button_handler}}', options.footerButtons[i].handler);
-					modalFooterButton = modalFooterButton.replace('{{button_text}}', options.footerButtons[i].text);
-					modalFooterHTML += modalFooterButton;
-				}
-				modalFooterHTML = modalFooterTemplate.replace('{{buttons}}', modalFooterHTML);
-			}
-			modalHTML = modalHTML.replace('{{footer}}', modalFooterHTML);
-			elemModal.innerHTML = modalHTML;
-			document.body.appendChild(elemModal);
-			return elemModal;
-		}
-	
-		function _showModal() {
-			if (!_destroyed && !_hiding) {
-				_elemModal.classList.add('modal__show');
-				document.dispatchEvent(_eventShowModal);
-			}
-		}
-	
-		function _hideModal() {
-			_hiding = true;
-			_elemModal.classList.remove('modal__show');
-			_elemModal.classList.add('modal__hiding');
-			setTimeout(function () {
-				_elemModal.classList.remove('modal__hiding');
-				_hiding = false;
-			}, _animationSpeed);
-			document.dispatchEvent(_eventHideModal);
-		}
-	
-		function _handlerCloseModal(e) {
-			if (e.target.dataset.dismiss === 'modal') {
-				_hideModal();
-			}
-		}
-	
-		_elemModal = _createModal(options || {});
-	
-	
-		_elemModal.addEventListener('click', _handlerCloseModal);
-		_eventShowModal = new CustomEvent('show.modal', { detail: _elemModal });
-		_eventHideModal = new CustomEvent('hide.modal', { detail: _elemModal });
-	
-		return {
-			show: _showModal,
-			hide: _hideModal,
-			destroy: function () {
-				_elemModal.parentElement.removeChild(_elemModal),
-					_elemModal.removeEventListener('click', _handlerCloseModal),
-					_destroyed = true;
-			},
-			setContent: function (html) {
-				_elemModal.querySelector('[data-modal="content"]').innerHTML = html;
-			},
-			setTitle: function (text) {
-				_elemModal.querySelector('[data-modal="title"]').innerHTML = text;
-			}
-		}
-	};
-
-	(function () {
-		var elemTarget;
-		// создаём модальное окно
-		var modal = $modal({
-		//   title: 'Просмотр изображения',
-		  content: '<img src="" alt="" style="display: block; height: auto; max-width: 100%;">',
-		//   footerButtons: [
-		// 	{ class: 'btn btn__delete', text: 'Удалить', handler: 'modalHandlerDelete' },
-		// 	{ class: 'btn btn__cancel', text: 'Закрыть', handler: 'modalHandlerCancel' }
-		//   ]
-		});
-		// при клике на документ
-		document.addEventListener('click', function (e) {
-		  // если мы кликнули на измобржение расположенное в .img__items, то...
-		  if (e.target.matches('.gallery__slide img')) {
-			elemTarget = e.target;
-			// устанавливаем модальному окну title
-			modal.setContent('<div style="flex: 1 0 60%;"><img src="' + e.target.src + '" alt="' + e.target.alt + '" style="display: block; height: auto; max-width: 100%; margin: 0 auto; transform: scale(1.3)"></div><div style="flex: 1 0 40%;"><div style="font-size: 18px; font-weight:bold;">');
-			modal.show();
-		  } else if (e.target.dataset.handler === 'modalHandlerCancel') {
-			modal.hide();
-		  } else if (e.target.dataset.handler === 'modalHandlerDelete') {
-			elemTarget.parentElement.removeChild(elemTarget);
-			modal.hide();
-		  }
-		});
-	  })();
+	});
 
 });
