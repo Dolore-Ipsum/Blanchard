@@ -489,11 +489,9 @@ input[type='search']::-webkit-search-results-decoration {
 	display: inline-block;
 	width: 100%;
 	height: 800px;
-	background: url('../img/1.header/first-picture.jpg') center no-repeat;
-	background-size: cover;
+	background-size: contain;
 	z-index: -1;
-	-webkit-animation: resize 15s alternate linear infinite;
-	animation: resize 15s alternate linear infinite;
+	animation: resize 30s alternate ease-in-out infinite, background 15s alternate linear infinite;
 }
 
  
@@ -502,10 +500,28 @@ input[type='search']::-webkit-search-results-decoration {
     transform: none;
   }
 
-  100% {
+  50% {
     transform: scale(1.08, 1.08);
   }
+
+  100% {
+	  transform: none;
 }
+}
+
+@keyframes background {
+	0% {
+		background: url('../img/1.header/first-picture.jpg') center no-repeat;
+	}
+
+	50% {
+		background: url("../img/1.header/second-picture.jpg") no-repeat;
+	}
+  
+	100% {
+		background: url("../img/1.header/third-picture.jpg") no-repeat;
+	}
+  }
 
 .hero__container {
 	display: -webkit-box;
@@ -3678,10 +3694,37 @@ input::-webkit-inner-spin-button {
 
 	/* header */
 
-	.header::before {
-		height: 768px;
-		background: url('../img/1024/first.jpg') no-repeat;
+	.hero::before {
+		height: 720px;
 	}
+
+	@keyframes resize {
+		0% {
+		  transform: none;
+		}
+		
+		50% {
+			transform: scale(1.06, 1.06);
+		  }
+
+		100% {
+			transform: none;
+		  }
+		}
+
+	@keyframes background {
+		0% {
+			background: url('../img/1024/first.jpg') center no-repeat;
+		}
+	
+		50% {
+			background: url("../img/1024/second.jpg") no-repeat;
+		}
+	  
+		100% {
+			background: url("../img/1024/third.png") no-repeat;
+		}
+	  }
 
 	.header__container {
 		padding-right: 16px;
@@ -4742,10 +4785,33 @@ input::-webkit-inner-spin-button {
 		max-width: 710px;
 	}
 
-	.header::before {
-		height: 768px;
-		background: url('../img/768/header.jpg') no-repeat;
-	}
+	@keyframes resize {
+		0% {
+		  transform: none;
+		}
+		
+		50% {
+			transform: scale(1.04, 1.04);
+		  }
+
+		100% {
+			transform: none;
+	  }
+		}
+
+	@keyframes background {
+		0% {
+			background: url('../img/768/first.jpg') center no-repeat;
+		}
+	
+		50% {
+			background: url("../img/768/second.jpg") no-repeat;
+		}
+	  
+		100% {
+			background: url("../img/768/third.jpg") no-repeat;
+		}
+	  }
 
 	.search__img {
 		margin-top: 0px;
@@ -6225,11 +6291,24 @@ input::-webkit-inner-spin-button {
 		padding-left: 0;
 	}
 
-	.header::before {
-		width: 100%;
-		height: 355px;
-		background: url('../img/320/header.jpg') no-repeat;
+	.hero::before {
+		height: 378px;
 	}
+
+	
+	@keyframes background {
+		0% {
+			background: url('../img/320/first.jpg') center no-repeat;
+		}
+	
+		50% {
+			background: url("../img/320/second.jpg") no-repeat;
+		}
+	  
+		100% {
+			background: url("../img/320/third.jpg") no-repeat;
+		}
+	  }
 
 	.burger-is-active+.header__link {
 		left: 23px;
