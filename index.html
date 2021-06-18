@@ -43,15 +43,14 @@
 				</button>
 
 
-				<a href="#" class="logo-link header__logo-link">
-					<img src="img/1.header/Logo.png" class="header__logo-img" alt="no-picture"
+				<a class="logo-link header__logo-link" id="logoTop" href="#">
+					<img class="header__logo-img" src="img/1.header/Logo.png" alt="no-picture"
 						aria-label="Логотип сайта">
 				</a>
 
 				<nav class="header__top-nav" id="menu">
 					<ul class="header__nav-list">
-						<li class="header__nav-item"><a class="header__nav-link" href="#aboutUs"
-								target="_self">О
+						<li class="header__nav-item"><a class="header__nav-link" href="#aboutUs" target="_self">О
 								нас</a></li>
 						<li class="header__nav-item"><a class="header__nav-link" href="#gallery"
 								target="_self">Галерея</a></li>
@@ -102,7 +101,11 @@
 				<ul class="header__list-info">
 					<li class="header__list-items">
 
-						<button class="header__list-link" aria-label="Раскрывающийся список:Реализм">Реализм</button>
+						<button class="header__list-link" aria-label="Раскрывающийся список:Реализм">Реализм
+							<svg class="header__list-icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
+							</svg>
+						</button>
 
 						<ul id="scroll" class="header__list-scroll">
 							<li class="scroll__item"><a class="scroll__link" href="#" target="_self">Тинторетто</a>
@@ -117,8 +120,14 @@
 
 
 					</li>
-					<li class="header__list-items"><button class="header__list-link"
-							aria-label="Раскрывающийся список:Импрессионизм">Импрессионизм</button>
+					<li class="header__list-items">
+
+						<button class="header__list-link"
+							aria-label="Раскрывающийся список:Импрессионизм">Импрессионизм
+							<svg class="header__list-icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
+								</svg>
+						</button>
 
 						<ul class="header__list-scroll" id="scroll-2">
 							<li class="scroll__item"><a class="scroll__link" href="#" target="_self">Тинторетто</a>
@@ -133,8 +142,13 @@
 
 					</li>
 					<li class="header__list-items">
+
 						<button class="header__list-link"
-							aria-label="Раскрывающийся список:Постимпрессионизм">Постимпрессионизм</button>
+							aria-label="Раскрывающийся список:Постимпрессионизм">Постимпрессионизм
+							<svg class="header__list-icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
+								</svg>
+						</button>
 
 						<ul class="header__list-scroll" id="scroll-3">
 							<li class="scroll__item"><a class="scroll__link" href="#" target="_self">Тинторетто</a>
@@ -148,7 +162,12 @@
 						</ul>
 					</li>
 					<li class="header__list-items">
-						<button class="header__list-link" aria-label="Раскрывающийся список:Авангард">Авангард</button>
+
+						<button class="header__list-link" aria-label="Раскрывающийся список:Авангард">Авангард
+							<svg class="header__list-icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
+								</svg>
+						</button>
 
 						<ul id="scroll-4" class="header__list-scroll">
 							<li class="scroll__item"><a class="scroll__link" href="#" target="_self">Тинторетто</a>
@@ -163,7 +182,13 @@
 
 					</li>
 					<li class="header__list-items">
-						<button class="header__list-link" aria-label="Раскрывающийся список:Футуризм">Футуризм</button>
+
+						<button class="header__list-link" aria-label="Раскрывающийся список:Футуризм">Футуризм
+							<svg class="header__list-icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
+								</svg>
+						</button>
+
 						<ul id="scroll-5" class="header__list-scroll">
 							<li class="scroll__item"><a class="scroll__link" href="#" target="_self">Тинторетто</a>
 							</li>
@@ -242,11 +267,11 @@
 				<div class="gallery__select">
 					<h2 class="gallery__title title" id="gallery">Галерея</h2>
 					<form class="gallery__form" method="GET" action="https://jsonplaceholder.typicode.com/posts">
-						<label class="gallery__label" for="filter">Фильтровать по:</label>
+						<label class="gallery__label" for="filter">Фильтр:</label>
 						<select class="gallery__filter" id="filter" name="select">
-							<option value="Автор">Автор</option>
-							<option value="Направление">Направление</option>
-							<option value="Техника">Техника</option>
+							<option value="Автор">Живопись</option>
+							<option value="Направление">Рисунок</option>
+							<option value="Техника">Скульптура</option>
 						</select>
 					</form>
 				</div>
@@ -288,122 +313,152 @@
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
-							
-	
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="1" data-graph-animation="fadeInUp" tabindex="1">
-								<img class="gallery__img" src="img/2.gallery/Picture1.jpg" alt="no-picture">	
+
+
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="1"
+								data-graph-animation="fadeInUp" tabindex="1">
+								<img class="gallery__img" src="img/2.gallery/Picture1.jpg" alt="no-picture">
 							</div>
 
-				
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="2" data-graph-animation="fadeInUp" tabindex="1">
+
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="2"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture2.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="3" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="3"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<div class="swiper-zoom-container">
 									<img class="gallery__img" src="img/2.gallery/Picture3.jpg" alt="no-picture">
 								</div>
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="4" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="4"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture4.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="5" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="5"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture5.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="6" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="6"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture6.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="7" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="7"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture7.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="8" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="8"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture8.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="9" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="9"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture9.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="10" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="10"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture10.jpg" alt="no-picture">
 							</div>
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="11" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="11"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture11.jpg" alt="no-picture">
 							</div>
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="12" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="12"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture12.jpg" alt="no-picture">
 							</div>
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="13" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="13"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture13.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="14" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="14"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture14.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="15" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="15"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture15.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="16" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="16"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture16.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="17" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="17"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture17.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="18" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="18"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture18.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="19" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="19"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture19.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="20" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="20"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture20.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="21" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="21"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture21.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="22" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="22"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture22.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="23" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="23"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture23.jpg" alt="no-picture">
 							</div>
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="24" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="24"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture24.jpg" alt="no-picture">
 							</div>
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="25" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="25"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture25.jpg" alt="no-picture">
 							</div>
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="26" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="26"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture26.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="27" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="27"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture27.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="28" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="28"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture28.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="29" data-graph-animation="fadeInUp" tabindex="1">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="29"
+								data-graph-animation="fadeInUp" tabindex="1">
 								<img class="gallery__img" src="img/2.gallery/Picture29.jpg" alt="no-picture">
 							</div>
 
-							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="30" data-graph-animation="fadeInUp">
+							<div class="swiper-slide gallery__slide swiper-lazy" data-graph-path="30"
+								data-graph-animation="fadeInUp">
 								<img class="gallery__img" src="img/2.gallery/Picture30.jpg" alt="no-picture">
 							</div>
 
@@ -417,9 +472,14 @@
 				<div class="modal">
 					<div class="modal__container" role="dialog" data-graph-target="1">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg>
 						</button>
 						<div class="modal-content">
@@ -429,11 +489,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="2">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture2.jpg" alt="no-picture">
 						</div>
@@ -441,11 +506,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="3">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture3.jpg" alt="no-picture">
 						</div>
@@ -453,11 +523,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="4">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture4.jpg" alt="no-picture">
 						</div>
@@ -465,11 +540,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="5">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture5.jpg" alt="no-picture">
 						</div>
@@ -477,11 +557,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="6">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture6.jpg" alt="no-picture">
 						</div>
@@ -489,11 +574,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="7">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture7.jpg" alt="no-picture">
 						</div>
@@ -501,11 +591,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="8">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture8.jpg" alt="no-picture">
 						</div>
@@ -513,11 +608,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="9">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture9.jpg" alt="no-picture">
 						</div>
@@ -525,11 +625,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="10">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture10.jpg" alt="no-picture">
 						</div>
@@ -537,11 +642,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="11">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture11.jpg" alt="no-picture">
 						</div>
@@ -549,11 +659,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="12">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture12.jpg" alt="no-picture">
 						</div>
@@ -561,11 +676,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="13">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture13.jpg" alt="no-picture">
 						</div>
@@ -573,11 +693,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="14">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture14.jpg" alt="no-picture">
 						</div>
@@ -585,11 +710,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="15">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture15.jpg" alt="no-picture">
 						</div>
@@ -597,11 +727,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="16">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture16.jpg" alt="no-picture">
 						</div>
@@ -609,11 +744,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="17">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture17.jpg" alt="no-picture">
 						</div>
@@ -621,11 +761,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="18">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture18.jpg" alt="no-picture">
 						</div>
@@ -633,11 +778,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="19">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture19.jpg" alt="no-picture">
 						</div>
@@ -645,11 +795,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="20">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture20.jpg" alt="no-picture">
 						</div>
@@ -657,11 +812,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="21">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture21.jpg" alt="no-picture">
 						</div>
@@ -669,11 +829,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="22">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture22.jpg" alt="no-picture">
 						</div>
@@ -681,11 +846,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="23">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture23.jpg" alt="no-picture">
 						</div>
@@ -693,11 +863,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="24">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture24.jpg" alt="no-picture">
 						</div>
@@ -705,11 +880,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="25">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture25.jpg" alt="no-picture">
 						</div>
@@ -717,11 +897,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="26">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture26.jpg" alt="no-picture">
 						</div>
@@ -729,11 +914,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="27">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture27.jpg" alt="no-picture">
 						</div>
@@ -741,11 +931,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="28">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture28.jpg" alt="no-picture">
 						</div>
@@ -753,11 +948,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="29">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture29.jpg" alt="no-picture">
 						</div>
@@ -765,11 +965,16 @@
 
 					<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="30">
 						<button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
-							<svg width="20" height="20" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#C283F3"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#C283F3"/>
+							<svg width="20" height="20" viewbox="0 0 13 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+									fill="#C283F3" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+									fill="#C283F3" />
 							</svg></button>
-						
+
 						<div class="modal-content">
 							<img class="gallery__img" src="img/2.gallery/Picture30.jpg" alt="no-picture">
 						</div>
@@ -872,7 +1077,8 @@
 
 					<div class="catalog__specification">
 
-						<div class="catalog__discription catalog__discription_is-active" id="rublev" data-target="btn-russia-3">
+						<div class="catalog__discription catalog__discription_is-active" id="rublev"
+							data-target="btn-russia-3">
 							<img class="catalog__specification-img" src="img/3.catalog/girlandayo.jpg"
 								alt="Изображние художника">
 							<div class="catalog__specification-block">
@@ -986,9 +1192,11 @@
 
 						<div>
 							<ul class="catalog__table">
-								<li class="catalog__date"><a class="catalog__link" href="#prohor" data-path="btn-russia-1">Прохор с
+								<li class="catalog__date"><a class="catalog__link" href="#prohor"
+										data-path="btn-russia-1">Прохор с
 										Городца</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#cherny" data-path="btn-russia-2">Даниил
+								<li class="catalog__date"><a class="catalog__link" href="#cherny"
+										data-path="btn-russia-2">Даниил
 										Чёрный</a></li>
 								<li class="catalog__date"><a class="catalog__link catalog__link_active" href="#rublev"
 										data-path="btn-russia-3">Андрей
@@ -1147,7 +1355,8 @@
 				<div class="catalog__info catalog__info_is-active" data-target="accordion-italy">
 
 					<div class="catalog__specification">
-						<div class="catalog__discription catalog__discription_is-active" id="girlandayo" data-target="btn-italy-1">
+						<div class="catalog__discription catalog__discription_is-active" id="girlandayo"
+							data-target="btn-italy-1">
 							<img class="catalog__specification-img" src="img/3.catalog/girlandayo.jpg"
 								alt="Изображние художника">
 							<div class="catalog__specification-block">
@@ -1245,13 +1454,15 @@
 						<div>
 
 							<ul class="catalog__table">
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Бенедетто
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Бенедетто
 										ди Биндо</a>
 								</li>
 								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
 										data-path="btn-unknown">Бергоньоне, Амброджо</a>
 								</li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Биссоло,
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Биссоло,
 										Франческо</a>
 								</li>
 								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
@@ -1265,30 +1476,38 @@
 								</li>
 								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
 										data-path="btn-unknown">Брамантино</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Бреа,
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Бреа,
 										Людовико</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Бьяджо
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Бьяджо
 										д’Антонио
 										Туччи</a></li>
 								<li class="catalog__date"><a class="catalog__link" href="#vekketa"
 										data-path="btn-italy-3">Веккьетта</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#verrokio" data-path="btn-italy-2">Андреа
+								<li class="catalog__date"><a class="catalog__link" href="#verrokio"
+										data-path="btn-italy-2">Андреа
 										Верроккьо</a></li>
-								<li class="catalog__date"><a class="catalog__link catalog__link_active" href="#girlandayo"
-										data-path="btn-italy-1">Доменико
+								<li class="catalog__date"><a class="catalog__link catalog__link_active"
+										href="#girlandayo" data-path="btn-italy-1">Доменико
 										Гирландайо</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Беноццо
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Беноццо
 										Гоццоли</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Граначчи,
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Граначчи,
 										Франческо</a>
 								</li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Грегорио
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Грегорио
 										ди Чекко</a>
 								</li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Джованни
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Джованни
 										да Удине</a>
 								</li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Джованни
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Джованни
 										ди Паоло</a>
 								</li>
 								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
@@ -1299,9 +1518,11 @@
 								</li>
 								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
 										data-path="btn-unknown">Пезеллино</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Пьетро
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Пьетро
 										Перуджино</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#informationItaly" data-path="btn-unknown">Перуцци,
+								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
+										data-path="btn-unknown">Перуцци,
 										Бальдассаре</a>
 								</li>
 								<li class="catalog__date"><a class="catalog__link" href="#informationItaly"
@@ -1475,7 +1696,8 @@
 				<div class="catalog__info" data-target="accordion-french">
 
 					<div class="catalog__specification">
-						<div class="catalog__discription catalog__discription_is-active" id="angerran" data-target="btn-french-1">
+						<div class="catalog__discription catalog__discription_is-active" id="angerran"
+							data-target="btn-french-1">
 							<img class="catalog__specification-img" src="img/3.catalog/girlandayo.jpg"
 								alt="Изображние художника">
 							<div class="catalog__specification-block">
@@ -1579,7 +1801,8 @@
 								<li class="catalog__date"><a class="catalog__link catalog__link_active" href="#angerran"
 										data-path="btn-french-1">Картон
 										Ангерран</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#iverny" data-path="btn-french-2">Жак
+								<li class="catalog__date"><a class="catalog__link" href="#iverny"
+										data-path="btn-french-2">Жак
 										Иверни</a></li>
 								<li class="catalog__date"><a class="catalog__link" href="#eik"
 										data-path="btn-french-3">Бартелеми
@@ -1768,7 +1991,8 @@
 								</p>
 							</div>
 						</div>
-						<div class="catalog__discription catalog__discription_is-active" id="volgemut" data-target="btn-deutch-2">
+						<div class="catalog__discription catalog__discription_is-active" id="volgemut"
+							data-target="btn-deutch-2">
 							<img class="catalog__specification-img" src="img/3.catalog/girlandayo.jpg"
 								alt="Изображние художника">
 							<div class="catalog__specification-block">
@@ -1832,12 +2056,14 @@
 						<div>
 
 							<ul class="catalog__table">
-								<li class="catalog__date"><a class="catalog__link" href="#bertram" data-path="btn-deutch-1">Мастер
+								<li class="catalog__date"><a class="catalog__link" href="#bertram"
+										data-path="btn-deutch-1">Мастер
 										Бертрам</a></li>
 								<li class="catalog__date"><a class="catalog__link catalog__link_active" href="#volgemut"
 										data-path="btn-deutch-2">Михаэль
 										Вольгемут</a></li>
-								<li class="catalog__date"><a class="catalog__link" href="#golbein" data-path="btn-deutch-3">Ганс
+								<li class="catalog__date"><a class="catalog__link" href="#golbein"
+										data-path="btn-deutch-3">Ганс
 										Гольбейн
 										Старший</a></li>
 							</ul>
@@ -2028,7 +2254,8 @@
 									женой — так называемый «Портрет четы Арнольфини».</p>
 							</div>
 						</div>
-						<div class="catalog__discription catalog__discription_is-active" id="dare" data-target="btn-belgium-2">
+						<div class="catalog__discription catalog__discription_is-active" id="dare"
+							data-target="btn-belgium-2">
 							<img class="catalog__specification-img" src="img/3.catalog/girlandayo.jpg"
 								alt="Изображние художника">
 							<div class="catalog__specification-block">
@@ -2087,7 +2314,8 @@
 						<div>
 
 							<ul class="catalog__table">
-								<li class="catalog__date"><a class="catalog__link" href="#vanEik" data-path="btn-belgium-1">Ян ван
+								<li class="catalog__date"><a class="catalog__link" href="#vanEik"
+										data-path="btn-belgium-1">Ян ван
 										Эйк</a></li>
 								<li class="catalog__date"><a class="catalog__link catalog__link_active" href="#dare"
 										data-path="btn-belgium-2">Жак
@@ -2422,7 +2650,7 @@
 									<label class="price__label price__label2" for="price2">до</label>
 									<input class="price__input price__input2" type="number" name="username" id="price2"
 										placeholder="25 000">
-									<span class="price__text">рублей</span>
+									<span class="price__text">руб.</span>
 								</div>
 							</div>
 						</div>
@@ -2703,9 +2931,9 @@
 						Заказать обратный звонок
 					</h3>
 
-					<form class="contacts__callback-form" action="#" method="get">
+					<form class="contacts__callback-form" action="#" method="POST">
 						<label class="form__label form__label-name" for="name"></label>
-						<input class="form__input form__input-name" name="Имя" type="text" id="name" placeholder="Имя*"
+						<input class="form__input form__input-name" name="name" type="text" id="name" placeholder="Имя*"
 							data-validate-field="name">
 						<label class="form__label form__label-tel" for="tel"></label>
 						<input class="form__input form__input-tel" name="tel" type="tel" id="tel" placeholder="Телефон*"
@@ -2760,7 +2988,7 @@
 	<footer class="footer">
 		<div class="container footer__container">
 
-			<a class="logo-link footer__logo-link" href="#">
+			<a class="logo-link footer__logo-link" href="#logoTop">
 				<img class="footer__logo-img" src="img/1.header/Logo.png" alt="no-picture" aria-label="Логотип сайта">
 			</a>
 

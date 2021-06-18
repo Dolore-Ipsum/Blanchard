@@ -62,14 +62,14 @@ window.addEventListener('DOMContentLoaded', function () {
 				slidesPerColumn: 2,
 				slidesPerGroup: 2,
 				slidesPerView: 2,
-				spaceBetween: 34,
+				spaceBetween: 36,
 			},
 
 			769: {
 				slidesPerColumn: 2,
 				slidesPerGroup: 2,
 				slidesPerView: 2,
-				spaceBetween: 36,
+				spaceBetween: 40,
 				slidesPerColumnFill: 'row-reverse',
 			},
 
@@ -584,12 +584,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	// width > 958
 
-	$(function(){
-		if ( $(window).width() > 958 ) {
+	$(function () {
+		if ($(window).width() > 958) {
 
-	  $('.catalog__link').click(function(){ return false})
+			$('.catalog__link').click(function () {
+				return false
+			})
 
-	}
+		}
 	});
-
 });
