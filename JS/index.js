@@ -4,13 +4,15 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	document.querySelector('#burger').addEventListener('click', function () {
 		document.querySelector('.header__top-nav').classList.toggle('burger-is-active');
-		document.querySelector('.header__link').classList.toggle('burger-is-active');
+		document.querySelector('.header__list').classList.remove('search-is-active');
 		document.querySelector('.burger__btn').classList.toggle('burger__btn-is-active');
 	})
 
 	document.querySelector('#search').addEventListener('click', function () {
 		document.querySelector('.header__list').classList.toggle('search-is-active');
+		document.querySelector('.header__top-nav').classList.remove('burger-is-active');
 		document.querySelector('.search__btn').classList.toggle('search__btn-is-active');
+		document.querySelector('.burger__btn').classList.remove('burger__btn-is-active');
 	})
 
 	// SimpleBar
@@ -39,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		watchSlidesProgress: true,
 		observer: true,
 		resizeObserver: true,
-		// Responsive breakpoints
+		// responseive breakpoints
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
@@ -593,4 +595,25 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		}
 	});
+
+	// form sender
+
+	let formData = new FormData(form);
+
+	let xhr = new XMLHttpRequest();
+
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4) {
+			if(xhr.status === 200) {
+				console.log('Posted')
+			}
+		}
+	}
+
+	xhr.open('POST', 'mail.php', true);
+
+	xhr.send(formData);
+
+	form.reset();
+
 });
