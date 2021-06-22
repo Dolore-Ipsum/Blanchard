@@ -1,5 +1,5 @@
 <?
-// require_once 'PHPMailer-master/PHPMailerAutoload.php';
+require_once 'PHPMailer-master/PHPMailerAutoload.php';
 
 $admin_email = array();
 foreach ( $_POST["admin_email"] as $key => $value ) {

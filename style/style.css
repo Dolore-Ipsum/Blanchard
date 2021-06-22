@@ -6224,6 +6224,19 @@ input::-webkit-inner-spin-button {
 
 @media(max-width: 629px) {
 
+	.modal-content {
+		width: 301px;
+		height: 396px;
+	}
+
+	.modal__container {
+		height: 388px;
+	}
+
+	.modal-content__text {
+		font-size: 24px;
+	}
+
 	.information-table {
 		padding-bottom: 0;
 	}
