@@ -145,7 +145,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	// Smooth transition
 
 	$(document).ready(function () {
-		$(document).on("click", "a", function (event) {
+		$(document).on("click", "a[href^='#']", function (event) {
 			//отменяем стандартную обработку нажатия по ссылке
 			event.preventDefault();
 
