@@ -30,14 +30,10 @@
 						<path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white" />
 					</svg>
 
-					<svg class="burger__cross" width="22" height="22" viewbox="0 0 11 12" fill="none"
+					<svg class="burger__cross" width="29" height="29" viewbox="0 0 29 29" fill="none"
 						xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-							fill="#000000" />
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-							fill="#000000" />
+						<rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
+						<rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
 					</svg>
 
 				</button>
@@ -69,17 +65,36 @@
 						<a class="header__link" href="#" target="_self">Войти</a>
 				</nav>
 
-				<button class="search__btn" type="button" id="search">
+				<form method="GET" action="#" class="header__list-search header__list-search-1024"
+					autocomplete="on">
+					<button class="header__search__btn search__btn" id="search">
+						<svg class="search-sign" width="23" height="22" viewbox="0 0 23 22" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<rect width="6.8678" height="1.71695"
+								transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+								fill="white" />
+						</svg>
+					</button>
+					<label for="header__search-input">
+						<input class="header__search-input" type="search" id="header__search-input"
+							name="header__search-input" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+					</label>
 
-					<svg class="search__img" viewbox="0 0 30 29" fill="none" aria-label="Поиск">
-						<rect width="9.15446" height="2.28862"
-							transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white" />
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M16.1246 24.174C10.0376 24.174 5.32763 19.2725 5.32763 13.5104C5.32763 7.74821 10.0376 2.84674 16.1246 2.84674C22.2115 2.84674 26.9215 7.74821 26.9215 13.5104C26.9215 19.2725 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14867 8.76285 0.180832 16.1246 0.180832C23.4863 0.180832 29.4541 6.14867 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
-							fill="white" />
+					<button class="search__close" type="button">
+					
+						<svg class="burger__cross" width="29" height="29" viewbox="0 0 29 29" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
+						<rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
 					</svg>
+	
+					</button>
+				</form>
 
-				</button>
+			
+				
 
 			</div>
 		</div>
@@ -193,9 +208,9 @@
 
 				</ul>
 
-				<form method="GET" action="https://jsonplaceholder.typicode.com/posts" class="header__list-search"
+				<form method="GET" action="#" class="header__list-search"
 					autocomplete="on">
-					<button class="header__search__btn">
+					<button class="header__search__btn search__btn">
 						<svg class="search-sign" width="23" height="22" viewbox="0 0 23 22" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<rect width="6.8678" height="1.71695"
@@ -206,7 +221,7 @@
 						</svg>
 					</button>
 					<label for="header__search-input">
-						<input class="header__search-input" type="search" id="header__search-input"
+						<input class="header__search-input" type="search"
 							name="header__search-input" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
 					</label>
 				</form>
@@ -466,15 +481,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg>
 						</button>
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture1.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №1</p>
+							<img class="gallery__img" src="img/320/Picture2.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Казимир Малевич</h3>
+								<span class="modal-content__description">“Женщина с граблями”</span>
+								<span class="modal-content__dates">1931-1932</span>
+							<p class="modal-content__text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+						</div>
 						</div>
 					</div>
 
@@ -484,15 +504,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture2.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №2</p>
+							<img class="gallery__img" src="img/320/Picture1.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Казимир Малевич</h3>
+								<span class="modal-content__description">“Женщина с граблями”</span>
+								<span class="modal-content__dates">1931-1932</span>
+							<p class="modal-content__text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+						</div>
 						</div>
 					</div>
 
@@ -502,15 +527,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture3.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №3</p>
+							<img class="gallery__img" src="img/320/Picture5.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -520,15 +550,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture4.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №4</p>
+							<img class="gallery__img" src="img/320/Picture3.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -538,15 +573,22 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture5.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №5</p>
+							<img class="gallery__img" src="img/320/Picture4.jpg" alt="no-picture">
+							<div class="modal-content__block">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
+						</div>
 						</div>
 					</div>
 
@@ -556,15 +598,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture6.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №6</p>
+							<img class="gallery__img" src="img/320/Picture6.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -574,15 +621,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture7.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №7</p>
+							<img class="gallery__img" src="img/320/Picture7.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -592,15 +644,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture8.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №8</p>
+							<img class="gallery__img" src="img/320/Picture9.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -610,15 +667,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture9.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №9</p>
+							<img class="gallery__img" src="img/320/Picture12.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -628,15 +690,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture10.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №10</p>
+							<img class="gallery__img" src="img/320/Picture8.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -646,15 +713,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture11.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №11</p>
+							<img class="gallery__img" src="img/320/Picture10.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -664,15 +736,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture12.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №12</p>
+							<img class="gallery__img" src="img/320/Picture11.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -682,15 +759,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture13.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №13</p>
+							<img class="gallery__img" src="img/320/Picture15.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -700,15 +782,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture14.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №14</p>
+							<img class="gallery__img" src="img/320/Picture13.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -718,15 +805,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture15.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №15</p>
+							<img class="gallery__img" src="img/320/Picture18.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -736,15 +828,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture16.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №16</p>
+							<img class="gallery__img" src="img/320/Picture16.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -754,15 +851,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture17.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №17</p>
+							<img class="gallery__img" src="img/320/Picture14.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -772,15 +874,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture18.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №18</p>
+							<img class="gallery__img" src="img/320/Picture17.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -790,15 +897,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture19.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №19</p>
+							<img class="gallery__img" src="img/320/Picture19.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -808,15 +920,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture20.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №20</p>
+							<img class="gallery__img" src="img/320/Picture20.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -826,15 +943,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture21.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №21</p>
+							<img class="gallery__img" src="img/320/Picture21.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -844,15 +966,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture22.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №22</p>
+							<img class="gallery__img" src="img/320/Picture25.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -862,15 +989,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture23.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №23</p>
+							<img class="gallery__img" src="img/320/Picture26.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -880,15 +1012,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture24.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №24</p>
+							<img class="gallery__img" src="img/320/Picture27.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -898,15 +1035,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture25.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №25</p>
+							<img class="gallery__img" src="img/320/Picture28.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -916,15 +1058,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture26.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №26</p>
+							<img class="gallery__img" src="img/320/Picture29.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -934,15 +1081,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture27.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №27</p>
+							<img class="gallery__img" src="img/320/Picture24.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -952,15 +1104,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture28.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №28</p>
+							<img class="gallery__img" src="img/320/Picture28.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -970,15 +1127,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture29.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №29</p>
+							<img class="gallery__img" src="img/320/Picture29.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -988,15 +1150,20 @@
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
-									fill="#C283F3" />
+									fill="#000" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
-									fill="#C283F3" />
+									fill="#000" />
 							</svg></button>
 
 						<div class="modal-content">
-							<img class="gallery__img" src="img/2.gallery/Picture30.jpg" alt="no-picture">
-							<p class="modal-content__text">Картина №30</p>
+							<img class="gallery__img" src="img/320/Picture30.jpg" alt="no-picture">
+							<div class="modal-content__block">
+								<h3 class="modal-content__title">Известный автор</h3>
+								<span class="modal-content__description">Известная картина</span>
+								<span class="modal-content__dates">Давным-давно</span>
+							<p class="modal-content__text">Картина не нуждается в комментариях</p>
+						</div>
 						</div>
 					</div>
 
@@ -3056,6 +3223,8 @@
 					</svg>
 
 				</a>
+
+				
 			</div>
 		</div>
 

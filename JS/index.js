@@ -6,6 +6,10 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('.header__top-nav').classList.toggle('burger-is-active');
 		document.querySelector('.header__list').classList.remove('search-is-active');
 		document.querySelector('.burger__btn').classList.toggle('burger__btn-is-active');
+		document.querySelector('.header').classList.remove('header-is-active');
+		document.querySelector('.search__btn').classList.remove('search__btn-is-active');
+		document.querySelector('.header__container').classList.remove('header__container-search-active');
+		document.querySelector('.header').classList.toggle('header__container-burger-active');
 	})
 
 	document.querySelector('#search').addEventListener('click', function () {
@@ -13,6 +17,15 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('.header__top-nav').classList.remove('burger-is-active');
 		document.querySelector('.search__btn').classList.toggle('search__btn-is-active');
 		document.querySelector('.burger__btn').classList.remove('burger__btn-is-active');
+		document.querySelector('.header').classList.toggle('header-is-active');
+		document.querySelector('.header__container').classList.toggle('header__container-search-active');
+	})
+
+	document.querySelector('.search__close').addEventListener('click', function () {
+		document.querySelector('.header__list').classList.remove('search-is-active');
+		document.querySelector('.search__btn').classList.remove('search__btn-is-active');
+		document.querySelector('.header').classList.remove('header-is-active');
+		document.querySelector('.header__container').classList.remove('header__container-search-active');
 	})
 
 	// SimpleBar
@@ -79,7 +92,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				slidesPerColumn: 2,
 				slidesPerGroup: 2,
 				slidesPerView: 2,
-				spaceBetween: 35,
+				spaceBetween: 39,
 				slidesPerColumnFill: 'row-reverse',
 			},
 
@@ -87,7 +100,14 @@ window.addEventListener('DOMContentLoaded', function () {
 				slidesPerColumn: 2,
 				slidesPerView: 3,
 				slidesPerGroup: 3,
-				spaceBetween: 50,
+				spaceBetween: 53,
+			},
+
+			1919: {
+				slidesPerColumn: 2,
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 58,
 			},
 
 		},
@@ -466,8 +486,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	// Валидация форм
 
-	new window.JustValidate('.contacts__callback-form');
-
 	var selector = document.querySelector("input[type='tel']");
 
 	var im = new Inputmask("+7 (999)-999-99-99");
@@ -505,6 +523,29 @@ window.addEventListener('DOMContentLoaded', function () {
 				function: 'Номер введён неверно'
 			},
 			focusWrongField: true,
+
+			// form sender
+
+			submitHandler: function (form) {
+
+				let formData = new FormData(form);
+
+				let xhr = new XMLHttpRequest();
+
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						if (xhr.status === 200) {
+							console.log('Posted')
+						}
+					}
+				}
+
+				xhr.open('POST', 'mail.php', true);
+
+				xhr.send(formData);
+
+				form.reset();
+			},
 		},
 	});
 
@@ -595,25 +636,5 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		}
 	});
-
-	// form sender
-
-	let formData = new FormData(form);
-
-	let xhr = new XMLHttpRequest();
-
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4) {
-			if(xhr.status === 200) {
-				console.log('Posted')
-			}
-		}
-	}
-
-	xhr.open('POST', 'mail.php', true);
-
-	xhr.send(formData);
-
-	form.reset();
 
 });
