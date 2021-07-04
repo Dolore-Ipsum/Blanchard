@@ -3,30 +3,56 @@ window.addEventListener('DOMContentLoaded', function () {
 	// Burger and Search
 
 	document.querySelector('#burger').addEventListener('click', function () {
-		document.querySelector('.header__top-nav').classList.toggle('burger-is-active');
+		document.querySelector('.header__top-nav').classList.add('burger-is-active');
 		document.querySelector('.header__list').classList.remove('search-is-active');
-		document.querySelector('.burger__btn').classList.toggle('burger__btn-is-active');
 		document.querySelector('.header').classList.remove('header-is-active');
 		document.querySelector('.search__btn').classList.remove('search__btn-is-active');
 		document.querySelector('.header__container').classList.remove('header__container-search-active');
-		document.querySelector('.header').classList.toggle('header__container-burger-active');
+		document.querySelector('.header').classList.add('header__container-burger-active');
 	})
 
-	document.querySelector('#search').addEventListener('click', function () {
-		document.querySelector('.header__list').classList.toggle('search-is-active');
+	document.querySelector('.cross').addEventListener('click', function () {
 		document.querySelector('.header__top-nav').classList.remove('burger-is-active');
-		document.querySelector('.search__btn').classList.toggle('search__btn-is-active');
-		document.querySelector('.burger__btn').classList.remove('burger__btn-is-active');
-		document.querySelector('.header').classList.toggle('header-is-active');
-		document.querySelector('.header__container').classList.toggle('header__container-search-active');
+		document.querySelector('.header').classList.remove('header__container-burger-active');
 	})
 
-	document.querySelector('.search__close').addEventListener('click', function () {
+	document.querySelector('.search__open').addEventListener('click', function () {
+		document.querySelector('.header__list-search-1024').classList.add('header__list-search-1024-is-opened');
+		document.querySelector('.header__container').classList.add('header__container-search-active');
+		document.querySelector('.header__list').classList.add('search-is-active');
+		document.querySelector('.search__btn').classList.add('search__btn-is-active');
+		document.querySelector('.header').classList.add('header-is-active');
+		document.querySelector('.search__open').classList.add('search__open_none');
+	})
+
+	document.querySelector('.close__btn').addEventListener('click', function () {
+		document.querySelector('.header__list-search-1024').classList.remove('header__list-search-1024-is-opened');
+		document.querySelector('.header__container').classList.remove('header__container-search-active');
 		document.querySelector('.header__list').classList.remove('search-is-active');
 		document.querySelector('.search__btn').classList.remove('search__btn-is-active');
 		document.querySelector('.header').classList.remove('header-is-active');
-		document.querySelector('.header__container').classList.remove('header__container-search-active');
+		document.querySelector('.search__open').classList.remove('search__open_none');
 	})
+
+	$(function () {
+		if ($(window).width() > 768) {
+	
+	jQuery(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = jQuery(".header__list-search-1024"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+			&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+				jQuery(".header").removeClass('header-is-active');
+				jQuery(".search__btn").removeClass('search__btn-is-active');
+				jQuery(".header__container").removeClass('header__container-search-active');
+				jQuery(".header__list").removeClass('search-is-active');
+				jQuery(".search__open").removeClass('search__open_none');
+				jQuery(".header__list-search-1024").removeClass('header__list-search-1024-is-opened');
+				$('.js-validate-error-label').attr('style', 'display: none;');
+				
+			}
+		});
+	}
+});
 
 	// SimpleBar
 
@@ -486,43 +512,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	// Валидация форм
 
-	var selector = document.querySelector("input[type='tel']");
+	var selector = document.querySelectorAll("input[type='tel']");
 
 	var im = new Inputmask("+7 (999)-999-99-99");
 	im.mask(selector);
 
 
-	new JustValidate('.contacts__callback-form', {
-		rules: {
-			name: {
-				required: true,
-				minLength: 2,
-				maxLength: 10,
-				strength: {
-					custom: '(^[A-Z, a-z, А-Я, а-я])'
-				}
+	let validateForms = function (selector, rules, successModal, yaGoal) {
+		new JustValidate('.contacts__callback-form', {
 
-			},
-			tel: {
-				required: true,
-				function: (name, value) => {
-					const phone = selector.inputmask.unmaskedvalue()
-					return Number(phone) && phone.length === 10
-				}
-			},
-		},
-		messages: {
-			name: {
-				minLength: 'Поле должно содержать не менее двух символов',
-				maxLength: 'Поле должно содержать не более десяти символов',
-				required: 'Как вас зовут?',
-				strength: 'Недопустимый формат'
-			},
-			tel: {
-				required: 'Укажите ваш телефон',
-				function: 'Номер введён неверно'
-			},
-			focusWrongField: true,
+			rules: rules,
 
 			// form sender
 
@@ -546,8 +545,143 @@ window.addEventListener('DOMContentLoaded', function () {
 
 				form.reset();
 			},
+
+				messages: {
+					name: {
+						minLength: 'Поле должно содержать не менее двух символов',
+						maxLength: 'Поле должно содержать не более десяти символов',
+						required: 'Как вас зовут?',
+						strength: 'Недопустимый формат'
+					},
+
+					tel: {
+						required: 'Укажите ваш телефон',
+						function: 'Номер введён неверно'
+					},
+
+					focusWrongField: true,
+				},
+		});
+	};
+
+	validateForms('.contacts__callback-form', {
+		name: {
+			required: true,
+			minLength: 2,
+			strength: {
+			custom: '(^[A-Z, a-z, А-Я, а-я])'
+			},
+		},
+		tel: {
+			required: true,
+		}	
+	});
+
+
+	let validateForms2 = function (selector, rules, successModal, yaGoal) {
+		new JustValidate('.send-form', {
+
+			rules: rules,
+
+			// form sender
+
+			submitHandler: function (form) {
+
+				let formData = new FormData(form);
+
+				let xhr = new XMLHttpRequest();
+
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						if (xhr.status === 200) {
+							console.log('Posted')
+						}
+					}
+				}
+
+				xhr.open('POST', 'mail.php', true);
+
+				xhr.send(formData);
+
+				form.reset();
+			},
+
+				messages: {
+					name: {
+						minLength: 'Поле должно содержать не менее двух символов',
+						maxLength: 'Поле должно содержать не более десяти символов',
+						required: 'Поле обязательно для заполнения',
+						strength: 'Недопустимый формат'
+					},
+
+					focusWrongField: true,
+				},
+		});
+	};
+
+	validateForms2('.send-form', {
+		name: {
+			required: true,
+			minLength: 2,
+			strength: {
+			custom: '(^[A-Z, a-z, А-Я, а-я])'
+			},
 		},
 	});
+
+	let validateForms3 = function (selector, rules, successModal, yaGoal) {
+		new JustValidate('.send-form2', {
+
+			rules: rules,
+
+			// form sender
+
+			submitHandler: function (form) {
+
+				let formData = new FormData(form);
+
+				let xhr = new XMLHttpRequest();
+
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						if (xhr.status === 200) {
+							console.log('Posted')
+						}
+					}
+				}
+
+				xhr.open('POST', 'mail.php', true);
+
+				xhr.send(formData);
+
+				form.reset();
+			},
+
+				messages: {
+					name: {
+						minLength: 'Поле должно содержать не менее двух символов',
+						maxLength: 'Поле должно содержать не более десяти символов',
+						required: 'Поле обязательно для заполнения',
+						strength: 'Недопустимый формат'
+					},
+
+					focusWrongField: true,
+				},
+		});
+	};
+
+	validateForms3('.send-form2', {
+		name: {
+			required: true,
+			minLength: 2,
+			strength: {
+			custom: '(^[A-Z, a-z, А-Я, а-я])'
+			},
+		},
+	});
+
+
+
 
 	// Функция ymaps.ready() будет вызвана, когда
 	// загрузятся все компоненты API, а также когда будет готово DOM-дерево.

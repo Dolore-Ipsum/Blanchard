@@ -30,12 +30,6 @@
 						<path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white" />
 					</svg>
 
-					<svg class="burger__cross" width="29" height="29" viewbox="0 0 29 29" fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
-						<rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
-					</svg>
-
 				</button>
 
 
@@ -45,6 +39,17 @@
 				</a>
 
 				<nav class="header__top-nav" id="menu">
+
+					<button class="burger__btn cross" type="submit">
+	
+						<svg class="burger__cross" width="29" height="29" viewbox="0 0 29 29" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
+							<rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
+						</svg>
+	
+					</button>
+					
 					<ul class="header__nav-list">
 						<li class="header__nav-item"><a class="header__nav-link" href="#aboutUs" target="_self">О
 								нас</a></li>
@@ -65,8 +70,18 @@
 						<a class="header__link" href="#" target="_self">Войти</a>
 				</nav>
 
-				<form method="GET" action="#" class="header__list-search header__list-search-1024"
-					autocomplete="on">
+				<button class="header__search__btn search__open">
+					<svg class="search-sign" width="23" height="22" viewbox="0 0 23 22" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<rect width="6.8678" height="1.71695"
+							transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+							fill="white" />
+					</svg>
+				</button>
+
+				<form class="header__list-search header__list-search-1024 send-form2" method="POST" action="mail.php" enctype="multipart/form-data">
 					<button class="header__search__btn search__btn" id="search">
 						<svg class="search-sign" width="23" height="22" viewbox="0 0 23 22" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
@@ -77,24 +92,23 @@
 								fill="white" />
 						</svg>
 					</button>
+					<input type="hidden" name="admin_email[]" value="kuznetso89@inbox.ru">
+						<input type="hidden" name="form_subject" value="Заказ обратного звонка">
 					<label for="header__search-input">
 						<input class="header__search-input" type="search" id="header__search-input"
-							name="header__search-input" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+							name="name" data-validate-field="name" aria-label="Поиск по сайту">
 					</label>
-
-					<button class="search__close" type="button">
-					
-						<svg class="burger__cross" width="29" height="29" viewbox="0 0 29 29" fill="none"
+				</form>	
+				
+				<button class="close__btn" type="button">
+	
+					<svg class="burger__cross" width="29" height="29" viewbox="0 0 29 29" fill="none"
 						xmlns="http://www.w3.org/2000/svg">
 						<rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
 						<rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
 					</svg>
-	
-					</button>
-				</form>
 
-			
-				
+				</button>
 
 			</div>
 		</div>
@@ -208,8 +222,7 @@
 
 				</ul>
 
-				<form method="GET" action="#" class="header__list-search"
-					autocomplete="on">
+				<form class="header__list-search send-form" method="POST" action="mail.php" enctype="multipart/form-data">
 					<button class="header__search__btn search__btn">
 						<svg class="search-sign" width="23" height="22" viewbox="0 0 23 22" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
@@ -220,9 +233,11 @@
 								fill="white" />
 						</svg>
 					</button>
+					<input type="hidden" name="admin_email[]" value="kuznetso89@inbox.ru">
+						<input type="hidden" name="form_subject" value="Заказ обратного звонка">
 					<label for="header__search-input">
 						<input class="header__search-input" type="search"
-							name="header__search-input" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+						name="name" data-validate-field="name" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
 					</label>
 				</form>
 			</div>
@@ -3118,7 +3133,7 @@
 						Заказать обратный звонок
 					</h3>
 
-					<form class="contacts__callback-form" id="form" action="mail.php" method="POST">
+					<form class="contacts__callback-form" id="form" action="mail.php" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="admin_email[]" value="kuznetso89@inbox.ru">
 						<input type="hidden" name="form_subject" value="Заказ обратного звонка">
 						<label class="form__label form__label-name" for="name"></label>
@@ -3126,7 +3141,7 @@
 							data-validate-field="name">
 						<label class="form__label form__label-tel" for="tel"></label>
 						<input class="form__input form__input-tel " name="tel" type="tel" id="tel" placeholder="Телефон*"
-							data-validate-field="tel" data-validate-rules="phone">
+							data-validate-field="tel">
 
 						<button class="btn contacts__callback-button" type="submit">Заказать</button>
 
