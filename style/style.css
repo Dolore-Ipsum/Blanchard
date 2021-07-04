@@ -5316,7 +5316,7 @@ input::-webkit-inner-spin-button {
 	}
 
 	.header-is-active+main .hero__container {
-		padding-top: 34px;
+		padding-top: 74px;
 	}
 
 	.header-is-active+main .hero {
@@ -6738,6 +6738,10 @@ input::-webkit-inner-spin-button {
 	.search-sign {
 		width: 17px;
 		height: 17px;
+	}
+
+	.header-is-active+main .hero__container {
+		padding-top: 33px;
 	}
 
 	.header__top-nav {
