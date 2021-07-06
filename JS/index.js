@@ -32,6 +32,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('.search__btn').classList.remove('search__btn-is-active');
 		document.querySelector('.header').classList.remove('header-is-active');
 		document.querySelector('.search__open').classList.remove('search__open_none');
+		document.querySelector('.js-validate-error-label').style.display="none";
 	})
 
 	$(function () {
@@ -48,6 +49,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				jQuery(".search__open").removeClass('search__open_none');
 				jQuery(".header__list-search-1024").removeClass('header__list-search-1024-is-opened');
 				$('.js-validate-error-label').attr('style', 'display: none;');
+				jQuery(".modal__send").removeClass('modal__send-is-active');
 				
 			}
 		});
@@ -514,7 +516,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	var selector = document.querySelectorAll("input[type='tel']");
 
-	var im = new Inputmask("+7 (999)-999-99-99");
+	var im = new Inputmask("+7 (999) 999-99-99");
 	im.mask(selector);
 
 
@@ -534,7 +536,8 @@ window.addEventListener('DOMContentLoaded', function () {
 				xhr.onreadystatechange = function () {
 					if (xhr.readyState === 4) {
 						if (xhr.status === 200) {
-							console.log('Posted')
+							console.log('Posted'),
+							document.querySelector('.modal__send').classList.add('modal__send-is-active');
 						}
 					}
 				}
@@ -594,7 +597,8 @@ window.addEventListener('DOMContentLoaded', function () {
 				xhr.onreadystatechange = function () {
 					if (xhr.readyState === 4) {
 						if (xhr.status === 200) {
-							console.log('Posted')
+							console.log('Posted'),
+							document.querySelector('.modal__send').classList.add('modal__send-is-active');
 						}
 					}
 				}
@@ -645,7 +649,8 @@ window.addEventListener('DOMContentLoaded', function () {
 				xhr.onreadystatechange = function () {
 					if (xhr.readyState === 4) {
 						if (xhr.status === 200) {
-							console.log('Posted')
+							console.log('Posted'),
+							document.querySelector('.modal__send').classList.add('modal__send-is-active');
 						}
 					}
 				}
@@ -680,7 +685,9 @@ window.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-
+	document.querySelector('.modal__close').addEventListener('click', function () {
+		document.querySelector('.modal__send').classList.remove('modal__send-is-active');
+	})
 
 
 	// Функция ymaps.ready() будет вызвана, когда
