@@ -180,7 +180,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			var id = $(this).attr('href'),
 
 				//узнаем высоту от начала страницы до блока на который ссылается якорь
-				top = $(id).offset().top - 15;
+				top = $(id).offset().top - 20;
 
 			//анимируем переход на расстояние - top за 1500 мс
 			$('body,html').animate({
