@@ -3471,7 +3471,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 1392px) {
 
 	.header__nav-item:not(:last-child) {
-		margin-right: 13px;
+		margin-right: 11px;
 	}
 
 	.header__list-items:not(:last-child) {
@@ -3556,7 +3556,7 @@ input::-webkit-inner-spin-button {
 	.cards__slide {
 		margin-right: 20px;
 		margin-bottom: 20px;
-		max-width: 299px;
+		max-width: 294px;
 	}
 
 	.cards__slide:nth-child(4) {

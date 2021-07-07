@@ -32,7 +32,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('.search__btn').classList.remove('search__btn-is-active');
 		document.querySelector('.header').classList.remove('header-is-active');
 		document.querySelector('.search__open').classList.remove('search__open_none');
-		document.querySelector('.js-validate-error-label').style.display="none";
 	})
 
 	$(function () {
@@ -181,7 +180,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			var id = $(this).attr('href'),
 
 				//узнаем высоту от начала страницы до блока на который ссылается якорь
-				top = $(id).offset().top;
+				top = $(id).offset().top - 15;
 
 			//анимируем переход на расстояние - top за 1500 мс
 			$('body,html').animate({
